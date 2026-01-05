@@ -1,0 +1,182 @@
+body {
+  background: repeating-linear-gradient(
+    180deg,
+    #021a00 -1px,
+    #004e14 6px
+  );
+}
+
+@font-face {
+  font-family: 'fixedsys';
+  src: url(/static/font/fixedsys/FSEX300.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+nav {
+    overflow: auto;
+    text-align: left;
+    word-spacing: 100px;
+    line-height: 100px;
+}
+
+.sel {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    /*background-color: #000000;*/
+    font-size: xx-large;
+    color: rgb(95, 249, 0);
+    font-family: 'fixedsys', 'Courier New', Courier, monospace;
+    top: 0;
+    width: 96.5%;
+}
+
+.sel:hover {
+    background-color: #5ff900;
+    color: #000000;
+    text-decoration: none;
+    
+}
+
+.sel:focus {
+    background-color: #5ff900;
+    color: #000000;
+    text-decoration: none;
+    
+}
+/* used AI*/
+.sel:hover a {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* .text-block {
+  border: 2px solid rgb(95, 249, 0); 
+  padding: 1em;           
+  border-radius: 8px;      
+  background: repeating-linear-gradient(
+    180deg,
+    #021a00 -1px,
+    #004e14 6px
+  );
+  position: fixed;
+  top: 0;
+  width: 96.5%;
+} */
+
+h1 { font-family:  'fixedsys', 'Courier New', Courier, monospace; color: rgb(95, 249, 0);}
+
+h2 { font-family:  'fixedsys', 'Courier New', Courier, monospace; color: rgb(95, 249, 0);}
+
+h3 { font-family:  'fixedsys', 'Courier New', Courier, monospace; color: rgb(95, 249, 0);}
+.ro {
+    font-size: x-large;
+    color: rgb(95, 249, 0);
+    font-family: 'fixedsys', 'Courier New', Courier, monospace;
+    text-align: center;
+}
+.rr {
+    font-size: 50px;
+    color: rgb(95, 249, 0);
+    font-family: 'fixedsys', 'Courier New', Courier, monospace;
+    text-align: center;
+}
+form {
+    font-size: large;
+    color: rgb(95, 249, 0);
+    font-family: 'fixedsys', 'Courier New', Courier, monospace;
+}
+input {
+    font-size: large;
+    color: rgb(95, 249, 0);
+    font-family: 'fixedsys', 'Courier New', Courier, monospace;
+    background: repeating-linear-gradient(
+      180deg,
+      #021a00 -1px,
+      #064300 6px
+    );
+}
+label {
+    font-size: large;
+    color: rgb(95, 249, 0);
+    font-family: 'fixedsys', 'Courier New', Courier, monospace;
+}
+p {
+    font-size: large;
+    color: rgb(95, 249, 0);
+    font-family: 'fixedsys', 'Courier New', Courier, monospace;
+}
+a {
+    font-size: xx-large;
+    color: rgb(95, 249, 0);
+    font-family: 'fixedsys', 'Courier New', Courier, monospace;
+}
+
+li {color: rgb(95, 249, 0);
+font-family: 'fixedsys', 'Courier New', Courier, monospace;
+font-size: large;}
+
+div {color: rgb(95, 249, 0);
+  font-family: 'fixedsys', 'Courier New', Courier, monospace;}
+.dagi {
+  font-size: xx-large;
+}
+
+ol {color: rgb(95, 249, 0);
+  font-family: 'fixedsys', 'Courier New', Courier, monospace;
+  font-size: large;}
+
+.container {
+    display: flex;   /* Aktiverer flexbox */
+    flex-direction: row; /* Standard - side ved side */
+    justify-content: center; /* midtstilt */
+    align-items: center; /* midt på høyden */
+    flex-wrap: wrap; /* Lar elementene gå ned på neste linje om de ikke får plass. */
+    gap: 50px; /* Gir mellomrom mellom elementene. */
+
+}
+.item {
+  flex: auto; /* alle får lik plass */
+  border: 2px solid rgb(95, 249, 0);
+  padding: 10px;
+  margin: 10px;
+  justify-content: center; /* midtstilt */
+  align-items: center;
+  background: repeating-linear-gradient(
+    180deg,
+    #021a00 -1px,
+    #064300 6px
+  );
+}
+.imgitem {
+  flex: 1;  
+  height: auto;
+  border: 2px solid rgb(95, 249, 0);
+  align-self: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* Inserting this collapsed row between two flex items will make 
+ * the flex item that comes after it break to a new row */
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.T {
+  font-size: xx-large;
+}
+
+.item2 {
+  flex: auto; /* alle får lik plass */
+  padding: 10px;
+  margin: 10px;
+  justify-content: center; /* midtstilt */
+  align-items: center;
+  text-align: center;
+  font-size: 50px;
+}
