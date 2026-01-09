@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block content %}
+<h1 class="h">Register Inhabitant Data</h1>
+<a href="/" style="text-align: center;">Back to Homepage</a>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <p> Name </p>
+    {{ form.name }}<br>
+    <p> Gender </p>
+    {{ form.gender }}<br>
+    <p> Age </p>
+    {{ form.age }}<br>
+    <p> Blood Type </p>
+    {{ form.blood_type }}<br>
+    <p> Known Diseases </p>
+    {{ form.known_diseases }}<br>
+    <p> Family </p>
+    {{ form.family }}<br>
+    <p> Current Medical Conditions </p>
+    {{ form.current_medical_conditions }}<br>
+    <p> Previous Medical Conditions </p>
+    {{ form.previous_medical_conditions }}<br>
+    <p> Allergies </p>
+    {{ form.allergies }}<br>
+    <p> Strengths </p>
+    {{ form.strengths }}<br>
+    <br>
+        {{ form.submit }}
+</form>
+{% endblock %}

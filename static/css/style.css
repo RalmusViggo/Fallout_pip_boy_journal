@@ -88,6 +88,7 @@ form {
     font-size: large;
     color: rgb(95, 249, 0);
     font-family: 'fixedsys', 'Courier New', Courier, monospace;
+    text-align: center;
 }
 input {
     font-size: large;
@@ -98,6 +99,18 @@ input {
       #021a00 -1px,
       #064300 6px
     );
+}
+.h {
+    font-size: xx-large;
+    color: rgb(95, 249, 0);
+    font-family: 'fixedsys', 'Courier New', Courier, monospace;
+    text-align: center;
+}
+.lo {
+    font-size: large;
+    color: rgb(95, 249, 0);
+    font-family: 'fixedsys', 'Courier New', Courier, monospace;
+    text-align: center;
 }
 label {
     font-size: large;
