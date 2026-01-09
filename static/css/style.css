@@ -37,21 +37,33 @@ nav {
 .sel:hover {
     background-color: #5ff900;
     color: #000000;
-    text-decoration: none;
-    
 }
 
 .sel:focus {
     background-color: #5ff900;
     color: #000000;
-    text-decoration: none;
     
 }
 /* used AI*/
 .sel:hover a {
     color: #000000;
-    text-decoration: none;
 }
+
+.sel:hover div {
+    color: #000000;
+}
+.sel:hover label {
+    color: #000000;
+}
+
+.sel:hover input {
+    background: repeating-linear-gradient(
+      180deg,
+      #021a00 -1px,
+      #004e14 6px
+    );
+}
+
 
 /* .text-block {
   border: 2px solid rgb(95, 249, 0); 
@@ -88,17 +100,24 @@ form {
     font-size: large;
     color: rgb(95, 249, 0);
     font-family: 'fixedsys', 'Courier New', Courier, monospace;
-    text-align: center;
+    text-align: left;
 }
 input {
     font-size: large;
     color: rgb(95, 249, 0);
     font-family: 'fixedsys', 'Courier New', Courier, monospace;
-    background: repeating-linear-gradient(
-      180deg,
-      #021a00 -1px,
-      #064300 6px
-    );
+    background: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0px;
+}
+.a1 {
+    font-size: xx-large;
+    color: rgb(95, 249, 0);
+    font-family: 'fixedsys', 'Courier New', Courier, monospace;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
 }
 .h {
     font-size: xx-large;
