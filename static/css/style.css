@@ -33,12 +33,25 @@ nav {
     top: 0;
     width: 96.5%;
 }
-
+.sel1 {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    /*background-color: #000000;*/
+    font-size: xx-large;
+    color: rgb(95, 249, 0);
+    font-family: 'fixedsys', 'Courier New', Courier, monospace;
+    top: 0;
+    width: 96.5%;
+}
 .sel:hover {
     background-color: #5ff900;
     color: #000000;
 }
-
+.sel1:hover {
+    background-color: #5ff900;
+    color: #000000;
+}
 .sel:focus {
     background-color: #5ff900;
     color: #000000;
@@ -62,6 +75,10 @@ nav {
       #021a00 -1px,
       #004e14 6px
     );
+}
+.sel1:hover label {
+    color: #000000;
+    
 }
 
 
