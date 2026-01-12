@@ -33,7 +33,7 @@ nav {
     top: 0;
     width: 96.5%;
 }
-.sel1 {
+.sel_input {
     display: inline-block;
     padding: 10px;
     margin: 10px;
@@ -48,7 +48,7 @@ nav {
     background-color: #5ff900;
     color: #000000;
 }
-.sel1:hover {
+.sel_input:hover {
     background-color: #5ff900;
     color: #000000;
 }
@@ -69,14 +69,14 @@ nav {
     color: #000000;
 }
 
-.sel:hover input {
+.sel_input:hover input {
     background: repeating-linear-gradient(
       180deg,
       #021a00 -1px,
       #004e14 6px
     );
 }
-.sel1:hover label {
+.sel_input:hover label {
     color: #000000;
     
 }
