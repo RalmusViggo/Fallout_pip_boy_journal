@@ -33,7 +33,7 @@ nav {
     top: 0;
     width: 96.5%;
 }
-.sel_input {
+.sel_reg {
     display: inline-block;
     padding: 10px;
     margin: 10px;
@@ -48,7 +48,7 @@ nav {
     background-color: #5ff900;
     color: #000000;
 }
-.sel_input:hover {
+.sel_reg:hover {
     background-color: #5ff900;
     color: #000000;
 }
@@ -65,18 +65,21 @@ nav {
 .sel:hover div {
     color: #000000;
 }
-.sel:hover label {
+.sel_reg:hover div {
+    color: #000000;
+}
+.sel_reg:hover label {
     color: #000000;
 }
 
-.sel_input:hover input {
+.sel_reg:hover input {
     background: repeating-linear-gradient(
       180deg,
       #021a00 -1px,
       #004e14 6px
     );
 }
-.sel_input:hover label {
+.sel_reg:hover label {
     color: #000000;
     
 }

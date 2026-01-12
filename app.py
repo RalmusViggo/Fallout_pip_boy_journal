@@ -18,7 +18,7 @@ def index():
     return render_template("index.html")
 
 @app.route('/register', methods=['GET', 'POST'])
-def welcome():
+def register():
     form = RegisterForm()
     if form.validate_on_submit():
         name = form.name.data
@@ -43,6 +43,39 @@ def welcome():
         conn.close()
         return redirect("/")
     return render_template("register.html", form=form)
+
+@app.route('/factions')
+def factions():
+    return render_template("factions.html")
+
+@app.route('/factions/atomites')
+def atomites():
+    return render_template("factions/atomites.html")
+
+@app.route('/factions/mutants')
+def mutants():
+    return render_template("factions/mutants.html")
+
+@app.route('/factions/bos')
+def bos():
+    return render_template("factions/bos.html")
+
+@app.route('/factions/caravans')
+def caravans():
+    return render_template("factions/caravans.html")
+
+@app.route('/factions/raiders')
+def raiders():
+    return render_template("factions/raiders.html") 
+
+@app.route('/factions/vault_dwellers')
+def vault_dwellers():
+    return render_template("factions/vault_dwellers.html")
+
+@app.route('/factions/enclave')
+def enclave():
+    return render_template("factions/enclave.html")
+
 
 if __name__ == "__main__":
     app.run()
