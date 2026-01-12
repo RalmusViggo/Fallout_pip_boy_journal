@@ -14,7 +14,7 @@ class RegisterForm(FlaskForm):
     allergies = StringField("Allergies", validators=[InputRequired()])
     strengths = StringField("Strengths", validators=[InputRequired()])
     
-    submit = SubmitField("Submit Data")
+    submit = SubmitField("> Submit Data")
 
 """ class LoginForm(FlaskForm):
     name = StringField("Brukernavn", validators=[InputRequired()])
