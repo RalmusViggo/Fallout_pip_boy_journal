@@ -3,9 +3,9 @@
 
 {% block content %}
 
-<a href="/factions" class="sel"> >Back to Factions</a>
+<a href="{{ url_for('factions') }}" class="sel"> >Back to Factions</a>
 <h1>Church of the Children of Atom</h1>
-<img src="/static/images/atom.png" alt="Emblem of the Church of the Children of Atom" style="display:block; margin-left:auto; margin-right:auto; width:50%;">
+<img src="/static/images/atom.png" class="fac_img" alt="Emblem of the Church of the Children of Atom" >
 
 
 {% endblock %}

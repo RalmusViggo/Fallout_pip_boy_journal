@@ -227,45 +227,10 @@ ol {color: rgb(95, 249, 0);
     gap: 50px; /* Gir mellomrom mellom elementene. */
 
 }
-.item {
-  flex: auto; /* alle får lik plass */
-  border: 2px solid rgb(95, 249, 0);
-  padding: 10px;
-  margin: 10px;
-  justify-content: center; /* midtstilt */
-  align-items: center;
-  background: repeating-linear-gradient(
-    180deg,
-    #021a00 -1px,
-    #064300 6px
-  );
-}
-.imgitem {
-  flex: 1;  
-  height: auto;
-  border: 2px solid rgb(95, 249, 0);
-  align-self: center;
-  padding: 10px;
-  margin: 10px;
-}
-
-/* Inserting this collapsed row between two flex items will make 
- * the flex item that comes after it break to a new row */
-.break {
-  flex-basis: 100%;
-  height: 0;
-}
-
-.T {
-  font-size: xx-large;
-}
-
-.item2 {
-  flex: auto; /* alle får lik plass */
-  padding: 10px;
-  margin: 10px;
-  justify-content: center; /* midtstilt */
-  align-items: center;
-  text-align: center;
-  font-size: 50px;
+.fac_img {
+    max-width: 300px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

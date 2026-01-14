@@ -3,8 +3,8 @@
 
 {% block content %}
 
-<a href="/factions" class="sel"> >Back to Factions</a>
+<a href="{{ url_for('factions') }}" class="sel"> >Back to Factions</a>
 <h1> Brotherhood of Steel </h1>
-<img src="/static/images/bos.png" alt="Brotherhood of Steel Emblem" style="display:block; margin-left:auto; margin-right:auto; width:50%;">
+<img src="/static/images/bos.png" class="fac_img" alt="Brotherhood of Steel Emblem" style="display:block; margin-left:auto; margin-right:auto; width:50%;">
 
 {% endblock %}

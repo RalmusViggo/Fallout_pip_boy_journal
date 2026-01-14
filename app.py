@@ -2,6 +2,7 @@ from flask import Flask, render_template_string, render_template, request, redir
 import mysql.connector
 from forms import RegisterForm
 
+
 app = Flask(__name__)
 app.secret_key = "123"
 
@@ -75,6 +76,55 @@ def vault_dwellers():
 @app.route('/factions/enclave')
 def enclave():
     return render_template("factions/enclave.html")
+
+@app.route('/creatures')
+def creatures():
+    return render_template("creatures.html")
+
+@app.route('/creatures/mutants')
+def creatures_mutants():
+    return render_template("creatures_dir/mutants.html")
+
+@app.route('/creatures/deathclaw')
+def creatures_deathclaw():
+    return render_template("creatures_dir/deathclaw.html")
+
+@app.route('/creatures/ghouls')
+def creatures_ghouls():
+    return render_template("creatures_dir/ghouls.html")
+
+@app.route('/creatures/radscorpion')
+def creatures_radscorpion():
+    return render_template("creatures_dir/radscorpion.html")
+
+@app.route('/creatures/yao_guai')
+def creatures_yao_guai():
+    return render_template("creatures_dir/yao_guai.html")
+
+@app.route('/creatures/vermin')
+def creatures_vermin():
+    return render_template("creatures_dir/vermin.html")
+
+@app.route('/creatures/aquatic')
+def creatures_aquatic():
+    return render_template("creatures_dir/aquatic.html")
+
+@app.route('/creatures/hoofed_mammals')
+def creatures_hoofed_mammals():
+    return render_template("creatures_dir/hoofed_mammals.html")
+
+@app.route('/creatures/mutants/super')
+def super():
+    return render_template("creatures_dir/super.html")
+
+@app.route('/creatures/mutants/nightkin')
+def nightkin():
+    return render_template("creatures_dir/nightkin.html")
+
+@app.route('/creatures/mutants/centaur')
+def centaur():
+    return render_template("creatures_dir/centaur.html")
+
 
 
 if __name__ == "__main__":

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %} Mutants - Creatures {% endblock %}
+
+{% block content %}
+<a href="{{ url_for('creatures') }}" class="sel"> >Back to Creatures</a>
+
+<li> <a href="{{ url_for('super') }}" class="sel"> > Super Mutants</a> </li>
+<li> <a href="{{ url_for('nightkin') }}" class="sel"> > Nightkin</a> </li>
+<li> <a href="{{ url_for('centaur') }}" class="sel"> > Centaurs</a> </li>
+
+{% endblock %}

@@ -3,9 +3,22 @@
 
 {% block content %}
 
-<a href="/factions" class="sel"> >Back to Factions</a>
+<a href="{{ url_for('factions') }}" class="sel"> >Back to Factions</a>
 <h1> Mutants (previously known as Unity or COC(Children of the Cathedral)) </h1>
-<img src="/static/images/coc.png" alt="Mutants(COC) Emblem" style="display:block; margin-left:auto; margin-right:auto; width:50%;">
+<img src="/static/images/coc.png" class="fac_img" alt="Mutants(COC) Emblem" style="display:block; margin-left:auto; margin-right:auto; width:50%;">
 
+<h3> for info about Different Types of Mutants, check the "<a href="{{ url_for('creatures') }}">Creatures</a>" page </h3>
+
+<img src="/static/images/centaur.png" class="fac_img" alt="Centaur">
+<h1> Children of the Cathedral (COC) </h1>
+<p>
+The Children of the Cathedral (destroyed) was a religious organization in New California which secretly served the Master's mutant cult, the Unity. They presented themselves as a benevolent religious movement and infiltrated wasteland communities by offering medical services, and would then use these arrangements to support the Master's army and send potential converts to the Cathedral. The organization was managed by Morpheus to act as the public face of the Unity, and ease the transition of power by guiding human culture.
+The name is commonly shortened to Children or Cathedral. It's abbreviated as COC, with CHOC used as a file naming convention.
+</p>
+
+<h1> The Unity </h1>
+<p>
+The Unity (also called the Master's army)(also destroyed) was the military and political organization created by the Master to advance his agenda, serving as the primary antagonists in Fallout. In his desire to forcefully evolve humans into a single, perfect race removing the inequalities that are the cause of strife among humans, the Master used the Forced Evolutionary Virus (FEV) on captured humans at Mariposa Military Base to uplift them into a new race colloquially known as super mutants by most people of New California.
+</p>
 
 {% endblock %}

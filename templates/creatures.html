@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %} Creatures of the wasteland {% endblock %}
+
+{% block content %}
+<h1>Creatures of the wasteland</h1>
+    <li> <a href="{{ url_for('creatures_mutants') }}" class="sel"> > Mutants</a> </li>
+    <li> <a href="{{ url_for('creatures_deathclaw') }}" class="sel"> > Deathclaw</a> </li>
+    <li> <a href="{{ url_for('creatures_ghouls') }}" class="sel"> > Ghouls</a> </li>
+    <li> <a href="{{ url_for('creatures_radscorpion') }}" class="sel"> > Radscorpion</a> </li>
+    <li> <a href="{{ url_for('creatures_yao_guai') }}" class="sel"> > Yao Guai</a> </li>
+    <li> <a href="{{ url_for('creatures_vermin') }}" class="sel"> > Vermin</a> </li>
+    <li> <a href="{{ url_for('creatures_aquatic') }}" class="sel"> > Aquatic Creatures</a> </li>
+    <li> <a href="{{ url_for('creatures_hoofed_mammals') }}" class="sel"> > Hoofed Mammals</a> </li>
+{%endblock %}

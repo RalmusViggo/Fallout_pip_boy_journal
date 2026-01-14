@@ -2,8 +2,8 @@
 {% block title %} Vault Dwellers - Factions {% endblock %}
 
 {% block content %}
-<a href="/factions" class="sel"> >Back to Factions</a>
+<a href="{{ url_for('factions') }}" class="sel"> >Back to Factions</a>
 <h1> Vault Dwellers </h1>
-<img src="/static/images/vault.png" alt="Vault Dwellers Emblem" style="display:block; margin-left:auto; margin-right:auto; width:50%;">
+<img src="/static/images/vault.png" class="fac_img" alt="Vault Dwellers Emblem">
 
 {% endblock %}
