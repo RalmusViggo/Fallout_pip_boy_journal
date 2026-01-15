@@ -36,4 +36,47 @@
         <img src="{{ url_for('static', filename='images/larva.png') }}" alt="Bloatfly larva" class="art2">
     </div>
 </div>
+<hr>
+<div class="text-block2">
+        <h2> Audio Files </h2>
+        <p> Below you will find various noises the bloatflies makes. </p>
+</div>
+<hr>
+<div class="container3">
+    
+    <div class="audio-block">
+        <p> Bloatfly Attacking With Dart: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/blowfly_attackdart.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Bloatfly Attack noise 2: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/blowfly_fire_3d_loop.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Bloatfly Death: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/blowfly_death.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div class="audio-block2">
+        <p> Injured Bloatfly: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/blowfly_injured.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Bloatfly Movement Sound: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/blowfly_mvmt_lpm.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Bloatfly Idle: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/blowfly_idle_lp.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</div>
 {% endblock %}

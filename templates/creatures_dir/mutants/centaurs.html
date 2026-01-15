@@ -34,6 +34,56 @@
         <img src="{{ url_for('static', filename='images/cent.png') }}" alt="Centaur Image" class="mutie2">
     </div>
 </div>
-
+<hr>
+ <div class="text-block2">
+        <h2> Audio Files </h2>
+        <p> Below you will find various noises a centaur makes. </p>
+</div>
+<hr>
+<div class="container3">
+    <div class="audio-block">
+        <p> Chasing Centaur: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/centaur_chasevox.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Centaur Tongue Lash: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/centaur_attack.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Centaur Spit Attack: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/centaur_attackspit_03.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Centaur Death: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/centaur_death_01.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div class="audio-block2">
+        <p> Injured Centaur: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/centaur_injured_01.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Centaur Roaming/Conscious: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/centaur_conscious_lp.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Centaur Idle: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/centaur_idle_scan.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Centaur Walking: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/centaur_walkbreath_01.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
 
 {% endblock %}
