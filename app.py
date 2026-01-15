@@ -115,15 +115,14 @@ def creatures_hoofed_mammals():
 
 @app.route('/creatures/mutants/super')
 def super():
-    return render_template("creatures_dir/super.html")
+    return render_template("creatures_dir/mutants/super.html")
 
 @app.route('/creatures/mutants/nightkin')
 def nightkin():
-    return render_template("creatures_dir/nightkin.html")
-
-@app.route('/creatures/mutants/centaur')
+    return render_template("creatures_dir/mutants/nightkin.html")
+@app.route('/creatures/mutants/centaurs')
 def centaur():
-    return render_template("creatures_dir/centaur.html")
+    return render_template("creatures_dir/mutants/centaurs.html")
 
 
 

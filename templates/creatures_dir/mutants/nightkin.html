@@ -2,7 +2,29 @@
 {% block title %} Nightkin - Creatures {% endblock %}
 
 {% block content %}
+<a href="{{ url_for('creatures') }}" class="sel"> >Back to Creatures</a>
+<a href="{{ url_for('creatures_mutants') }}" class="sel"> >Back to Mutants</a>
 <h1> Nightkin </h1>
-<p> Nightkin is a name for the elite super mutants of the Unity, created by the Master at Mariposa Military Base. The mutants were the apex of mutant development, corresponding with the Master's vision for the future of humanity. As the most successful examples of the transformation, nightkin considered exposure to FEV to be an unambiguous honor and a source of pride. They were provided with the finest equipment the Unity could muster, including Stealth Boys. The Master's death at the hands of the Vault Dweller and destruction of the Unity was a traumatic experience, scattering the nightkin across the West, relying on their stealth gear to evade pursuers. Their reliance on this stealth technology has become an addiction, causing maladaptive behavior, paranoia, delusions, affected speech, brain damage, and most commonly of all, schizophrenia.</p>
-<h2> Known populations of Nightkin </h2>
+<hr>
+<div class="container">
+    <div class="text-block">
+        <p> Nightkin is a name for the elite super mutants of the Unity, created by the Master at Mariposa Military Base. The mutants were the apex of mutant development, corresponding with the Master's vision for the future of humanity. As the most successful examples of the transformation, nightkin considered exposure to FEV to be an unambiguous honor and a source of pride. They were provided with the finest equipment the Unity could muster, including Stealth Boys. The Master's death at the hands of the Vault Dweller and destruction of the Unity was a traumatic experience, scattering the nightkin across the West, relying on their stealth gear to evade pursuers. Their reliance on this stealth technology has become an addiction, causing maladaptive behavior, paranoia, delusions, affected speech, brain damage, and most commonly of all, schizophrenia.</p>
+        <h2> Nightkin — Origins, Culture, and Present Condition </h2>
+        <p> The nightkin are an elite offshoot of the original super mutants, created through controlled exposure to the Forced Evolutionary Virus at the Mariposa Military Base. Those whose intellect survived the transformation intact were set apart and elevated above their peers. They were stronger, more disciplined, and entrusted with the Unity’s most sensitive duties. Their distinctive black uniforms and superior equipment marked their status, and they quickly became symbols of authority and fear. </p>
+        <p> From their inception, the nightkin were shaped not only by physical alteration but by ideology. Many were deeply influenced by the Master’s psychic presence, some even communicating with him directly. They were taught to see themselves as chosen—proof of humanity’s future rather than its ruin. This belief became a vital coping mechanism, allowing them to endure sterility, extreme violence, and morally corrosive tasks such as assassinations, espionage, and the disposal of failed experiments. Confidence, arrogance, and ritualized intimidation were common traits, particularly in combat, where they embraced a doctrine of superiority and inevitability. </p>
+        <p> Despite their reputation, the nightkin were never mindless brutes. They retained much of their humanity, forming friendships, engaging in humor and conversation, and maintaining emotional bonds with both mutants and humans. Some approached the Unity as a faith, leading prayers and meditations, while others viewed themselves simply as reborn humans pursuing peace through strength. A smaller number withdrew into solitude, seeking quiet refuge rather than conquest. </p>
+    </div>
+    <div class="img-block">
+        <img src="{{ url_for('static', filename='images/nightkin.png') }}" alt="Nightkin Image" class="mutie">
+    </div>
+</div>
+<div class="container2">
+    <div class="text-block2">
+        <p> The collapse of the Unity scattered the nightkin across the wasteland. Many reevaluated their past, remembering the Unity as a lost golden age and preferring their mutant existence to the perceived flaws of humanity. For a time, the term nightkin faded, as former elites attempted to integrate into new communities or live quietly among other mutants. </p>
+        <p> Their current condition, however, is defined by a devastating legacy. Prolonged use of Stealth Boys—once standard equipment for nightkin operatives—caused severe neurological damage. Over time, stealth radiation altered brain chemistry, resulting in hallucinations, paranoia, schizophrenia, and fractured identities. Their skin darkened to a deep blue, and the name nightkin returned, now synonymous with suffering rather than status. </p>
+        <p> Today, many nightkin struggle with a powerful fear of being seen and an obsessive dependence on stealth technology, often turning violent in pursuit of it. Their intelligence and charisma remain intact enough to make them dangerous leaders, and nightkin commonly gravitate toward strong figures who echo the certainty once provided by the Master. This longing makes them vulnerable to demagogues, false prophets, and distorted memories of past psychic command. </p>
+        <p> Not all nightkin succumb to madness or brutality. Some seek treatment, others isolate themselves, and a rare few adapt in unexpected ways, developing heightened perception or psychic sensitivity as a byproduct of their condition. Still, mental illness remains the defining crisis of nightkin existence. Medication can suppress symptoms, but often at the cost of memory and identity, forcing painful choices between stability and selfhood. </p>
+        <p> In the present day, the nightkin are neither united nor extinct. They are scattered remnants of a failed vision—once humanity’s supposed salvation, now living reminders of how purpose, faith, and suffering can intertwine. Their struggle is ongoing, shaped by loss, nostalgia, and the unanswered question of whether they can ever truly move beyond the shadow of their creator. </p>
+    </div>    
+</div>
 {% endblock %}
