@@ -302,3 +302,53 @@ hr {
     margin-left: auto;
     margin-right: auto;
 }
+
+.art {
+    max-width: 550px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.art2 {
+    max-width: 400px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container3 {
+    display: flex;   /* Aktiverer flexbox */
+    flex-direction: row; /* Standard - side ved side */
+    flex-wrap: nowrap;
+    justify-content: center; /* Sentrerer innholdet horisontalt */
+    align-content: center;
+}
+.audio-block {
+    display: block;
+    justify-content: left;
+    align-content: left;
+    padding: 1px;
+    margin: 150px;
+}
+.audio-block2 {
+    display: block;
+    justify-content: right;
+    align-content: right;
+    padding: 1px;
+    margin: 150px;
+}
+audio {
+    color: rgb(95, 249, 0);
+    font-family: 'fixedsys', 'Courier New', Courier, monospace;
+    width: 400px;
+
+}
+.cr_audio {
+    max-width: 100%;
+}
+audio::-webkit-media-controls-panel {
+    background-color: rgb(95, 249, 0); /* Change this to your desired color */
+}

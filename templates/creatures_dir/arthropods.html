@@ -3,8 +3,12 @@
 
 {% block content %}
 <a href="{{ url_for('creatures') }}" class="sel"> > Back to Creatures</a>
-
-<li> <a href="{{ url_for('') }}" class="sel"> > </a> </li>
-<li> <a href="{{ url_for('') }}" class="sel"> > </a> </li>
-<li> <a href="{{ url_for('') }}" class="sel"> > </a> </li>
+<hr>
+<h1> Different Arthropods </h1>
+<li> <a href="{{ url_for('bloatfly') }}" class="sel"> > Bloatflies</a> </li>
+<li> <a href="{{ url_for('bloodbug') }}" class="sel"> > Bloodbugs</a> </li>
+<li> <a href="{{ url_for('cazador') }}" class="sel"> > Cazadors</a> </li>
+<li> <a href="{{ url_for('giant_ant') }}" class="sel"> > Giant Ants</a> </li>
+<li> <a href="{{ url_for('radroach') }}" class="sel"> > Radroaches</a> </li>
+<li> <a href="{{ url_for('radscorpion') }}" class="sel"> > Radscorpions</a> </li>
 {% endblock %}

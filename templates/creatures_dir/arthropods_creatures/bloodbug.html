@@ -4,4 +4,49 @@
 {% block content %}
 <a href="{{ url_for('creatures') }}" class="sel"> > Back to Creatures</a>
 <a href="{{ url_for('creatures_arthropods') }}" class="sel"> > Back to Arthropods</a>
+
+<h1> Bloodbug </h1>
+<div class="container">
+    <div class="text-block">
+        <P>Bloodbugs are a species of mutated, ectoparasitic mosquitoes.</P>
+        <hr>
+        <h2> Background </h2>
+        <p> Mutated from the humble marsh mosquito after the Great War, bloodbugs have become a capable predator in the Commonwealth and Appalachia. Around the size of a dog, bloodbugs attack by stabbing their knife-like proboscis into soft tissue. </p>
+        <p> Although they feed upon the blood of their victims, they will also often spray this blood back into their prey's eyes to distort their vision. The bog standard of bloodbugs, these mutated insects attack in swarms, piercing their prey with a needle like proboscis and feeding on their blood. </p>
+        <hr>
+        <h2> Characteristics </h2>
+        <hr>
+        <h3> Biology </h3>
+        <p> Bloodbugs appear to be roughly two feet in length from the head to the tip of the abdomen. Bloodbugs possess muddy brown coloration which allows them to camouflage effectively into the environment of the Commonwealth and Appalachia. Like their pre-War ancestors, bloodbugs possess six long double-jointed limbs, one pair of finely-veined wings, a small expandable sac to hold blood, and a long, pointed proboscis that extends from between two compound eyes. </p>
+        <p> The proboscis is the bloodbug's primary means of assault, sinking it into prey almost like a syringe and inflicting minor-to-intermediate radiation poisoning on the victim. The proboscis can be collected upon the bloodbug's death </p>
+        <hr>
+    </div>
+    <div class="image-block">
+        <img src="{{ url_for('static', filename='images/bloodbug.png') }}" alt="Bloodbug" class="art">
+    </div>
+</div>
+<div class="container2">
+    <div class="text-block2">
+        <h2> Variants </h2>
+        <hr>
+        <h3> Bloodbug hatchling </h3>
+        <p> A younger variant of the adult bloodbug, their exoskeleton has not had time to harden to the extent of more mature bloodbugs, thus they are paler and weaker. </p>
+        <hr>
+        <h3> Bloodbug</h3>
+        <p> The most common variant of the bloodbug; the typical mature form. They can be found in numerous locations throughout the Commonwealth and Appalachia. </p>
+        <hr>
+        <h3> Red widow bloodbug</h3>
+        <p> A rare variant of the bloodbug. They are of similar size to normal bloodbugs, but their bodies are tinted red. They are markedly more aggressive and much deadlier than other variants. </p>
+        <hr>
+        <h3> Infected bloodbug </h3>
+        <p> They possess more health than a normal adult bloodbug and deal more damage per hit. Some specimens also have green exoskeletons. the name suggests that they are infected with some kind of disease. </p>
+        <hr>
+        <h3> Glowing bloodbug </h3>
+        <p> A rare variant inundated with radiation to such an extent that it glows. It is stronger and more resilient than many of the other bloodbug variants. </p>
+        <hr>
+        <h3> Vampiric bloodbug </h3>
+        <p> The vampiric bloodbug can be found in various locations throughout the Commonwealth and Appalachia. It is the strongest variant of these creatures, and is much more deadly than its counterparts. </p>
+    </div>
+
+</div>
 {% endblock %}

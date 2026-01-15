@@ -149,5 +149,29 @@ def gulper():
 def angler():
     return render_template("creatures_dir/aquatic_creatures/angler.html")
 
+@app.route('/creatures/arthropods_creatures/bloatfly')
+def bloatfly():
+    return render_template("creatures_dir/arthropods_creatures/bloatfly.html")
+
+@app.route('/creatures/arthropods_creatures/bloodbug')
+def bloodbug():
+    return render_template("creatures_dir/arthropods_creatures/bloodbug.html")
+
+@app.route('/creatures/arthropods_creatures/cazador')
+def cazador():
+    return render_template("creatures_dir/arthropods_creatures/cazador.html")
+
+@app.route('/creatures/arthropods_creatures/giant_ant')
+def giant_ant():
+    return render_template("creatures_dir/arthropods_creatures/giant_ant.html")
+
+@app.route('/creatures/arthropods_creatures/radroach')
+def radroach():
+    return render_template("creatures_dir/arthropods_creatures/radroach.html")
+
+@app.route('/creatures/arthropods_creatures/radscorpion')
+def radscorpion():
+    return render_template("creatures_dir/arthropods_creatures/radscorpion.html")
+
 if __name__ == "__main__":
     app.run()

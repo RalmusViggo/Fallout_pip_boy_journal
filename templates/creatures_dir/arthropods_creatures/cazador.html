@@ -1,7 +1,82 @@
 {% extends "base.html" %}
-{% block title %} Cazadors - Creatures {% endblock %}
+{% block title %} Cazadores - Creatures {% endblock %}
 
 {% block content %}
 <a href="{{ url_for('creatures') }}" class="sel"> > Back to Creatures</a>
 <a href="{{ url_for('creatures_arthropods') }}" class="sel"> > Back to Arthropods</a>
+
+<h1> Cazadores </h1>
+<hr>
+<div class="container"> 
+    <div class="text-block">
+        <p> Cazadores (Spanish for "hunters") are mutated insects found in the Mojave Wasteland</p>
+        <hr>
+        <h2> Background </h2>
+        <p> Mutated and enlarged in the laboratories of Big MT, cazadores were created as the offshoot of DNA experiments performed by Doctor Borous on tarantula hawk wasps. Borous' memories of when these experiments took place however have become muddled; he is confident that they took place on a Tuesday, possibly in May of 2003. Formerly, the lab-grown cazadores were confined to the Z-14 Pepsinae DNA splicing lab in Big MT, but groups of the mutant insects have managed to escape the Big MT crater and moved to neighboring areas, such as the Mojave Wasteland and Zion Canyon, and rapidly multiplied their numbers in recent years. Doctor Borous confidently denies that they have escaped from Big MT or have the ability to breed, which is shown to be false. </p>
+        <p> With the population widespread throughout the wasteland, they have come in contact with many groups and believed to have been given their name by Spanish-speakers of the regions they have propagated. </p>
+        <hr>
+    </div>
+    <div class="image-block">
+        <img src="{{ url_for('static', filename='images/cazador.png') }}" alt="Cazador" class="art">
+    </div>
+</div>
+<div class="container2">
+    <div class="text-block2">
+        <h2> Characteristics </h2>
+        <p> Cazadores have a quick and erratic flight pattern. They are most often encountered in swarms of four or more, with the occasional strays flying in the outlying area. Their venomous attacks can lead to a quick death if they succeed in poisoning their target. The spikes on their back rise and fall, both when idle and when attacking. </p>
+        <p> Cazadores are more common in mountainous regions of the Mojave Wasteland, although some swarms can be found near lakes in lower areas. They create large basket-shaped nests, many of which can be seen at places such as Bonnie Springs, cazador nest, west of the Brewer's beer bootlegging, the road heading towards Jacobstown, north of Goodsprings, inside various tents in the tribal village and the boathouse at Callville Bay, with the cazadores' original breeding ground being the Z-14 Pepsinae DNA splicing lab in Big MT. They frequently compete with other wildlife like night stalkers for prey. </p>
+        <hr>
+    </div>
+    <div class="text-block2">
+        <h2> Audio Files </h2>
+        <p> Below you will find various noises the cazador makes. </p>
+    </div>
+</div>
+<hr>
+<div class="container3">
+    <div class="audio-block">
+        <p> Chasing cazador: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/cazadore_chasevox.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Cazador Falling: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/cazadore_bodyfall.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Conscious/Roaming Cazaror: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/cazadore_consciouslp.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Cazador Death: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/cazadore_death.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div class="audio-block2">
+        <p> Cazador Hit Sound 1: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/cazadore_hit_01.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Cazador Hit Sound 2: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/cazadore_hit_02.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Cazador Hit Sound 3: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/cazadore_hit_03.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Cazador Wing Turn: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/cazadore_wingturn.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</div>
 {% endblock %}
