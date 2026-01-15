@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %} Gulper - Creatures {% endblock %}
+
+{% block content %}
+<a href="{{ url_for('creatures') }}" class="sel"> > Back to Creatures</a>
+<a href="{{ url_for('creatures_aquatic') }}" class="sel"> > Back to Aquatic Creatures</a>
+
+{% endblock %}

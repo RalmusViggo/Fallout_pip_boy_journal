@@ -113,6 +113,18 @@ def creatures_aquatic():
 def creatures_hoofed_mammals():
     return render_template("creatures_dir/hoofed_mammals.html")
 
+@app.route('/creatures/arthropods')
+def creatures_arthropods():
+    return render_template("creatures_dir/arthropods.html")
+
+@app.route('/creatures/canines')
+def creatures_canines():
+    return render_template("creatures_dir/canines.html")
+
+@app.route('/creatures/geckos')
+def creatures_geckos():
+    return render_template("creatures_dir/geckos.html")
+
 @app.route('/creatures/mutants/super')
 def super():
     return render_template("creatures_dir/mutants/super.html")
@@ -125,6 +137,13 @@ def centaur():
     return render_template("creatures_dir/mutants/centaurs.html")
 
 
+@app.route('/creatures/aquatic_creatures/mirelurks')
+def mirelurks():
+    return render_template("creatures_dir/aquatic_creatures/mirelurks.html")
+
+@app.route('/creatures/aquatic_creatures/gulper')
+def gulper():
+    return render_template("creatures_dir/aquatic_creatures/gulper.html")
 
 if __name__ == "__main__":
     app.run()
