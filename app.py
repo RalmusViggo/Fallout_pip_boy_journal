@@ -145,5 +145,9 @@ def mirelurks():
 def gulper():
     return render_template("creatures_dir/aquatic_creatures/gulper.html")
 
+@app.route('/creatures/aquatic_creatures/angler')
+def angler():
+    return render_template("creatures_dir/aquatic_creatures/angler.html")
+
 if __name__ == "__main__":
     app.run()

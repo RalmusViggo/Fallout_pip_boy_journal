@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %} Angler - Creatures {% endblock %}
+
+{% block content %}
+<a href="{{ url_for('creatures') }}" class="sel"> > Back to Creatures</a>
+<a href="{{ url_for('creatures_aquatic') }}" class="sel"> > Back to Aquatic Creatures</a>
+<h1> Anglers </h1>
+<div class="container">
+    <div class="text-block">
+        <h2> Characteristics </h2>
+        <hr>
+        <h2> Biology </h2>
+        <p> Anglers are aggressive creatures native to the Island of Far Harbour. They are usually found living in swamps or rivers where lure weed is present, sometimes hiding under the surface to ambush prey. The fleshy bioluminescent growth atop its head (similar to an anglerfish's illicium) acts as a camouflage for the predator, effectively disguising it as the surrounding lure weed to fool its prey. </p>
+        <h2> Attributes </h2>
+        <p> The angler is an aggressive creature with the ability to absorb the fog and spit it out like a fireball, inflicting incendiary damage to any target it is able to hit. In combat, they often rely on these long ranged attacks but have been observed to charge at their prey and use their claws, though often they will halt mid charge to use their preferred method. </p>
+        <p> With V.A.T.S. or a very high perception, you can spot these creatures hiding among lure weed ahead of an ambush and avoid the surprise attack. Even without using it, though, the angler's illicium can be distinguished from the plant by the lack of leaves of a single appendage resting on the water's surface. Sometimes, the angler's head can be visible under the surface and mistaken for these leaves from afar but will remain submerged until the prey is close enough. Getting too close will alert the angler, causing it to spring from the water and engage. </p>
+    </div>
+    <div class="img-block">
+        <img src="{{ url_for('static', filename='images/angler.png') }}" alt="Angler" class="aqua3">
+    </div>
+</div>
+<div class="container2">
+    <div class="text-block2">
+        <p> Anglers' energy resistance is much higher than their damage resistance, making ballistic or melee weapons the preferable choice for engaging them in combat. </p>
+        <hr>
+        <h2> Variants </h2>
+        <hr>
+        <h3> Normal Angler </h3>
+        <p> This is the most common variant of the angler and therefore the weakest. They are mostly found hiding among lure weed, sometimes with other anglers. </p>
+        <hr>
+        <h3> Glowing angler </h3>
+        <p> The glowing angler is stronger than the basic and lantern angler variants. Like the other glowing variant creatures in the wasteland, it has absorbed massive amounts of radiation, and now visibly glows green which grants it the ability to deal radiation damage in a small radius around it. </p>
+        <hr>
+        <h3> Albino angler </h3>
+        <p> The second strongest variant of angler, a genetic mutation has causes these anglers to not produce melanin and thus appear much more pale. </p>
+        <hr>
+        <h3> Venomous angler </h3>
+        <p> Venomous anglers are the most powerful variant of their species. Visually, they have bluish gray skin unlike others of their kind. </p>
+    </div> 
+</div>
+
+{% endblock %}

@@ -272,3 +272,33 @@ hr {
   flex-basis: 100%;
   height: 0; /* Ensures it takes no vertical space */
 }
+
+.aqua {
+    max-width: 400px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.aqua2 {
+    max-width: 250px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aqua3 {
+    max-width: 500px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.aqua4 {
+    max-width: 550px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
