@@ -4,4 +4,91 @@
 {% block content %}
 <a href="{{ url_for('creatures') }}" class="sel"> > Back to Creatures</a>
 <a href="{{ url_for('creatures_arthropods') }}" class="sel"> > Back to Arthropods</a>
+<h1> Giant Ants </h1>
+<div class="container">
+    <div class="text-block">
+        <p> Giant ants are hostile creatures commonly found in the wasteland, including the former state of California, the Capital Wasteland, the Mojave Wasteland, the Commonwealth and Appalachia. </p>
+        <h2> Background </h2>
+        <p> These mutated arthropods, of order Hymenoptera, family Formicidae, and genus Camponotus were exposed to large levels of radiation, growing larger. </p>
+        <hr>
+        <h2> Variants </h2>
+        <hr>
+        <h3> Ant </h3>
+        <p> Large and small forager ants make up the bulk of these ants' colonies, while soldier ants guard them to apply defense. Small, flight-enabled swarms also exist and act together as if by a hive mind in the group. Ants are not a serious threat, only being dangerous when swarming the player character due to encroachment of their territories. </p>
+        <hr>
+    </div>
+    <div class="image-block">
+        <img src="{{ url_for('static', filename='images/ant.png') }}" alt="Giant Ant" class="art">
+    </div>
+</div>
+<div class="container2">
+    <div class="text-block2">
+        <h3> Giant ant </h3>
+        <p> Giant ants are large insectoids inhabiting the area earlier known as Northern California and Oregon, and tend to live in dark places, such as caverns, and can be found in Arroyo and Broken Hills. As they are insects they have three pairs of legs, and a powerful exoskeleton. They are also prone to turn into a frenzy, should their primary sense organ, their antenna, be damaged. </p>
+        <hr>
+        <h3> Giant ant queen </h3>
+        <p> The heart of the swarm, a giant ant queen is significantly larger than drones and soldiers and capable of spitting acid at attackers. However, her large size renders her largely immobile, while the wings are little more than a vestigial limb, capable of threat displays, but little beyond that. The queen is roughly four to five times larger than the average giant ant. When threatened, she buzzes her wings and will hiss at the enemy. She will then proceed to spit an acidic saliva at the enemy in an attempt to ward them off. She cannot move much, so avoidance is easy, especially in smaller spaces. </p>
+        <hr>
+        <h3> Giant soldier ant </h3>
+        <p> These are the colony's main defense against intruders. They are plentiful and can often overwhelm an enemy by either running it off or killing it. This ant can often be found accompanying smaller ants as they forage. </p>
+        <hr>
+        <h3> Giant worker ant </h3>
+        <p> As their name suggests, these ants do most of the work around the colony. </p>
+        <hr>
+        <h3> Mutated forager ant </h3>
+        <p> They are friendly and won't attack, even if they are attacked. </p>
+    </div>
+</div>
+<hr>
+<div class="text-block2">
+        <h2> Audio Files </h2>
+        <p> Below you will find various noises the giant ants make. </p>
+</div>
+<hr>
+<div class="container3">
+    <div class="audio-block">
+        <p> Ant Attacking: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/ant_attack.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Ant Death: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/ant_death.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Ant Idle: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/ant_idle.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Ant Queen Spit Attack: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/antqueen_attack_spit.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div class="audio-block2">
+        <p> Injured Ant: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/ant_injured.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Ant Strafe: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/ant_strafevox.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Ant Warning: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/ant_warning.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Injured Ant Queen: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/antqueen_injured.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</div>
 {% endblock %}

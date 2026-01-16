@@ -318,6 +318,13 @@ hr {
     margin-left: auto;
     margin-right: auto;
 }
+.art3 {
+    max-width: 330px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .container3 {
     display: flex;   /* Aktiverer flexbox */
