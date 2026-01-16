@@ -359,3 +359,9 @@ audio {
 audio::-webkit-media-controls-panel {
     background-color: rgb(95, 249, 0); /* Change this to your desired color */
 }
+
+h3 {
+    font-size: 21px;
+    color: rgb(95, 249, 0);
+    font-family: 'fixedsys', 'Courier New', Courier, monospace;
+}

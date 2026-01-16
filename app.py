@@ -173,5 +173,18 @@ def radroach():
 def radscorpion():
     return render_template("creatures_dir/arthropods_creatures/radscorpion.html")
 
+@app.route('/creatures/canines_creatures/dog')
+def dog():
+    return render_template("creatures_dir/canines_creatures/dog.html")
+
+@app.route('/creatures/canines_creatures/mongrel')
+def mongrel():
+    return render_template("/creatures/canines_creatures/mongrel.html")
+
+
+
+
+
+
 if __name__ == "__main__":
     app.run()

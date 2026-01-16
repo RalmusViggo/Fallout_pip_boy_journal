@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %} Dog - Canines {% endblock %}
+
+{% block content %}
+<a href="{{ url_for('creatures') }}" class="sel"> > Back to Creatures</a>
+<a href="{{ url_for('creatures_canines') }}" class="sel"> > Back to Canines</a>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %} Mutant Hound - Canines {% endblock %}
+
+{% block content %}
+<a href="{{ url_for('creatures') }}" class="sel"> > Back to Creatures</a>
+<a href="{{ url_for('creatures_canines') }}" class="sel"> > Back to Canines</a>
+<h1> Mutant Hound </h1>
+<div class="container">
+    <div class="text-block">
+        <p> Mutant hounds or FEV hounds are creatures found in the Commonwealth and Appalachia. </p>
+        <h2> Background </h2>
+        <p> These are dogs that have undergone major mutations from being exposed to the Forced Evolutionary Virus. Usually, they are accompanying super mutants. They may have been created in the FEV lab of the Institute, along with the rest of the super mutants that are seen throughout the Commonwealth, but they are also found in Appalachia. </p>
+        <h2> Characteristics </h2>
+        <h3> Biology </h3>
+    </div>
+    <div class="image-block">
+        <img src="{{ url_for('static', filename='images/creatures/canines/mutant_hound.jpg') }}" alt="Mutant Hound">
+    </div>
+
+{% endblock %}
