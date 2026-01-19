@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block title %} Cyberdog - Canines {% endblock %}
+
+{% block content %}
+<a href="{{ url_for('creatures') }}" class="sel"> > Back to Creatures</a>
+<a href="{{ url_for('creatures_canines') }}" class="sel"> > Back to Canines</a>
+<hr>
+<h1> Cyberdogs </h1>
+<div class="container">
+    <div class="text-block">
+        <p> Cyberdogs, also called cyber-dogs or cyber-hounds, are mechanically enhanced canines found, albeit rarely, in the wasteland. </p>
+        <hr>
+        <h2> Background </h2>
+        <p> Cyberdogs are cybernetically augmented dogs which incorporate both organic and mechanical parts in their being. The abilities of individual cyberdogs vary from dog to dog, but as a rule, they are all physically superior to their organic counterparts and are far more long lived, with advanced models being intelligent enough for conversation. </p>
+        <p> Cyberdogs are rare and creating one is extremely difficult, requiring both a high degree of technical sophistication and generalized breeding and training programs. As such, they have only been utilized in scale by technologically advanced organizations such as the pre-War US government, the Enclave and Big MT. Big MT even took things one step further and created weapons (like the K9000) which used a dog’s brain as its central processor and could sniff out and lock onto targets. </p>
+        <p> In addition to military-grade dogs, Big MT also produced lesser variants for the nation's more affluent police departments, allegedly to sniff out communists within society. Denver in particular had a large supply of cyber police dogs, and they still roam the streets. </p>
+    </div>
+    <div class="image-block">
+        <img src="{{ url_for('static', filename='images/cyberdog.png') }}" alt="Cyberdog" class="can">
+    </div>
+</div>
+<hr>
+<div class="container2">
+    <div class="text-block">
+        <h2> Characteristics </h2>
+        <hr> 
+        <h3> Cybernetic canines models </h3>
+        <p> Cyberdogs have the appearance of cybernetic canines (although two exceptions exist) with a yellow sclera (only the "Cyber-Hound Mk III police model" have a normal, white sclera). Cyberdogs of this type are also called "K-9 units." Despite being highly modified with electronic parts, they are not affected by pulse weapons. </p>
+        <p> Their modifications include: </p>
+        <ul>
+            <li> Robotic enhancements to much of the body, including replacement limbs and artificial tail. </li>
+            <li> Replacement of the mandible with a robotic jaw and metal bottom teeth. </li>
+            <li> Brain removed from the skull and placed in a protective container above the head, allowing them to check their organic and cybernetic system as well as improving their perception. This brain can be swapped out for another, as a cyberdog can suffer neural degeneration over time resulting in the brain abruptly shutting down. Once swapped out, the cyberdog keeps the same personality, its memories and mannerisms it had before becoming a cyberdog, with the additional personality of the fresh dog brain being added into the mix, possibly creating a mix of attributes. </li>
+            <li> Replacement of most vital organs with high-tech artificial implants, allowing cyberdogs to live indefinitely so long as the brain is replaced periodically (a healthy brain can live over 200 years). </li>
+            <li> Motivator circuit integrated into the cyberdog acting like a drive mechanism. If removed, the cyberdog's legs will be rendered immobile. </li>
+            <li> If cyberdogs die, it is possible for them to be reconstructed or fixed. </li>
+        </ul>
+        <hr class="short">
+        <p> Some standard cyberdog models are: </p>
+        <ul>
+            <li> Cyber-Hound Mk II personal security model, with a light gray coat, a cybernetic right eye and built for personal security. </li>
+            <li> Cyber-Hound Mk III law enforcement officer support model, with a light brown coat and built for pursuit. </li>
+            <li> Cyber-Hound Mk III police model, with a dark brown coat and built for police work. </li>
+            <li> Cyber-Hound Mk III military model, with a dark coat, green-colored robotic parts, vocal enhancements allowing the cyberdog to produce powerful sonic waves when barking and built for military mission. </li>
+        </ul>
+        <hr class="short">
+        <p> Unique models include K-9 and Gabe. K-9 was created by the Dr. Schreber in the Enclave outpost of Navarro and based on the "Cyber-Hound Mk II personal security model." He includes all the standard modifications above with: </p>
+        <ul> 
+            <li> Enhancements to the brain allowing greater Intelligence superior to that of humans, able to use the large panel of human expression like jokes, sarcasm and have a stronger personality able to be at odds with his master and to disobey. It can also perform repairs on it itself to a certain degree. </li>
+            <li> Vocal organs allowing speech in multiple languages. </li>
+        </ul>
+        <hr class="short">
+        <p> Gabe was created by the Dr. Borous in the Big Mountain Research and Development Center and based on the "Cyber-Hound Mk III police model." He includes all the standard modifications above (excluding the speech capability) with: </p>
+        <ul>
+            <li> Biological enhancements with a huge intake of psycho, becoming as large as a human, more aggressive and more powerful. </li>
+            <li> Cyberdog atomic core integrated into his body, triggered with a countdown of 10 seconds after his death and causes a miniature atomic explosion of approximately with a 30-foot blast radius. </li>
+        </ul>
+        <hr class="short">
+        <h3> Weapon models </h3>
+        <p> A weapon model (and an outstanding exception to the standard cybernetic canine's appearance) is the K9000 cyberdog gun, created to act as a personal operated, handheld weapon system. Instead of the standard cyberdog units, which are canine in general anatomy, the K9000 cyberdog gun is more akin to a heavy weapon. It is a living dog's brain that has been provided with a machine gun frame utilizing the .357 Magnum ammunition. Its "canine" features include two metallic "ears" mounted on top of the weapon that moves like a real dog's and a sniffer mounted on the jar containing the brain, which allow the gun to sense its surroundings. It can be enhanced with a Resla Roil increasing its damage by 2 and a Mentat chow to increase its rate of fire by 4. </p>
+        <p> Another exception is the upgraded version of the K9000 cyberdog gun, the unique FIDO. Unlike the K9000 cyberdog gun, FIDO uses .44 Magnum rounds instead of .357 Magnum rounds, resulting in higher damage, but it also has a slightly higher spread. It has a special red brain instead of the standard green one of the K9000 cyberdog gun and the decal is changed to a bulldog. It can't be enhanced with the same modifications as available for the K9000 cyberdog gun. Other features of the K9000 cyberdog gun are included in the FIDO. </p>
+        <h3> Collectron android dogs </h3>
+        <p> The F.E.T.C.H. Collectron is a RobCo-developed canine android which gathers materials and deposits them at its station, which is designed like a doghouse. The wastelanders of Appalachia later created Junkyard Dog Collectrons, reproductions which utilize the RobCo software and imitate their design using junk materials. </p>
+        <hr>
+        <h2> Variants </h2>
+        <hr>
+        <h3> Cyber-Hound Mk II personal security model </h3>
+        <p> Robodog is a cyberdog, more specifically "Cyber-Hound Mk II personal security model." Dr. Henry brought it from the Enclave Oil Rig and settled down in the NCR. </p>
+        <hr>
+        <h3> Cyber-Hound Mk III law enforcement officer support model </h3>
+        <p> The only encounter i've had with one of these models is a cyberdog named Rex. Rex was under the ownership of The King and needed a new brain due to neural degeneration. I do not know the current status of Rex. </p>
+        <hr>
+        <h3> Cyber-Hound Mk III military model </h3>
+        <p> The military cyberdog has a sonic bark used as a weapon, and has a chance to knock down the player character with its melee attack. They also appear to have the ability to self heal/repair themselves. </p>
+        <hr>
+        <h3> Cyber-Hound Mk III police model </h3>
+        <p> A slightly weaker variety of the military cyberdog. They can be distinguished from military cyberdogs by their unique black and white paint, as well as the red and blue reflective patches on their backs. </p>
+        <hr>
+        <h3> K9000 cyberdog gun </h3>
+        <p> A unique take on the cyberdog, where, instead of adding machine to dog, it adds dog to machine. The K9000 Cyberdog gun is a living dog brain that interfaces with it's machine gun body. By utilizing a mounted "sniffer", the dog is able to sense its surroundings and relay information to its user by emitting a "growl" and rapidly moving two mechanical "ears". A sticker indicating the dog's breed is placed on the front display. The weapon may be chambered in .357 Magnum or .44 Magnum ammunition </p>
+    </div>
+</div>
+{% endblock %}

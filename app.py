@@ -179,11 +179,19 @@ def dog():
 
 @app.route('/creatures/canines_creatures/mongrel')
 def mongrel():
-    return render_template("/creatures/canines_creatures/mongrel.html")
+    return render_template("/creatures_dir/canines_creatures/mongrel.html")
 
+@app.route('/creatures/canines_creatures/mutant_hound')
+def mutant_hound():
+    return render_template("/creatures_dir/canines_creatures/mutant_hound.html")
 
+@app.route('/creatures/canines_creatures/wolf')
+def wolf():
+    return render_template("/creatures_dir/canines_creatures/wolf.html")
 
-
+@app.route('/creatures/canines_creatures/cyberdog')
+def cyberdog():
+    return render_template("/creatures_dir/canines_creatures/cyberdog.html")
 
 
 if __name__ == "__main__":

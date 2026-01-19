@@ -221,7 +221,7 @@ ol {color: rgb(95, 249, 0);
     display: flex;   /* Aktiverer flexbox */
     flex-direction: row; /* Standard - side ved side */
     flex-wrap: nowrap;
-    justify-content: center; /* Sentrerer innholdet horisontalt */
+    justify-content: left; /* Sentrerer innholdet horisontalt */
 }
 .fac_img {
     max-width: 300px; /* Maks bredde på bildet */
@@ -257,7 +257,7 @@ hr {
     display: flex;   /* Aktiverer flexbox */
     flex-direction: row; /* Standard - side ved side */
     flex-wrap: wrap;
-    justify-content: center; /* Sentrerer innholdet horisontalt */
+    justify-content: left; /* Sentrerer innholdet horisontalt */
 }
 .text-block2 {
     display: block;
@@ -364,4 +364,40 @@ h3 {
     font-size: 21px;
     color: rgb(95, 249, 0);
     font-family: 'fixedsys', 'Courier New', Courier, monospace;
+}
+.can {
+    max-width: 400px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.can2 {
+    max-width: 300px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container4 {
+    display: flex;   /* Aktiverer flexbox */
+    flex-direction: row; /* Standard - side ved side */
+    flex-wrap: nowrap;
+    justify-content: left; /* Sentrerer innholdet horisontalt */
+}
+.can3 {
+    max-width: 250px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.short {
+    max-width: 500px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: 0px;
+    margin-right: auto;
 }

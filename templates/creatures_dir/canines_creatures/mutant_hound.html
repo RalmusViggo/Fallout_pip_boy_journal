@@ -4,17 +4,39 @@
 {% block content %}
 <a href="{{ url_for('creatures') }}" class="sel"> > Back to Creatures</a>
 <a href="{{ url_for('creatures_canines') }}" class="sel"> > Back to Canines</a>
-<h1> Mutant Hound </h1>
+<hr>
+<h1> Mutant Hounds </h1>
 <div class="container">
     <div class="text-block">
         <p> Mutant hounds or FEV hounds are creatures found in the Commonwealth and Appalachia. </p>
         <h2> Background </h2>
         <p> These are dogs that have undergone major mutations from being exposed to the Forced Evolutionary Virus. Usually, they are accompanying super mutants. They may have been created in the FEV lab of the Institute, along with the rest of the super mutants that are seen throughout the Commonwealth, but they are also found in Appalachia. </p>
+        <hr>
         <h2> Characteristics </h2>
+        <hr>
         <h3> Biology </h3>
+        <p> Mutant hounds are usually several times bigger than normal stray dogs and mongrels. The modification imposed on their bodies by the Forced Evolutionary Virus is similar to the one the super mutants went through: increase of muscle mass, depigmentation of the skin to a greenish color and complete loss of body hair. </p>
     </div>
     <div class="image-block">
-        <img src="{{ url_for('static', filename='images/creatures/canines/mutant_hound.jpg') }}" alt="Mutant Hound">
+        <img src="{{ url_for('static', filename='images/mutant_hound.png') }}" alt="Mutant Hound" class="can">
     </div>
-
+</div>
+<hr>
+<div class="container2">
+    <div class="text-block">
+        <h3> Attributes/Behaviour </h3>
+        <p> Mutant hounds will alert nearby mutants using a very loud howl. Their bite inflicts radiation damage. They normally attack in packs of up to three. </p>
+        <hr>
+        <h2> Variants </h2>
+        <hr>
+        <h3> Mutant hound </h3>
+        <p> Mutant hounds are dogs that have been infected by FEV. They will not attack super mutants of any type, and will make a loud howl to alert other super mutants in the area. They are usually in packs of other super mutants. </p>
+        <hr>
+        <h3> Glowing mutant hound </h3>
+        <p> Glowing mutant hounds share the same appearance as the basic variant but they have more hit points than their regular counterpart, and can deal a decent amount of radiation damage with a bite. As such, they still emit a loud howl to alert other super mutants of a threat. </p>
+        <hr>
+        <h2> Locations </h2>
+        <p> Mutant hounds can be found accompanying super mutants throughout the Commonwealth, the Island of Far Harbor, and Appalachia. </p>
+    </div>
+</div>
 {% endblock %}
