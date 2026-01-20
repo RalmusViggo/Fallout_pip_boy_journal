@@ -445,3 +445,10 @@ h3 {
     margin-left: auto;
     margin-right: auto;
 }
+.ge {
+    max-width: 400px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

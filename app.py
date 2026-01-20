@@ -121,9 +121,9 @@ def creatures_arthropods():
 def creatures_canines():
     return render_template("creatures_dir/canines.html")
 
-@app.route('/creatures/geckos')
-def creatures_geckos():
-    return render_template("creatures_dir/geckos.html")
+@app.route('/creatures/gecko')
+def creatures_gecko():
+    return render_template("creatures_dir/gecko.html")
 
 @app.route('/creatures/mutants/super')
 def super():
