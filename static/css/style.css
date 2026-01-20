@@ -401,3 +401,47 @@ h3 {
     margin-left: 0px;
     margin-right: auto;
 }
+.container5 {
+    display: flex;   /* Aktiverer flexbox */
+    flex-direction: row; /* Standard - side ved side */
+    flex-wrap: nowrap;
+    justify-content: center; /* Sentrerer innholdet horisontalt */
+    
+}
+.death {
+    max-width: 500px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.death2 {
+    max-width: 900px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Brukte KI */
+.vertical {
+    border-left: 1px solid rgb(95, 249, 0);
+    height: 500px;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+  }
+
+.death3 {
+    max-width: 260px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.death4 {
+    max-width: 400px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
