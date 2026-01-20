@@ -3,4 +3,19 @@
 
 {% block content %}
 <a href="{{ url_for('creatures') }}" class="sel"> > Back to Creatures</a>
+<h1> Geckos </h1>
+
+<div class="container">
+    <div class="text-block">
+        <p> Geckos are mutated lizards prized for their sleek and durable hides. They are known to inhabit the Mojave Wasteland and New California and its surrounding areas. </p>
+        <hr>
+        <h2> Overview </h2>
+        <p> Before the Great War, they could be found in warm climates throughout the world, ranging from 0.39 in (1.6 cm) to 27 in (60 cm) in size, with the particularity among other lizards to make chirping sounds in social interactions with others. After the Great War, they've mutated, causing them to grow to giant size. Most of them evolved due to their exposure to the mutated F.E.V. in the air coming from the West Tek research facility, while some emerged due to other toxic conditions like massive radiation spills. These geckos are the result of an unknown species of lizard indigenous to the Oregon-California border regions, which have mutated after exposure to mutated FEV. The mutation made them bigger, stronger, faster, and more fertile. The initial rampant mutation took several generations to stabilize, but once it did, the geckos became highly reproductive. In fact, their breeding rate is second to rats that were exposed to trace amounts of mutated FEV. </p>
+        <p> Modern geckos are large, easily capable of growing to the size of a small child and beyond in certain cases. They have a hunched posture, a varied coloration of skin (closely related to their size and behavior), and tend to live in packs. While geckos are peaceful and non-threatening, they exhibit a pack mentality. If a single gecko attacks or is attacked, the remaining pack will join, charging the attacker fangs and claws bared. Packs are the usual family unit and can be either composed of a single gecko type or mixed. Geckos, like the lizards they stem from, are oviparous, with both parents caring for the eggs. They don't seem to make permanent nests, likely as a result of their tendency for migrating in search of food. </p>
+
+    </div> 
+    <div class="image-block">
+        <img src="{{ url_for('static', filename='images/gecko.png') }}" alt="Gecko" class="gecko">
+    </div>
+</div>
 {% endblock %}
