@@ -193,6 +193,10 @@ def wolf():
 def cyberdog():
     return render_template("/creatures_dir/canines_creatures/cyberdog.html")
 
+@app.route('/creatures/ghouls/glowing_one')
+def glowing_one():
+    return render_template("/creatures_dir/glowing_one.html")
+
 
 if __name__ == "__main__":
     app.run()
