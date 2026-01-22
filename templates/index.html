@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% block title %}welcome{% endblock %}
 {% block content %}
+<div class="container">
+        <div class="text-block">
+                <p class="j"> This is the exploration journal by <span class="redacted"> Mark</span> "The Chronicler" <span class="redacted"> Schultz</span>. </p>
+                <p class="j"> If you are seeing this, this means that I am either dead, or that I have somehow lost my pip-boy, and that you have found it. </p>
+                <p class="j"> As for <i> why <i> I wrote this, I did it just in case I <i> do </i> die or lose my pip-boy. </p>
+                <p class="j"> Either way, welcome, and please take care of my pip-boy and my journal, they are very precious to me. </p>
+                <p class="j"> Yours truly, <span class="redacted"> Schultz</span> </p>
+        </div>
+</div>
 <nav>
         <li> <a href="{{ url_for('register') }}" class="sel"> > Register</a></li>
         <li> <a href="{{ url_for('factions') }}" class="sel"> > Factions</a></li>
