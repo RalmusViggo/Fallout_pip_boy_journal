@@ -77,6 +77,14 @@ def vault_dwellers():
 def enclave():
     return render_template("factions/enclave.html")
 
+@app.route('/factions/legion')
+def legion():
+    return render_template("factions/legion.html")
+
+@app.route('/factions/ncr')
+def ncr():
+    return render_template("factions/ncr.html")
+
 @app.route('/creatures')
 def creatures():
     return render_template("creatures.html")

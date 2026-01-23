@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %} New California Republic - Factions {% endblock %}
+
+{% block content %}
+<a href="{{ url_for('factions') }}" class="sel"> >Back to Factions</a>
+<h1> New California Republic </h1>
+<div class="container">
+    <div class="text-block">
+
+    </div>
+    <div class="image-block">
+        <img src="{{ url_for('static', filename='images/ncr.png') }}" alt="New California Republic Emblem" class="fac_img">
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %} Caesar's Legion - Factions {% endblock %}
+
+{% block content %}
+<a href="{{ url_for('factions') }}" class="sel"> >Back to Factions</a>
+<h1> Caesar's Legion </h1>
+<div class="container">
+    <div class="text-block">
+    </div>
+    <div class="image-block">
+        <img src="{{ url_for('static', filename='images/legion.png') }}" alt="Caesar's Legion Emblem" class="fac_img">
+    </div>
+</div>
+{% endblock %}

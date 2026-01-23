@@ -485,3 +485,22 @@ h3 {
     color: rgb(95, 249, 0);
     font-family: 'fixedsys', 'Courier New', Courier, monospace;
 }
+
+.yao {
+    max-width: 600px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.yao2 {
+    max-width: 500px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.text-blockD {
+    display: block;
+    text-align: center;
+}
