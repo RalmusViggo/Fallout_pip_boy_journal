@@ -197,6 +197,9 @@ def cyberdog():
 def glowing_one():
     return render_template("/creatures_dir/glowing_one.html")
 
+@app.route('/aboutme')
+def aboutme():
+    return render_template("aboutme.html")
 
 if __name__ == "__main__":
     app.run()
