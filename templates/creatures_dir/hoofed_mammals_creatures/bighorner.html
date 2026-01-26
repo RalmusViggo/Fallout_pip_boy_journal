@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %} Bighorner - Creatures {% endblock %}
+
+{% block content %}
+<a href="{{ url_for('creatures') }}" class="sel"> > Back to Creatures</a>
+<a href="{{ url_for('creatures_hoofed_mammals') }}" class="sel"> > Back to Hoofed Mammals</a>
+<h1> Bighorners </h1>
+
+<div class="container">
+    <div class="text-block">
+        <p> Bighorners are creatures found in the Mojave Wasteland, and Zion Canyon </p>
+        <hr>
+        <h2> Background </h2>
+        <p> Bighorners can be found scattered throughout the Mojave and Zion Canyon, generally around water sources and plants such as banana yucca fruit. Several settlements, such as Goodsprings and Jacobstown, have domesticated them for a source of fresh meat, hides, and horns. </p>
+        <hr>
+        <h2> Characteristics </h2>
+        <h3> Biology </h3>
+        <p> Bighorners are mutated bighorn sheep native to the American Southwest. Humans have since domesticated them for their horns, meat, milk, and hides, but wild herds can be found in mountainous regions, usually in proximity to banana yucca fruit. This makes them rather instrumental in herb tracking. Several settlements, such as Goodsprings and Jacobstown, keep domesticated bighorners in order to survive. </p>
+        <p> Bighorners are herbivorous, and are primarily found in wild herds of three to seven in the Mojave Wasteland and Zion Canyon, or in domesticated drifts of varying size in settlements such as Goodsprings, Jacobstown, Spring Mt. Ranch State Park, and around Cottonwood Cove. A large contingent of wild bighorners can also be found northwest of Snyder prospector camp. Bighorners are communal animals, and as such, if one member of the herd is distressed, the entire herd becomes aggressive. </p>
+    </div>
+    <div class="image-block">
+        <img src="{{ url_for('static', filename='images/bighorner.png') }}" alt="Bighorner" class="hoof">
+    </div>
+</div>
+<div class="container">
+    <div class="text-block">
+        <p> They are generally calm beasts with docile dispositions, in spite of being quite capable of being dangerous when provoked. However, according to Easy Pete, a former prospector, and an expert with explosives, they cannot be used as pack animals, as "they just lie down until you take [the load] off". </p>
+        <h3> Attributes </h3>
+        <p> In combat situations, bighorners are unique in that they are rarely outright hostile, setting them apart from most other creatures. Though marked as hostile on the pip-boy's compass, unprovoked bighorners will not actively pursue you, like other creatures, and if left alone, are content to graze and mind their own business. They will not attack unless something comes in proximity to them or their young. At this point, they will rear their heads up and bellow, afterwards charging and attempting to ram their foe. </p>
+        <p> Bighorners cannot take a decent amount of damage (they are squarely on par with a radscorpion in terms of health), but their head-butting attacks are devastating, capable of sending enemies flying backwards or knocking them down. Bighorners can also run very fast. </p>
+    </div>
+</div>
+<div class="container">
+    <div class="text-block">
+        <h2> Variants </h2>
+        <hr>
+    </div>
+</div>
+<div class="container4">
+    <div class="text-block">
+        <h3> Bighorner </h3>
+        <p> A regular bighorner with all the attributes mentioned above. Bighorners are not hostile unless provoked and are commonly found in the woods in the northwest area of the map near Jacobstown and the Silver Peak Mine, the cliffs east of Nipton, near Lake Las Vegas and Camp Golf, and near Snyder Prospector Camp. </p>
+    </div>
+</div>
+<div class="container4">
+    <div class="text-block">
+        <h3> Bighorner bull </h3>
+        <p> Bighorner bulls are stronger, larger versions of bighorners, and are likely to be found in any herd of bighorners in the wild, and can completely replace regular bighorners at more "hostile" areas. </p>
+        <p> A killed bighorner bull can drop up to five pieces of bighorner meat, which can be turned into bighorner steak at a campfire. </p>
+        <p> Bighorner bulls can cause a lot of damage when attacking in packs, as their charges will continue to knock the Courier over until they are beyond their range. </p>
+    </div>
+</div>
+<div class="container4">
+    <div class="text-block">
+        <h3> Bighorner calf </h3>
+        <p> Bighorner calves are small, younger bighorners that have not fully matured or grown to full size. They can be found in any bighorner herd in the wild. </p>
+        <p> Like normal bighorners, calves can also be found in towns, domesticated and raised for their meat and hides. Be wary of killing penned-up calves, as unlike the free roaming ones, these are often guarded by ranchers that become hostile if any harm comes to their livestock. </p>
+    </div>
+</div>
+<div class="container4">
+    <div class="text-block">
+        <h3> Young bighorner </h3>
+        <p> Young bighorners are roughly a third of the size of their fully grown counterparts, and are thus quite weaker. While they will not become hostile by being close to them, attacking one of these will cause their nearby family members to turn hostile and attack. </p>
+    </div>
+</div>
+{% endblock %}

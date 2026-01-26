@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %} Brahmin - Creatures {% endblock %}
+
+{% block content %}
+<a href="{{ url_for('creatures') }}" class="sel"> > Back to Creatures</a>
+<a href="{{ url_for('creatures_hoofed_mammals') }}" class="sel"> > Back to Hoofed Mammals</a>
+
+<h1> Brahmin </h1>
+<div class="container">
+    <div class="text-block">
+        <p> Brahmin, also called brahma, are a mutated species of cattle, recognizable by their signature two heads. Spread across the post-War United States, they are raised throughout the wasteland as beasts of burden, as well as for their milk, hair, leather, meat, and a source of fertilizer in agricultural areas, similar to their pre-War purposes. </p>
+        <hr>
+        <h2> Background </h2>
+        <p> Brahmin are one of the most important mutated species that emerged in the wasteland following the Great War. Descended from the Indian brahman cattle variant that was imported to the U.S. for crossbreeding purposes, the effects of the lingering radiation resulted in their iconic feature of having two fully grown heads, and they were quickly adopted by survivors as the most versatile and capable livestock animal found in the wastes. The brahmin's major advantage to human resourcefulness is the fact that while sometimes ornery, their disposition is actually easy to manage with as little as a pointy stick. </p>
+    </div>
+    <div class="image-block">
+        <img src="{{ url_for('static', filename='images/brahmin.png') }}" alt="Brahmin" class="hoof">
+    </div>
+</div>
+<div class="container">
+    <div class="text-block">
+        <p> A large, two-headed mutant bovine famed for its broad use as a pack animal capable of carrying up to 500 lbs, brahmin also provide milk, and their feces are an efficient fertilizer and fuel for fires. When a brahmin's use as a beast of burden ends and they are slaughtered, they become even more useful as a source of meat, leather (noted to be tough, durable and fit for everything including tents, clothes, leather-made armor, belts, saddle bags, shoes), bones (useful for making clubs, tools, dice, hoes, and arrowheads), tails (perfect as brushes), and even fat for soap making. As valuable of a commodity as they are, they also require few resources to survive, as they can go without water for extended periods of time and can subsist on whatever weeds they find in the arid wasteland, digesting them in eight-compartment stomachs (double the number compared to pre-War cows). </p>
+        <p> These advantages over other mutated descendants of cattle species has made the brahmin the cornerstone of many a post-nuclear economy, including the New California Republic whose vast brahmin herds are the driving force of its industry and the influence of the powerful brahmin barons. By extension, they also provide for the economically parasitic too, such as New Reno during the 2240s, when the rustling of brahmin cattle brought much needed income to the crime families of the city. </p>
+        <hr> 
+        <h2> Biology </h2>
+        <p> Brahmin are a post-War species of mutated cattle, with the most recognizable feature being that they have two fully functional heads. Scientific research has also determined that the species is born with eight stomach compartments, males have four testicles, and the females' udders have grown in size compared to pre-War variants. They have lost much of their natural hair, resulting in their skin being a toasted brown, orange, or pink color. When aggressed, they primarily attack by headbutting opponents or attempting to gore them with their horns. </p>
+        <p> Harvested brahmin meat is noted to be delicious and protein-rich, if only when compared to other sources of food. Brahmin also serve as a source of milk which is not only nutritious but also has medicinal, radiation-cleansing effects. </p>
+    </div>
+</div>
+<hr>
+<div class="container">
+    <div class="text-block">
+        <h2> Variants </h2>
+        <h3> Brahmin </h3>
+        <p> The standard, docile variant domesticated by humanity and raised as cattle throughout the wasteland. </p>
+        <hr class="short">
+        <h3> Mad brahmin </h3>
+        <p> Brahmin that went insane for various reasons. They will be hostile to nearly anyone they encounter. </p>
+        <hr class="short">
+        <h3> Wild brahmin </h3>
+        <p> Undomesticated and aggressive if provoked, these brahmin freely roam the large steppes of the wastes in large herds. </p>
+    </div>
+</div>
+{% endblock %}

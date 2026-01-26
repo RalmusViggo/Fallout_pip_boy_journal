@@ -209,5 +209,17 @@ def creatures_glowing_one():
 def aboutme():
     return render_template("aboutme.html")
 
+@app.route('/creatures/hoofed_mammals_creatures/bighorner')
+def bighorner():
+    return render_template("/creatures_dir/hoofed_mammals_creatures/bighorner.html")
+
+@app.route('/creatures/hoofed_mammals_creatures/brahmin')
+def brahmin():
+    return render_template("/creatures_dir/hoofed_mammals_creatures/brahmin.html")
+
+@app.route('/creatures/hoofed_mammals_creatures/radstag')
+def radstag(): 
+    return render_template("/creatures_dir/hoofed_mammals_creatures/radstag.html")
+
 if __name__ == "__main__":
     app.run()
