@@ -144,7 +144,6 @@ def nightkin():
 def centaur():
     return render_template("creatures_dir/mutants/centaurs.html")
 
-
 @app.route('/creatures/aquatic_creatures/mirelurks')
 def mirelurks():
     return render_template("creatures_dir/aquatic_creatures/mirelurks.html")
@@ -220,6 +219,18 @@ def brahmin():
 @app.route('/creatures/hoofed_mammals_creatures/radstag')
 def radstag(): 
     return render_template("/creatures_dir/hoofed_mammals_creatures/radstag.html")
+
+@app.route('/creatures/vermin/giant_rat')
+def giant_rat():
+    return render_template("/creatures_dir/vermin_creatures/giant_rat.html")
+
+@app.route('/creatures/vermin/mole_rat')
+def mole_rat():
+    return render_template("/creatures_dir/vermin_creatures/mole_rat.html")
+
+@app.route('/creatures/vermin/nightstalker')
+def nightstalker(): 
+    return render_template("/creatures_dir/vermin_creatures/nightstalker.html")
 
 if __name__ == "__main__":
     app.run()

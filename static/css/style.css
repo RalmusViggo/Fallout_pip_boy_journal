@@ -526,3 +526,10 @@ h3 {
     margin-left: auto;
     margin-right: auto;
 }
+.ver {
+    width: 450px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

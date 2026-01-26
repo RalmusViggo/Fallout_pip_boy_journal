@@ -3,9 +3,9 @@
 
 {% block content %}
 <a href="{{ url_for('creatures') }}" class="sel"> > Back to Creatures</a>
-
-<li> <a href="{{ url_for('') }}" class="sel"> > Giant rat </a> </li>
-<li> <a href="{{ url_for('') }}" class="sel"> > Mole rat </a> </li>
-<li> <a href="{{ url_for('') }}" class="sel"> > Nightstalker </a> </li>
-<li> <a href="{{ url_for('') }}" class="sel"> > </a> </li>
+<hr>
+<h1> Different Vermin </h1>
+<li> <a href="{{ url_for('giant_rat') }}" class="sel"> > Giant rat </a> </li>
+<li> <a href="{{ url_for('mole_rat') }}" class="sel"> > Mole rat </a> </li>
+<li> <a href="{{ url_for('nightstalker') }}" class="sel"> > Nightstalker </a> </li>
 {% endblock %}
