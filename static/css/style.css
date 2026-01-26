@@ -500,7 +500,22 @@ h3 {
     margin-left: auto;
     margin-right: auto;
 }
-.text-blockD {
+.text-blockC { /* C for Center */
     display: block;
     text-align: center;
+}
+
+.audio-block3 {
+    display: block;
+    justify-content: left;
+    align-content: left;
+    padding: 1px;
+}
+
+.gl {
+    max-width: 1400px;
+    height: auto; 
+    margin-left: auto;
+
+    display: block;
 }

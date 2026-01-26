@@ -201,8 +201,8 @@ def wolf():
 def cyberdog():
     return render_template("/creatures_dir/canines_creatures/cyberdog.html")
 
-@app.route('/creatures/ghouls/glowing_one')
-def glowing_one():
+@app.route('/creatures/glowing_one')
+def creatures_glowing_one():
     return render_template("/creatures_dir/glowing_one.html")
 
 @app.route('/aboutme')
