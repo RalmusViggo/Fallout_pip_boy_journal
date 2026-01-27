@@ -20,15 +20,70 @@
         <div class="text-blockC">
             <h3> East coast Mole Rat </h3>
         </div>
-        <img src="{{ url_for('static', filename='images/yao_guai_fo4.png') }}" alt="east coast yao guai" class="yao">
+        <img src="{{ url_for('static', filename='images/mole_rat_east_coast.png') }}" alt="east coast mole rat" class="yao">
     </div>
     <div class="break"></div>
     <div class="image-block2">
         <div class="text-blockC">
-            <h3> West coast Yao Guai </h3>
+            <h3> West coast Mole Rat </h3>
         </div>
-        <img src="{{ url_for('static', filename='images/yao_guai_fo3.png') }}" alt="west coast yao guai" class="yao">
+        <img src="{{ url_for('static', filename='images/mole_rat_west_coast.png') }}" alt="west coast mole rat" class="yao">
     </div>
 </div>
-
+<hr>
+<div class="container">
+    <div class="text-block">
+        <h1> West Coast Mole Rat </h1>
+        <hr>
+        <h2> Characteristics </h2>
+        <hr class="short">
+        <h3> Biology </h3>
+        <p> According to Enclave's research, this variety of the mole rats most closely resembles a Heterocephalus glaber, also known as the sand puppy or desert mole rats. Their increased size is likely due to exposure to heavy radiation. While larger than their ancestors, they don't appear to be any smarter. Their incisors show increased enamel and dentin growth, making them razor sharp. In addition, they display an incredible pain tolerance. They are relatively caring parents, willing to sacrifice their own life for the well-being of their pups. Mole rat families travel in groups of usually three to seven, consisting of two to three adults and one to four pups. These families are moderately docile, keeping to themselves unless approached by an enemy. Even though they are almost blind, they can smell and hear quite well. </p>
+        <h3> Attributes </h3>
+        <p> Mole rats are usually found in small packs, usually away from the main populated areas. Although relatively weak, they can be a threat to lower level characters when encountered in large packs. Mole rats will attack if approached and usually charge at the player character. </p>
+        <hr>
+        <h1> East Coast Mole Rat </h1>
+        <hr>
+        <h2> Characteristics </h2>
+        <h3> Biology </h3>
+        <p> Mole rats range in size depending on the type being fought. They range in size from a house cat up to a large dog and possibly bigger. They have a bald, pink appearance, with large front teeth and small eyes. They are highly territorial and will attack anything entering their territory. They move quickly and will attack with a jumping lunge. </p>
+        <h3> Attributes </h3>
+        <p> Mole rats in the Commonwealth and Appalachia possess a unique ability which is not found in specimens from the Capital and Mojave wastelands. They will tunnel to avoid their enemy or close in to attack unseen, they will also retreat to a tunnel if the enemy moves to an area inaccessible to them, such as on top of a car. This makes them difficult to keep track of in groups. However, a faint outline of their tunnel can be seen as they move. This ability is shared with radscorpions. If you use a weapon dealing damage over time on a radscorpion or mole rat just as they burrow, they can die underground and the corpse will be irretrievable. </p>
+        <hr>
+        <h2> Audio Files </h2>
+        <p> Below you will find various noises a deathclaw makes: </p>
+    </div>
+</div>
+<hr>
+<div class="container3">
+    <div class="audio-block">
+        <p> Mole rat attack: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/molerat_attack.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Mole rat alarm cry: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/molerat_alarmcry.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Sniffing Mole rat: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/molerat_sniff.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div class="audio-block2">
+        <p> Yawning Mole rat: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/molerat_yawn.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+        <p> Mole rat pawing at ground: </p>
+        <audio controls>
+            <source src="{{ url_for('static', filename='audio/molerat_pawground.ogg') }}" type="audio/ogg" class="cr_audio">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</div>
 {% endblock %}
