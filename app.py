@@ -85,6 +85,18 @@ def legion():
 def ncr():
     return render_template("factions/ncr.html")
 
+@app.route('/factions/institute')
+def institute():
+    return render_template("factions/institute.html")
+
+@app.route('/factions/minutemen')
+def minutemen():
+    return render_template("factions/minutemen.html")
+
+@app.route('/factions/railroad')
+def railroad():
+    return render_template("factions/railroad.html")
+
 @app.route('/creatures')
 def creatures():
     return render_template("creatures.html")

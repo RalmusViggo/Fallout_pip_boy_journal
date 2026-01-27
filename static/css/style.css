@@ -193,7 +193,7 @@ label {
     font-family: 'fixedsys', 'Courier New', Courier, monospace;
 }
 p {
-    font-size: large;
+    font-size: 17px;
     color: rgb(95, 249, 0);
     font-family: 'fixedsys', 'Courier New', Courier, monospace;
 }
@@ -532,4 +532,8 @@ h3 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.fh {
+    font-size: 19px;
 }
