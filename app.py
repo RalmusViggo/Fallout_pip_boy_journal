@@ -244,5 +244,9 @@ def mole_rat():
 def nightstalker(): 
     return render_template("/creatures_dir/vermin_creatures/nightstalker.html")
 
+@app.route('/creatures/non-feral')
+def nonferal():
+    return render_template("/creatures_dir/non-feral.html")
+
 if __name__ == "__main__":
     app.run()
