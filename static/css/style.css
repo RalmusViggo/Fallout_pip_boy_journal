@@ -542,3 +542,10 @@ h3 {
 .three {
     font-size: 23px;
 }
+.small {
+    font-size: 18px;
+}
+
+.indent {
+    margin-left: 40px;
+}
