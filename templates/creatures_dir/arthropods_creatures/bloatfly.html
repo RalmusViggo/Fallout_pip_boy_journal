@@ -7,7 +7,7 @@
 
 <h1>Bloatflies</h1>
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <p> * Ah, bloatflies. These flying, disguisting maggot shooting flies were the bane of my existance when I was younger. I will take any opportunity to stomp and kill these things. * </p>
         <hr>
         <p> A bloatfly is a mutated pest resembling an oversized biting horse or common housefly, often found in Appalachia, the Capital Wasteland, the Commonwealth and the Mojave Wasteland. </p>
@@ -17,12 +17,12 @@
         <p> The standard bloatfly has a green and brown carapace and is significantly larger and more tenacious than its predecessors. Its size inhibits previous flight characteristics and agility, making it impossible to feed like pre-War horse flies did. Instead, it uses its engorged stinger and pupae gestating within its abdomen to incapacitate prey. The stinger is capable of launching mature larvae with a barbed sting at the end. These latch onto the target and deliver a neurotoxin capable of incapacitating larger prey, allowing the bloatfly and its larvae to feed. </p>
         
     </div>
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="{{ url_for('static', filename='images/bloatfly.png') }}" alt="Bloatfly" class="art">
     </div>
 </div>
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <p> Its neurotoxin is ineffective against humans and larger targets, causing only localized necrosis. As a result, the bloatfly serves as prey rather than predator among wastelanders who utilize its meat for food. Bloatflies can resort to scavenging in situations where prey or other sources of sustenance are scarce. It adapted to its enlarged size with a unique gland that enables it to balance and maintain speed despite its size. The gland itself may be toxic to consume. </p>
         <hr>
         <h2> Attributes/Behaviour </h2>
@@ -39,19 +39,21 @@
 </div>
 <hr>
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
             <h2> Audio Files </h2>
             <p> Below you will find various noises the bloatflies makes. </p>
     </div>
 </div>
 <hr>
 <div class="container3"> <!-- container3 is used for audio files -->
-    <div class="audio-block">
+    <div class="audio-block" tabindex="0">
         <p> Bloatfly Attacking With Dart: </p>
         <audio controls>
             <source src="{{ url_for('static', filename='audio/blowfly_attackdart.ogg') }}" type="audio/ogg" class="cr_audio">
             Your browser does not support the audio element.
         </audio>
+    </div>
+    <div  tabindex="0">
         <p> Bloatfly Attack noise 2: </p>
         <audio controls>
             <source src="{{ url_for('static', filename='audio/blowfly_fire_3d_loop.ogg') }}" type="audio/ogg" class="cr_audio">
@@ -63,17 +65,21 @@
             Your browser does not support the audio element.
         </audio>
     </div>
-    <div class="audio-block2">
+    <div class="audio-block2" tabindex="0">
         <p> Injured Bloatfly: </p>
         <audio controls>
             <source src="{{ url_for('static', filename='audio/blowfly_injured.ogg') }}" type="audio/ogg" class="cr_audio">
             Your browser does not support the audio element.
         </audio>
+    </div>
+    <div  tabindex="0">
         <p> Bloatfly Movement Sound: </p>
         <audio controls>
             <source src="{{ url_for('static', filename='audio/blowfly_mvmt_lpm.ogg') }}" type="audio/ogg" class="cr_audio">
             Your browser does not support the audio element.
         </audio>
+    </div>
+    <div  tabindex="0">
         <p> Bloatfly Idle: </p>
         <audio controls>
             <source src="{{ url_for('static', filename='audio/blowfly_idle_lp.ogg') }}" type="audio/ogg" class="cr_audio">
