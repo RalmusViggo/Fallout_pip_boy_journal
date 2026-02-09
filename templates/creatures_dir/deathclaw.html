@@ -4,22 +4,26 @@
 {% block content %}
 <a href="{{ url_for('creatures') }}" class="sel"> > Back to Creatures</a>
 <hr>
-<h1> Deathclaws </h1>
+<h1 tabindex="0"> Deathclaws </h1>
 <div class="container">
     <div class="text-block">
-        <p> * These big lizards have earnt the brand of "Apex Predator" in my eyes. the ones in the west coast are probably the scariest; they are fast, strong, and resiliant. the ones in the east coast are slower, but bigger and more resilient, though still able to pack a punch. * </p>
-        <p> According to my research, deathclaws are a species of genetically engineered reptilian creatures originating from experiments by the United States government to create superior battlefield soldiers capable of carrying out high-risk, search-and-destroy missions in place of humans. In the wake of the Great War and their escape into the wild, the deathclaw population exploded and evolved to become an apex predator in the post-nuclear ecosystem of the wasteland. </p>
+        <div tabindex="0">
+            <p> * These big lizards have earnt the brand of "Apex Predator" in my eyes. the ones in the west coast are probably the scariest; they are fast, strong, and resiliant. the ones in the east coast are slower, but bigger and more resilient, though still able to pack a punch. * </p>
+        </div>
+        <div tabindex="0">
+            <p> According to my research, deathclaws are a species of genetically engineered reptilian creatures originating from experiments by the United States government to create superior battlefield soldiers capable of carrying out high-risk, search-and-destroy missions in place of humans. In the wake of the Great War and their escape into the wild, the deathclaw population exploded and evolved to become an apex predator in the post-nuclear ecosystem of the wasteland. </p>
+        </div>
     </div>
 </div>
 <hr>
 <div class="container5">
-    <div class="image-block2">
+    <div class="image-block2" tabindex="0">
         <div class="text-blockC">
             <h3> Commonwealth Deathclaw </h3>
         </div>
         <img src="{{ url_for('static', filename='images/deathclaw_fo4.png') }}" alt="Commonweath Deathclaw" class="death">
     </div>
-    <div class="image-block2">
+    <div class="image-block2" tabindex="0">
         <div class="text-blockC">
             <h3> Mojave Deathclaw </h3>
         </div>
@@ -29,158 +33,198 @@
 <hr>
 <div class="container">
     <div class="text-block">
-        <h2> Research Findings </h2>
-        <h3> Origins </h3>
-        <p> Originally engineered from scientific experiments conducted by the United States government to develop a cheap, cost-effective replacement for human troops during heavy-duty combat operations, the creature which came to be called the "deathclaw" was the result of a genetic mix of various animal species, with the primary test subject being Jackson's chameleons. The project was successful in creating a ferocious predator capable of surviving and thriving on its own in nearly any environment, and while the full extent remains unclear, it is known that U.S. military leadership deployed at least one deathclaw into an American conflict prior to 2077, sending it to assist USMC T-45 armored troopers against Chinese PLA forces in Alaska during the Sino-American War. </p>
-        <p> While it is ambiguous as to whether the Enclave had any input into the creation of deathclaws, members of their Appalachian division noted that the genetic manipulation that birthed the apex predator species has similar structural design to their own projects. </p>
-        <hr class="short">
-        <h3> Post-War growth </h3>
-        <p> After the nuclear devastation of the Great War, surviving members of the new species escaped containment and fled into the wilderness of the post-apocalyptic wasteland, where their population increased substantially and spread out over the former American landscape. </p>
-        <p> By the late 22nd century, the deathclaws' physiology would be refined by the megalomaniacal Master through his expertise in genetic manipulation and access to samples of the Forced Evolutionary Virus. Because initial reports of sightings were limited to a series of isolated nests, deathclaws were viewed as legendary creatures of destruction by wastelanders such as those inhabiting post-War California. However, the denizens of the Boneyard were aware of their existence earlier than most other places, as a lone den mother and her offspring had claimed the area between Downey and Norwalk around 2161, keeping organized groups like the Gun Runners in a checkmate while terrorizing other nearby communities. At least one deathclaw was also found to be living near the outskirts of the Hub around that time as well. </p>
-        <p> In subsequent years, deathclaws entered common consciousness as a deadly apex predator and danger to inhabited settlements if allowed to nest for too long. This reputation also made the deathclaws a highly prized subject for scientists in the Enclave, who sought to restore the species' original design as a weapon of war. The West Coast Enclave eventually completed their work and bred a population of deathclaws with increased levels of intelligence around 2235. </p>
-        <hr class="short">
-        <h3> Intelligent deathclaws </h3>
-        <p> On May 17, 2242, the first successful deployment of deathclaw units under Enclave control was carried out when they were sent into Vault 13 to cloak the presence of Enclave forces and their abduction of the dwellers within. Unbeknownst to their Enclave handlers, following their first combat test, the deathclaws, having become far more intelligent than anyone could foresee, broke ties with their creators and sought to create a peaceful home in the old Vault for themselves. The pack, led by Gruthar eventually developed a unique culture as the first known case of non-humanoid sentient beings in history. However, the pack's home and their enhanced intelligence were eventually discovered by the Enclave. Subsequently, an extermination squad led by Secret Service agent Frank Horrigan was dispatched to the Vault and successfully wiped out the intelligent deathclaws; Goris and Xarn were left the only survivors due to not being present in the Vault. Later attempts by the East Coast Enclave to harness deathclaws for military purposes in the late 23rd century instead turned to the use of technology such as domestication units that would put the predator species under their control more effectively. </p>
-        <hr>
-        <h2> Biology </h2>
-        <p> Deathclaws are a large, carnivorous, bipedal reptile species, designed for maximum lethality. The choice to make them bipedal was natural, as bipedalism raises the head, providing a greater field of vision and thus improving the ability to detect targets or resources. The upper limbs were also freed by this choice and could be fashioned into extremely dangerous weapons. The caveat is that the deathclaw is not as fast as a quadrupedal animal, though this is a largely academic concern. However, deathclaws have been observed running on all fours when charging prey. The rippling musculature of the deathclaw provides it with superior strength, excellent speed, and incredible resilience in most combat situations. Deathclaws communicate with each other in a pack using growls and body language, though they are also capable of mimicking human voices like a parrot if their intelligence is artificially increased. </p>
-        <p> Their strength is further magnified by their claws. Owing to their lineage, the deathclaw has opposable thumbs, though an additional two fingers were coded into the genome, for a total of five fingers on each hand. Each terminates in a sharp talon that allows the reptile to wound and kill with frightening efficiency; a single swipe is capable of bisecting an unarmored human in seconds. Deathclaw hide is extremely tough, providing an excellent defense against blunt and edged weapons. Firearms and energy weapons are reliable tools for killing a deathclaw, though lower powered variants are likely to have trouble piercing its skin. The defense is enhanced by horns and dorsal spikes, making melee combat a very dangerous proposition. </p>
-        <p> However, while they are difficult opponents, their keen senses can be used against them. Loud noises and bright light, such as that emitted by flares, can be used to deter a deathclaw's advance or even keep it at bay. </p>
-        <hr class="short">
-        <h3> Behavior </h3>
-        <p> Deathclaws are pack animals, with the leadership role assumed by the alpha pair, the strongest male and female deathclaws in the group. The remainder of the pack follows the leaders and migrates along with them. </p>
-        <p> Coupled with their pack behavior is a fierce territorial instinct. Deathclaws will usually opt for territories away from inhabited areas (most likely due to noise), but may settle into temporarily abandoned human buildings and areas, as was the case with the Boneyard warehouses circa 2161 or Quarry Junction in 2281. Once it claims a territory, a pack is exceedingly difficult to dislodge, as the alpha male will not abandon a claimed territory even if the pack mother is killed, while the alpha female will simply choose another mate to procreate. As such, reclaiming a deathclaw territory usually requires either killing both pack leaders, causing the pack to scatter, or wiping out the entire pack. Neither is particularly easy. </p>
-        <hr class="short">
-        <h3> Reproduction </h3>
-        <p> Deathclaws are made even more dangerous by their reproductive instincts. Unlike Jackson's chameleons, deathclaws are an oviparous species, female deathclaws will lay eggs in clusters, sired by the strongest male deathclaws in the pack, typically the alpha male. Survival of the pack is coded into deathclaws and the pack leaders will instinctively select only the strongest partners for procreation. If killed, the pack mother will typically be replaced by another female in short order. </p>
-        <p> Deathclaw eggs are large, weighing up to twelve pounds (5.5 kilograms), durable and resilient, with a remarkably long shelf life. Deathclaws will seek out dark, sheltered areas to set up their nests. Lone deathclaws will also claim territories and create nests, usually in sheltered, secluded areas. If they are female and have been impregnated by a male deathclaw, they will prepare a separate nest for their young, protecting their hardy eggs with whatever small objects are at hand, such as small rocks, fallen leaves, twigs, and bones leftover from their meals. </p>
-        <p> A juvenile deathclaw is born without prominent horns or dorsal spikes, which grow as it matures, and both of which act as secondary sex characteristics. Horns grow forwards on males, with larger being the more desirable, and grow back and upwards on females. Dorsal spikes grow much the same way as horns on males and act much the same way with larger being more desirable, but on females, dorsal spikes do not grow as large as they do on males and tend to be short in comparison. Claws, on the other hand, are present from day one. Baby deathclaws are born with a light brown skin tone and live under the protection of their parents within the pack. The skin darkens as the deathclaw matures, reaching deep brown upon entering adulthood, and eventually dark brown, black or even black and blue for old, experienced claws. </p>
-        <hr class="short">
-        <h3> Relationship with humans </h3>
-        <p> While deathclaws do not actively seek out human habitats to attack, human expansion inevitably leads to the two species coming into contact, usually by accident. Deathclaws are incredibly dangerous to humans, no matter how well prepared they are. Even Brotherhood of Steel patrols are known to suffer severe casualties if they walk into a deathclaw's territory unaware. The Enclave sought to exploit their fierce instincts and ferocity and use them as cheap, expendable troops for use in hostile environments. </p>
-        <p>  Their initial experiments, starting in 2235, focused on using a modified FEV strain to artificially increase the intelligence of deathclaws and succeeded in creating a single pack of modified, intelligent deathclaws led by Gruthar. Intended to only be smart enough to follow orders issued by their handlers, they have developed far higher intelligence than the project assumed was possible. After the first unit was fielded, Doctor Schreber's experimentation revealed that fact and the whole breed was summarily exterminated at the site they were first unleashed: Vault 13. Subsequent efforts, once the Enclave regrouped at Raven Rock, were focused on cruder, but more reliable methods: domestication units. These devices are surgically implanted into a captive deathclaw's brain and skull, allowing Enclave troops to issue commands to the fierce reptiles as if they were pets. Of course, even without human interference, deathclaws are a continuing hazard in the wastelands. Despite the efforts of hunter teams, they continue to set up nests throughout the wastelands. </p>
-        <p> The ferocity of deathclaws and their incredible resilience has earned them the respect and fear of wastelanders. Initially, the existence of deathclaws was treated with skepticism in the first century after the war, and many considered them a tall tale, on the order of ghosts and demons. However, the steady increase in deathclaw populations eventually secured them a place in the common consciousness. When used for comparisons, deathclaws are usually synonymous with ferocity and resilience. Occasionally, they're used to insult people; allegedly, they're as bad as marketing directors. Other examples of deathclaw presence in popular culture is the expression "deathclaw in a mating season", and, allegedly, deathclaw costumes </p>
-        <p> Deathclaw eggs are also a known delicacy, used to make omelettes that are highly nourishing and delicious. </p>
-        <hr>
-        <h2> Variants </h2>
-        <p> Deathclaws are primarily differentiated by age and gender, from the youngest, "baby" deathclaws, to the terrifying legendary male deathclaws. </p>
-        <hr class="short">
+        <div tabindex="0">
+            <h2> Research Findings </h2>
+        </div>
+        <div tabindex="0">
+            <h3> Origins </h3>
+        </div>
+        <div tabindex="0">
+            <p> Originally engineered from scientific experiments conducted by the United States government to develop a cheap, cost-effective replacement for human troops during heavy-duty combat operations, the creature which came to be called the "deathclaw" was the result of a genetic mix of various animal species, with the primary test subject being Jackson's chameleons. The project was successful in creating a ferocious predator capable of surviving and thriving on its own in nearly any environment, and while the full extent remains unclear, it is known that U.S. military leadership deployed at least one deathclaw into an American conflict prior to 2077, sending it to assist USMC T-45 armored troopers against Chinese PLA forces in Alaska during the Sino-American War. </p>
+            <p> While it is ambiguous as to whether the Enclave had any input into the creation of deathclaws, members of their Appalachian division noted that the genetic manipulation that birthed the apex predator species has similar structural design to their own projects. </p>
+            <hr class="short">
+        </div>
+        <div tabindex="0">
+            <h3> Post-War growth </h3>
+        </div>
+        <div tabindex="0">
+            <p> After the nuclear devastation of the Great War, surviving members of the new species escaped containment and fled into the wilderness of the post-apocalyptic wasteland, where their population increased substantially and spread out over the former American landscape. </p>
+            <p> By the late 22nd century, the deathclaws' physiology would be refined by the megalomaniacal Master through his expertise in genetic manipulation and access to samples of the Forced Evolutionary Virus. Because initial reports of sightings were limited to a series of isolated nests, deathclaws were viewed as legendary creatures of destruction by wastelanders such as those inhabiting post-War California. However, the denizens of the Boneyard were aware of their existence earlier than most other places, as a lone den mother and her offspring had claimed the area between Downey and Norwalk around 2161, keeping organized groups like the Gun Runners in a checkmate while terrorizing other nearby communities. At least one deathclaw was also found to be living near the outskirts of the Hub around that time as well. </p>
+            <p> In subsequent years, deathclaws entered common consciousness as a deadly apex predator and danger to inhabited settlements if allowed to nest for too long. This reputation also made the deathclaws a highly prized subject for scientists in the Enclave, who sought to restore the species' original design as a weapon of war. The West Coast Enclave eventually completed their work and bred a population of deathclaws with increased levels of intelligence around 2235. </p>
+            <hr class="short">
+        </div>
+        <div tabindex="0">
+            <h3> Intelligent deathclaws </h3>
+        </div>
+        <div tabindex="0">
+            <p> On May 17, 2242, the first successful deployment of deathclaw units under Enclave control was carried out when they were sent into Vault 13 to cloak the presence of Enclave forces and their abduction of the dwellers within. Unbeknownst to their Enclave handlers, following their first combat test, the deathclaws, having become far more intelligent than anyone could foresee, broke ties with their creators and sought to create a peaceful home in the old Vault for themselves. The pack, led by Gruthar eventually developed a unique culture as the first known case of non-humanoid sentient beings in history. However, the pack's home and their enhanced intelligence were eventually discovered by the Enclave. Subsequently, an extermination squad led by Secret Service agent Frank Horrigan was dispatched to the Vault and successfully wiped out the intelligent deathclaws; Goris and Xarn were left the only survivors due to not being present in the Vault. Later attempts by the East Coast Enclave to harness deathclaws for military purposes in the late 23rd century instead turned to the use of technology such as domestication units that would put the predator species under their control more effectively. </p>
+            <hr>
+        </div>
+        <div tabindex="0">
+            <h2> Biology </h2>
+        </div>
+        <div tabindex="0">
+            <p> Deathclaws are a large, carnivorous, bipedal reptile species, designed for maximum lethality. The choice to make them bipedal was natural, as bipedalism raises the head, providing a greater field of vision and thus improving the ability to detect targets or resources. The upper limbs were also freed by this choice and could be fashioned into extremely dangerous weapons. The caveat is that the deathclaw is not as fast as a quadrupedal animal, though this is a largely academic concern. However, deathclaws have been observed running on all fours when charging prey. The rippling musculature of the deathclaw provides it with superior strength, excellent speed, and incredible resilience in most combat situations. Deathclaws communicate with each other in a pack using growls and body language, though they are also capable of mimicking human voices like a parrot if their intelligence is artificially increased. </p>
+            <p> Their strength is further magnified by their claws. Owing to their lineage, the deathclaw has opposable thumbs, though an additional two fingers were coded into the genome, for a total of five fingers on each hand. Each terminates in a sharp talon that allows the reptile to wound and kill with frightening efficiency; a single swipe is capable of bisecting an unarmored human in seconds. Deathclaw hide is extremely tough, providing an excellent defense against blunt and edged weapons. Firearms and energy weapons are reliable tools for killing a deathclaw, though lower powered variants are likely to have trouble piercing its skin. The defense is enhanced by horns and dorsal spikes, making melee combat a very dangerous proposition. </p>
+            <p> However, while they are difficult opponents, their keen senses can be used against them. Loud noises and bright light, such as that emitted by flares, can be used to deter a deathclaw's advance or even keep it at bay. </p>
+            <hr class="short">
+        </div>
+        <div tabindex="0">
+            <h3> Behavior </h3>
+        </div>
+        <div tabindex="0">
+            <p> Deathclaws are pack animals, with the leadership role assumed by the alpha pair, the strongest male and female deathclaws in the group. The remainder of the pack follows the leaders and migrates along with them. </p>
+            <p> Coupled with their pack behavior is a fierce territorial instinct. Deathclaws will usually opt for territories away from inhabited areas (most likely due to noise), but may settle into temporarily abandoned human buildings and areas, as was the case with the Boneyard warehouses circa 2161 or Quarry Junction in 2281. Once it claims a territory, a pack is exceedingly difficult to dislodge, as the alpha male will not abandon a claimed territory even if the pack mother is killed, while the alpha female will simply choose another mate to procreate. As such, reclaiming a deathclaw territory usually requires either killing both pack leaders, causing the pack to scatter, or wiping out the entire pack. Neither is particularly easy. </p>
+            <hr class="short">
+        </div>
+        <div tabindex="0">
+            <h3> Reproduction </h3>
+        </div>
+        <div tabindex="0">
+            <p> Deathclaws are made even more dangerous by their reproductive instincts. Unlike Jackson's chameleons, deathclaws are an oviparous species, female deathclaws will lay eggs in clusters, sired by the strongest male deathclaws in the pack, typically the alpha male. Survival of the pack is coded into deathclaws and the pack leaders will instinctively select only the strongest partners for procreation. If killed, the pack mother will typically be replaced by another female in short order. </p>
+            <p> Deathclaw eggs are large, weighing up to twelve pounds (5.5 kilograms), durable and resilient, with a remarkably long shelf life. Deathclaws will seek out dark, sheltered areas to set up their nests. Lone deathclaws will also claim territories and create nests, usually in sheltered, secluded areas. If they are female and have been impregnated by a male deathclaw, they will prepare a separate nest for their young, protecting their hardy eggs with whatever small objects are at hand, such as small rocks, fallen leaves, twigs, and bones leftover from their meals. </p>
+            <p> A juvenile deathclaw is born without prominent horns or dorsal spikes, which grow as it matures, and both of which act as secondary sex characteristics. Horns grow forwards on males, with larger being the more desirable, and grow back and upwards on females. Dorsal spikes grow much the same way as horns on males and act much the same way with larger being more desirable, but on females, dorsal spikes do not grow as large as they do on males and tend to be short in comparison. Claws, on the other hand, are present from day one. Baby deathclaws are born with a light brown skin tone and live under the protection of their parents within the pack. The skin darkens as the deathclaw matures, reaching deep brown upon entering adulthood, and eventually dark brown, black or even black and blue for old, experienced claws. </p>
+            <hr class="short">
+        </div>
+        <div tabindex="0">
+            <h3> Relationship with humans </h3>
+        </div>
+        <div tabindex="0">
+            <p> While deathclaws do not actively seek out human habitats to attack, human expansion inevitably leads to the two species coming into contact, usually by accident. Deathclaws are incredibly dangerous to humans, no matter how well prepared they are. Even Brotherhood of Steel patrols are known to suffer severe casualties if they walk into a deathclaw's territory unaware. The Enclave sought to exploit their fierce instincts and ferocity and use them as cheap, expendable troops for use in hostile environments. </p>
+            <p>  Their initial experiments, starting in 2235, focused on using a modified FEV strain to artificially increase the intelligence of deathclaws and succeeded in creating a single pack of modified, intelligent deathclaws led by Gruthar. Intended to only be smart enough to follow orders issued by their handlers, they have developed far higher intelligence than the project assumed was possible. After the first unit was fielded, Doctor Schreber's experimentation revealed that fact and the whole breed was summarily exterminated at the site they were first unleashed: Vault 13. Subsequent efforts, once the Enclave regrouped at Raven Rock, were focused on cruder, but more reliable methods: domestication units. These devices are surgically implanted into a captive deathclaw's brain and skull, allowing Enclave troops to issue commands to the fierce reptiles as if they were pets. Of course, even without human interference, deathclaws are a continuing hazard in the wastelands. Despite the efforts of hunter teams, they continue to set up nests throughout the wastelands. </p>
+            <p> The ferocity of deathclaws and their incredible resilience has earned them the respect and fear of wastelanders. Initially, the existence of deathclaws was treated with skepticism in the first century after the war, and many considered them a tall tale, on the order of ghosts and demons. However, the steady increase in deathclaw populations eventually secured them a place in the common consciousness. When used for comparisons, deathclaws are usually synonymous with ferocity and resilience. Occasionally, they're used to insult people; allegedly, they're as bad as marketing directors. Other examples of deathclaw presence in popular culture is the expression "deathclaw in a mating season", and, allegedly, deathclaw costumes </p>
+            <p> Deathclaw eggs are also a known delicacy, used to make omelettes that are highly nourishing and delicious. </p>
+            <hr>
+        </div>
+        <div tabindex="0">
+            <h2> Variants </h2>
+        </div>
+        <div tabindex="0">
+            <p> Deathclaws are primarily differentiated by age and gender, from the youngest, "baby" deathclaws, to the terrifying legendary male deathclaws. </p>
+            <hr class="short">
+        </div>
     </div>
 </div>
 <div class="container">
     <div class="text-block">
-        <h3> Baby/Young Deathclaw </h3>
-        <sub> baby deathclaws </sub>
-        <p> The smallest, youngest deathclaws are by no means non-threatening. While under the protection of their pack and especially their mother, babies are dangerous as they possess the fearsome claws and an attitude to match. They are also an estimated 50% smaller than adults. </p>
-        <p> Their relationship with their mother results in them fighting to protect their mother (which means they will rush any threat alongside her). If they are killed, the deathclaw mother will typically go berserk and attack any target in the vicinity, even pack mates. If the mother is dispatched, her children will flock to her body. </p>
-        <sub> young deathclaws </sub>
-        <p> Adolescent deathclaws are identical to juveniles in all, except one: size. They are nearing the size of an adult and thus only 25% smaller than an adult. They still remain within the pack but are tougher, faster and more deadly than babies. </p>
+        <div tabindex="0">
+            <h3> Baby/Young Deathclaw </h3>
+        </div>
+        <div tabindex="0">
+            <h4> baby deathclaws </h4>
+            <p> The smallest, youngest deathclaws are by no means non-threatening. While under the protection of their pack and especially their mother, babies are dangerous as they possess the fearsome claws and an attitude to match. They are also an estimated 50% smaller than adults. </p>
+            <p> Their relationship with their mother results in them fighting to protect their mother (which means they will rush any threat alongside her). If they are killed, the deathclaw mother will typically go berserk and attack any target in the vicinity, even pack mates. If the mother is dispatched, her children will flock to her body. </p>
+        </div>
+        <div tabindex="0">
+            <h4> young deathclaws </h4>
+            <p> Adolescent deathclaws are identical to juveniles in all, except one: size. They are nearing the size of an adult and thus only 25% smaller than an adult. They still remain within the pack but are tougher, faster and more deadly than babies. </p>
+        </div>
     </div>
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="/static/images/baby_deathclaw.png" alt="young deathclaw" class="death3">
     </div>
 </div>
 <hr class="short">
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <h3> Male Deathclaw </h3>
         <p> Male deathclaws that reach sexual maturity are easily recognizable by their brown skin and prominent, fully formed horns. They are fast, deadly and resilient, capable of dispatching nearly any threat with ease. </p>
         <p> Moreover, male deathclaws tend to congregate and travel in packs. Lone adults are the exception, rather than the rule. </p>
     </div>
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="/static/images/deathclaw.png" alt="deathclaw" class="death4">
     </div>
 </div>
 <hr class="short">
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <h3> Deathclaw alpha male </h3>
         <p> Fully mature adult deathclaws that avoid death at the hands of the various wasteland horrors will usually mature into alpha deathclaws. Their horns are longer, more curved and thicker than a regular adult, while their skin takes on a dark brown, even black hue with age. The brown markings also become visible. Alpha males have siring privileges and are usually found heading entire packs of deathclaws. </p>
     </div>
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="/static/images/alpha_deathclaw.png" alt="alpha deathclaw" class="death3">
     </div>
 </div>
 <hr class="short">
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <h3> Mother deathclaw </h3>
         <p> Adult female deathclaws are distinguished by a skin color that mixes olive and blue, horns curving backward, rather than forwards, barbed tails and a prominent flap of skin roughly where the cloaca is. Mother deathclaws (also called matriarchs) exclusively lay clutches sired by the pack's most powerful males, typically the alpha. </p>
     </div>
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="/static/images/mother_deathclaw.png" alt="mother deathclaw" class="death3">
     </div>
 </div>
 <hr class="short">
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <h3> Legendary deathclaw </h3>
         <p> Found only within the Dead Wind cavern in the Mojave, the legendary deathclaw is an alpha male deathclaw that managed to survive long enough to achieve a size a full 25% larger than regular adult deathclaws, with massive horns and claws to match. This particular specimen is responsible for the death of a Brotherhood of Steel paladin who tried to explore the cave. </p>
     </div>
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="/static/images/alpha_deathclaw.png" alt="legendary deathclaw" class="death3">
     </div>
 </div>
 <hr class="short">
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <h2> Deathclaw subtypes </h2>
     </div>
 </div>
 <hr class="short">
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <h3> Blind deathclaw </h3>
         <p> Wounded deathclaws that lost their eyesight can be found in the Mojave. While weaker than completely healthy deathclaws, they have excellent hearing to compensate, making it nearly impossible to sneak by. </p>
     </div>
 </div>
 <hr class="short">
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <h3> Intelligent deathclaw </h3>
         <p> The result of Enclave experiments, Gruthar's pack was subjected to FEV injections that conferred increased intelligence in order to create expendable troops for use in hostile environments. The project succeeded beyond the Enclave's intent, giving the pack intelligence ranging from that comparable to a human eight-year-old to matching or even surpassing adult humans. The increase in intelligence brought with itself sentience and self-awareness, which coupled with their instincts and pack behavior created fearsome predators. The emergence of intelligence also brought conscience along with it. Gruthar's rational thought led to the pack adopting an isolationist, pacifist philosophy to allow for the coexistence of humans and deathclaws. However, they did not avoid violence if it was necessary for the survival of the pack. </p>
         <p> All intelligent deathclaws were executed by Enclave's special operations unit led by Frank Horrigan. </p>
     </div>
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="/static/images/deathclaw_fo1.png" alt="intelligent deathclaw" class="death3">
     </div>
 </div>
 <hr class="short">
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <h3> Albino deathclaw </h3>
         <p> These deathclaws have suffered depigmentation of their skin. They are incredibly deadly, intelligent, and more durable than most deathclaws. Exposure to FEV that granted them increased intelligence also caused their skin to lose melanin, becoming stark white, and the eyes to stop producing pigment, allowing for their retina and the blood vessels to be seen. </p>
     </div>
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="/static/images/albino_deathclaw.png" alt="albino deathclaw" class="death4">
     </div>
 </div>
 <hr class="short">
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <h3> Enclave deathclaw </h3>
         <p> An adult deathclaw captured by the Enclave in the Capital Wasteland can be fitted with a domestication unit, a special contraption mounted to the skull of the creature and connected to the brain, giving Enclave personnel the ability to use these ferocious predators like guard dogs. Deathclaws controlled in this manner do not consider Enclave personnel a threat, but the Lyons' Brotherhood of Steel developed a device that can scramble the control signal and reverse the IFF, making Enclave personnel the only valid targets for the deathclaw and then detonating the domestication unit as a failsafe. </p>
         <p> Enclave units typically hold deathclaws in transport cages (a pre-War design), released when needed. Some patrols may choose to field them directly, however, at the discretion of the commanding officer. </p>
     </div>
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="/static/images/enclave_deathclaw.png" alt="enclave deathclaw" class="death3">
     </div>
 </div>
 <hr class="short">
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <h3> Hairy deathclaw </h3>
         <p> An entirely separate species that was termed deathclaw due to the similarity in behavior and, of course, the fearsome claws, the eastern hairy deathclaw is a unique creature that emerged in the territories belonging to the states of Illinois, Missouri, and Kansas. </p>
         <p> These deathclaws exhibit traits similar to mammals. The body is covered in a thick layer of fur, providing them with excellent protection from the elements, while their thick, leathery skin grants these deathclaws increased defense against projectiles and melee weapons. They are easily distinguishable by a crest of five horns protruding from their skull and a single nasal horn. The eponymous claws are also much less pronounced than in their reptilian cousins. Hairy deathclaws have developed a natural intelligence and sentience, as well as the ability to mimic human speech. They are self-aware and sentient, though precisely when the transition occurs is unknown. </p>
         <p> There is only one known extant brood of these deathclaws, which was controlled by the Beastlords by imprisoning Mother, the matriarch of the brood. </p>
     </div>
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="/static/images/hairy_deathclaw.png" alt="hairy deathclaw" class="death3">
     </div>
 </div>
 <hr class="short">
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <h3> Experimental deathclaw </h3>
         <p> Developed within the Corporate Vault, the experimental deathclaw is an offshoot of the regular deathclaw development program undertaken by Vault-Tec. Increased muscle mass and naturally grown exoskeleton with prominent spikes were achieved at the expense of eyesight. </p>
         <p> Experimental deathclaw variants include baby deathclaws, elder deathclaws, adolescent deathclaws and mother deathclaws. </p>
@@ -188,7 +232,7 @@
 </div>
 <hr class="short">
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <h3> Chameleon deathclaw </h3>
         <p> An experimental variant of the deathclaw, with an epidermis capable of adapting its appearance to its surroundings, providing it with a natural form of active camouflage, effectively making them invisible. </p>
         <hr>
@@ -199,43 +243,57 @@
 <hr>
 <div class="container3">
     <div class="audio-block">
-        <p> Chasing Deathclaw: </p>
-        <audio controls>
-            <source src="{{ url_for('static', filename='audio/deathclaw_chase_vox.ogg') }}" type="audio/ogg" class="cr_audio">
-            Your browser does not support the audio element.
-        </audio>
-        <p> Deathclaw Power attack forward: </p>
-        <audio controls>
-            <source src="{{ url_for('static', filename='audio/deathclaw_attackpowerforward.ogg') }}" type="audio/ogg" class="cr_audio">
-            Your browser does not support the audio element.
-        </audio>
-        <p> Conscious/Roaming Deathclaw: </p>
-        <audio controls>
-            <source src="{{ url_for('static', filename='audio/deathclaw_consciouslp.ogg') }}" type="audio/ogg" class="cr_audio">
-            Your browser does not support the audio element.
-        </audio>
-        <p> Deathclaw Death: </p>
-        <audio controls>
-            <source src="{{ url_for('static', filename='audio/deathclaw_death.ogg') }}" type="audio/ogg" class="cr_audio">
-            Your browser does not support the audio element.
-        </audio>
+        <div tabindex="0">
+            <p> Chasing Deathclaw: </p>
+            <audio controls>
+                <source src="{{ url_for('static', filename='audio/deathclaw_chase_vox.ogg') }}" type="audio/ogg" class="cr_audio">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div tabindex="0">
+            <p> Deathclaw Power attack forward: </p>
+            <audio controls>
+                <source src="{{ url_for('static', filename='audio/deathclaw_attackpowerforward.ogg') }}" type="audio/ogg" class="cr_audio">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div tabindex="0">
+            <p> Conscious/Roaming Deathclaw: </p>
+            <audio controls>
+                <source src="{{ url_for('static', filename='audio/deathclaw_consciouslp.ogg') }}" type="audio/ogg" class="cr_audio">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div tabindex="0">
+            <p> Deathclaw Death: </p>
+            <audio controls>
+                <source src="{{ url_for('static', filename='audio/deathclaw_death.ogg') }}" type="audio/ogg" class="cr_audio">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
     </div>
     <div class="audio-block2">
-        <p> Pained Deathclaw: </p>
-        <audio controls>
-            <source src="{{ url_for('static', filename='audio/deathclaw_pain_vox.ogg') }}" type="audio/ogg" class="cr_audio">
-            Your browser does not support the audio element.
-        </audio>
-        <p> Deathclaw Idle: </p>
-        <audio controls>
-            <source src="{{ url_for('static', filename='audio/deathclaw_idle.ogg') }}" type="audio/ogg" class="cr_audio">
-            Your browser does not support the audio element.
-        </audio>
-        <p> Deathclaw Power attack: </p>
-        <audio controls>
-            <source src="{{ url_for('static', filename='audio/deathclaw_poweratk_vox.ogg') }}" type="audio/ogg" class="cr_audio">
-            Your browser does not support the audio element.
-        </audio>
+        <div tabindex="0">
+            <p> Pained Deathclaw: </p>
+            <audio controls>
+                <source src="{{ url_for('static', filename='audio/deathclaw_pain_vox.ogg') }}" type="audio/ogg" class="cr_audio">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div tabindex="0">
+            <p> Deathclaw Idle: </p>
+            <audio controls>
+                <source src="{{ url_for('static', filename='audio/deathclaw_idle.ogg') }}" type="audio/ogg" class="cr_audio">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div tabindex="0">
+            <p> Deathclaw Power attack: </p>
+            <audio controls>
+                <source src="{{ url_for('static', filename='audio/deathclaw_poweratk_vox.ogg') }}" type="audio/ogg" class="cr_audio">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
     </div>
 </div>
 {% endblock %}

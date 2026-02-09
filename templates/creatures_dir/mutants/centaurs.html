@@ -4,50 +4,74 @@
 {% block content %}
 <a href="{{ url_for('creatures') }}" class="sel"> > Back to Creatures</a>
 <a href="{{ url_for('creatures_mutants') }}" class="sel"> > Back to Mutants</a>
-<h1> Centaurs </h1>
+<h1 tabindex="0"> Centaurs </h1>
 <div class="container">
     <div class="text-block">
-        <p> * What looks like your worst nightmare?... a centaur. * </p>
-        <p> These nightmarish mutants named centaurs are mutated hybrid creatures created from experimentation with the Forced Evolutionary Virus, named for their malformed legs. </p>
-        <hr>
-        <h2> Research Findings </h2>
-        <hr>
-        <h3> West Coast </h3>
-        <p> Centaurs encountered in New California and the Mojave Wasteland were created by the Master. The creation process involved tossing a varied mix of different animals, including humans, dogs, and cats, into a Forced Evolutionary Virus (FEV) vat to be infected by the virus, and then seeing what mutant chimera emerged as the virus produced rapid and unpredictable mutations. The resulting centaurs can differ quite radically in physical appearance from one another. However, all known centaurs are somewhat humanoid in appearance. Despite this consuming them is not an uncommon practice; such as with Mom's Diner of the Den. </p>
-        <p> Used by the Master as a sort of guard dog, these mutant chimeras weren't tamed in the traditional sense. </p>
-        <hr class="short">
-        <h3> Capital Wasteland </h3>
-        <p> Like their western counterparts, the Capital Wasteland centaurs were created by infection with the FEV along with the super mutants. Their birthplace, like the super mutants, is Vault 87. They often accompany the super mutants, serving as watchdogs and alert their masters to danger. </p>
-        <hr>
-        <h2> Biology </h2>
-        <hr>
-        <h2>Two-headed centaur</h2>
-        <p> Centaurs are large, fleshy creatures consisting of human and canine components, named after its three pairs of leg-like arms. Centaurs walk along the ground on their massive gash-covered torsos, with movement similar to that of giant ants. The rear pair of arms serve as the creature's legs, connected to the pelvis and driving movement. The front pair of arms assist in walking, but are connected to the shoulder blades and considered arms when targeted with an Aimed Shot. The middle pair of arms may serve as legs, but are connected neither to the pelvis nor the shoulder blades. Each pair of arms has a bone structure similar to that of humanoids, although the hands only have three to four fingers.</p>
-        <p> Two-headed centaurs have two heads, one being canine and the other humanoid. Each head is mounted on a thick, lengthy neck, converging into the main body and spine at the base of the torso. The canine head struts when walking and is used in attacking, suggesting some level of control over the body. Likewise, it is the only head labeled as such during an Aimed Shot. The canine head can also be seen biting at the human head, at which point the human head evades, suggesting some level of individual thought. </p>
-        <p> A large number of red tentacles spill from the creature's swollen groin and writhe around on the ground. They extend under the centaur's torso and may lash out from under the base of the neck. Centaurs also have a large rib cage and drooping spine along the back of the torso. </p>
+        <div tabindex="0">
+            <p> * What looks like your worst nightmare?... a centaur. * </p>
+        </div>
+        <div tabindex="0">
+            <p> These nightmarish mutants named centaurs are mutated hybrid creatures created from experimentation with the Forced Evolutionary Virus, named for their malformed legs. </p>
+            <hr>
+        </div>
+        <div tabindex="0">
+            <h2> Research Findings </h2>
+            <hr>
+        </div>
+        <div tabindex="0">
+            <h3> West Coast </h3>
+        </div>
+        <div tabindex="0">
+            <p> Centaurs encountered in New California and the Mojave Wasteland were created by the Master. The creation process involved tossing a varied mix of different animals, including humans, dogs, and cats, into a Forced Evolutionary Virus (FEV) vat to be infected by the virus, and then seeing what mutant chimera emerged as the virus produced rapid and unpredictable mutations. The resulting centaurs can differ quite radically in physical appearance from one another. However, all known centaurs are somewhat humanoid in appearance. Despite this consuming them is not an uncommon practice; such as with Mom's Diner of the Den. </p>
+            <p> Used by the Master as a sort of guard dog, these mutant chimeras weren't tamed in the traditional sense. </p>
+            <hr class="short">
+        </div>
+        <div tabindex="0">
+            <h3> Capital Wasteland </h3>
+        </div>
+        <div tabindex="0">
+            <p> Like their western counterparts, the Capital Wasteland centaurs were created by infection with the FEV along with the super mutants. Their birthplace, like the super mutants, is Vault 87. They often accompany the super mutants, serving as watchdogs and alert their masters to danger. </p>
+            <hr>
+        </div>
+        <div tabindex="0">
+            <h2> Biology </h2>
+            <hr>
+        </div>
+        <div tabindex="0">
+            <h2>Two-headed centaur</h2>
+        </div>
+        <div tabindex="0">
+            <p> Centaurs are large, fleshy creatures consisting of human and canine components, named after its three pairs of leg-like arms. Centaurs walk along the ground on their massive gash-covered torsos, with movement similar to that of giant ants. The rear pair of arms serve as the creature's legs, connected to the pelvis and driving movement. The front pair of arms assist in walking, but are connected to the shoulder blades and considered arms when targeted with an Aimed Shot. The middle pair of arms may serve as legs, but are connected neither to the pelvis nor the shoulder blades. Each pair of arms has a bone structure similar to that of humanoids, although the hands only have three to four fingers.</p>
+            <p> Two-headed centaurs have two heads, one being canine and the other humanoid. Each head is mounted on a thick, lengthy neck, converging into the main body and spine at the base of the torso. The canine head struts when walking and is used in attacking, suggesting some level of control over the body. Likewise, it is the only head labeled as such during an Aimed Shot. The canine head can also be seen biting at the human head, at which point the human head evades, suggesting some level of individual thought. </p>
+            <p> A large number of red tentacles spill from the creature's swollen groin and writhe around on the ground. They extend under the centaur's torso and may lash out from under the base of the neck. Centaurs also have a large rib cage and drooping spine along the back of the torso. </p>
+        </div>
     </div>
-    <div class="img-block">
+    <div class="img-block" tabindex="0">
         <img src="{{ url_for('static', filename='images/centaur.png') }}" alt="Centaurs Image" class="mutie">
     </div>
 </div>
 <div class="container2">
     <div class="text-block">
-        <h2>One-headed centaur</h2>
-        <p> One-headed centaurs encountered in the Capital and the Mojave Wastelands are somewhat different from the two-headed creatures seen along the West Coast. A muscular humanoid torso sits upright upon a sloped, insect-like abdomen. When walking, the front two pairs of arms drive the creature forward, with the rear pair dragging along the ground next to the abdomen. The centaur's torso sways when the body moves, with the limbs moving in slow yet abrupt motions. </p>
-        <p> Jagged bones sprout from the creature's spine and along the rear abdomen. Similarly, numerous teeth-like bones surround the torso's abdominal muscles. A single human head sits upon the torso, connected with a thick, brawny neck. A pained expression is worn on the face, with three tongue-like tentacles sprouting from the creature's mouth and reaching the length of the torso. The centaur is covered in thick purple veins and its shoulders end in bony stumps. </p>
-        <p> Larger versions of centaurs, ironically monikered as "evolved" centaurs, also exist in the Capital and Mojave Wastelands. While having generally the same body shape, evolved centaurs have tight, deeper toned skin and have grown a large number of tumors along the back. The creature's purple veins and protruding bone fragments are less prominent than the standard centaur. Evolved centaurs can also grow to be much larger and have darker-colored tongues. </p>
+        <div tabindex="0">
+            <h2>One-headed centaur</h2>
+        </div>
+        <div tabindex="0">
+            <p> One-headed centaurs encountered in the Capital and the Mojave Wastelands are somewhat different from the two-headed creatures seen along the West Coast. A muscular humanoid torso sits upright upon a sloped, insect-like abdomen. When walking, the front two pairs of arms drive the creature forward, with the rear pair dragging along the ground next to the abdomen. The centaur's torso sways when the body moves, with the limbs moving in slow yet abrupt motions. </p>
+            <p> Jagged bones sprout from the creature's spine and along the rear abdomen. Similarly, numerous teeth-like bones surround the torso's abdominal muscles. A single human head sits upon the torso, connected with a thick, brawny neck. A pained expression is worn on the face, with three tongue-like tentacles sprouting from the creature's mouth and reaching the length of the torso. The centaur is covered in thick purple veins and its shoulders end in bony stumps. </p>
+            <p> Larger versions of centaurs, ironically monikered as "evolved" centaurs, also exist in the Capital and Mojave Wastelands. While having generally the same body shape, evolved centaurs have tight, deeper toned skin and have grown a large number of tumors along the back. The creature's purple veins and protruding bone fragments are less prominent than the standard centaur. Evolved centaurs can also grow to be much larger and have darker-colored tongues. </p>
+        </div>
     </div> 
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <p> this is a digital rendering of a diagram found in an abandoned FEV-lab </p>
     </div>  
     <div class="break"></div>
-    <div class="img-block">
+    <div class="img-block" tabindex="0">
         <img src="{{ url_for('static', filename='images/cent.png') }}" alt="Centaur Image" class="mutie2">
     </div>
 </div>
 <hr>
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <h2> Audio Files </h2>
         <p> Below you will find various noises a centaur makes. </p>
     </div>
@@ -55,48 +79,62 @@
 <hr>
 <div class="container3">
     <div class="audio-block">
-        <p> Chasing Centaur: </p>
-        <audio controls>
-            <source src="{{ url_for('static', filename='audio/centaur_chasevox.ogg') }}" type="audio/ogg" class="cr_audio">
-            Your browser does not support the audio element.
-        </audio>
-        <p> Centaur Tongue Lash: </p>
-        <audio controls>
-            <source src="{{ url_for('static', filename='audio/centaur_attack.ogg') }}" type="audio/ogg" class="cr_audio">
-            Your browser does not support the audio element.
-        </audio>
-        <p> Centaur Spit Attack: </p>
-        <audio controls>
-            <source src="{{ url_for('static', filename='audio/centaur_attackspit_03.ogg') }}" type="audio/ogg" class="cr_audio">
-            Your browser does not support the audio element.
-        </audio>
-        <p> Centaur Death: </p>
-        <audio controls>
-            <source src="{{ url_for('static', filename='audio/centaur_death_01.ogg') }}" type="audio/ogg" class="cr_audio">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
-    <div class="audio-block2">
-        <p> Injured Centaur: </p>
-        <audio controls>
-            <source src="{{ url_for('static', filename='audio/centaur_injured_01.ogg') }}" type="audio/ogg" class="cr_audio">
-            Your browser does not support the audio element.
-        </audio>
-        <p> Centaur Roaming/Conscious: </p>
-        <audio controls>
-            <source src="{{ url_for('static', filename='audio/centaur_conscious_lp.ogg') }}" type="audio/ogg" class="cr_audio">
-            Your browser does not support the audio element.
-        </audio>
-        <p> Centaur Idle: </p>
-        <audio controls>
-            <source src="{{ url_for('static', filename='audio/centaur_idle_scan.ogg') }}" type="audio/ogg" class="cr_audio">
-            Your browser does not support the audio element.
-        </audio>
-        <p> Centaur Walking: </p>
-        <audio controls>
-            <source src="{{ url_for('static', filename='audio/centaur_walkbreath_01.ogg') }}" type="audio/ogg" class="cr_audio">
-            Your browser does not support the audio element.
-        </audio>
+        <div tabindex="0">
+            <p> Chasing Centaur: </p>
+            <audio controls>
+                <source src="{{ url_for('static', filename='audio/centaur_chasevox.ogg') }}" type="audio/ogg" class="cr_audio">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div tabindex="0">
+            <p> Centaur Tongue Lash: </p>
+            <audio controls>
+                <source src="{{ url_for('static', filename='audio/centaur_attack.ogg') }}" type="audio/ogg" class="cr_audio">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div tabindex="0">
+            <p> Centaur Spit Attack: </p>
+            <audio controls>
+                <source src="{{ url_for('static', filename='audio/centaur_attackspit_03.ogg') }}" type="audio/ogg" class="cr_audio">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div tabindex="0">
+            <p> Centaur Death: </p>
+            <audio controls>
+                <source src="{{ url_for('static', filename='audio/centaur_death_01.ogg') }}" type="audio/ogg" class="cr_audio">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-block2">
+            <p> Injured Centaur: </p>
+            <audio controls>
+                <source src="{{ url_for('static', filename='audio/centaur_injured_01.ogg') }}" type="audio/ogg" class="cr_audio">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div tabindex="0">
+            <p> Centaur Roaming/Conscious: </p>
+            <audio controls>
+                <source src="{{ url_for('static', filename='audio/centaur_conscious_lp.ogg') }}" type="audio/ogg" class="cr_audio">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div tabindex="0">
+            <p> Centaur Idle: </p>
+            <audio controls>
+                <source src="{{ url_for('static', filename='audio/centaur_idle_scan.ogg') }}" type="audio/ogg" class="cr_audio">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div tabindex="0">
+            <p> Centaur Walking: </p>
+            <audio controls>
+                <source src="{{ url_for('static', filename='audio/centaur_walkbreath_01.ogg') }}" type="audio/ogg" class="cr_audio">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
     </div>
 </div>
 {% endblock %}

@@ -5,7 +5,7 @@
 <a href="{{ url_for('creatures') }}" class="sel"> > Back to Creatures</a>
 <a href="{{ url_for('creatures_canines') }}" class="sel"> > Back to Canines</a>
 <hr>
-<h1> Wolves </h1>
+<h1 tabindex="0"> Wolves </h1>
 <div class="container">
     <div class="text-block">
         <div tabindex="0">
@@ -33,7 +33,7 @@
             <p> Unlike most other creatures in the wasteland, wolves do not have any visible mutations. The radiation in the environment has not affected their appearance, as they maintain consistent coats of fur. Despite the lack of external mutations, wolves still possess pointed teeth and sharp claws that are utilized to attack enemies. </p>
         </div>
     </div>
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="{{ url_for('static', filename='images/wolf.png') }}" alt="Wolf" class="can">
     </div>
 </div>

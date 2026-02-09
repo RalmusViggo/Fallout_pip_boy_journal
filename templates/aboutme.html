@@ -2,41 +2,49 @@
 {% block title %} About Me And My Journal {% endblock %}
 
 {% block content %}
-<h1> About me and my journal. </h1>
+<h1 tabindex="0"> About me and my journal. </h1>
 <hr>
 <div class="container">
     <div class="text-block">
-        <p> My name is <span class="redacted"> Mark</span> <span class="redacted"> Schultz</span>. I am often called "The Chronicler". </p>
-        <p> I started writing this journal in the year 2163. I began writing it because I was so very fascinated by how humans and other creatures have adapted to the radioactive wasteland that is the world. </p>
-        <p> As you might have been able to pice together if you've read some of my entries, I am far above the age of really any human, and this is because I am a ghoul. </p>
-        <p> The current year as of when I'm writing this is 2287. So I am 148 years as of when I'm writing this. </p>
-        <p> This journal is a guide of sorts I've made, I am... or was (depending on if I'm still in ownership of this pip-boy) hoping to make this a replicable holotape, so it can be widely distributed. </p>
-        <br>
-        <p> If you have found this on my corpse, please be careful with it, it is very precious to me. If it wasn't on a corpse, still be careful with it, but there should be a tracking signal that should be broadcasting on an unused radio frequency, the frequency is 85.3. Please use it to find me and return my journal to me. </p>
-        <br>
-        <p> Yours truly, <span class="redacted"> Schultz</span> </p>
+        <div tabindex="0">
+            <p> My name is <span class="redacted"> Mark</span> <span class="redacted"> Schultz</span>. I am often called "The Chronicler". </p>
+        </div>
+        <div tabindex="0">
+            <p> I started writing this journal in the year 2163. I began writing it because I was so very fascinated by how humans and other creatures have adapted to the radioactive wasteland that is the world. </p>
+            <p> As you might have been able to pice together if you've read some of my entries, I am far above the age of really any human, and this is because I am a ghoul. </p>
+            <p> The current year as of when I'm writing this is 2287. So I am 148 years as of when I'm writing this. </p>
+            <p> This journal is a guide of sorts I've made, I am... or was (depending on if I'm still in ownership of this pip-boy) hoping to make this a replicable holotape, so it can be widely distributed. </p>
+            <br>
+        </div>
+        <div tabindex="0">
+            <p> If you have found this on my corpse, please be careful with it, it is very precious to me. If it wasn't on a corpse, still be careful with it, but there should be a tracking signal that should be broadcasting on an unused radio frequency, the frequency is 85.3. Please use it to find me and return my journal to me. </p>
+            <br>
+        </div>
+        <div tabindex="0">
+            <p> Yours truly, <span class="redacted"> Schultz</span> </p>
+        </div>
     </div>
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="{{ url_for('static', filename='images/mark.png') }}" alt="Me" class="gh">
         <sub> (this is one of the few images i managed to actually show colours beside green and black.) </sub>
     </div>
 </div>
 <hr>
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <p> I managed to take a photo og the screen of the pip-boy with the pip-boy, don't ask me how it works, i don't know, it just does... but i did it to show my S.P.E.C.I.A.L stats and my skills. </p>
     </div>
 </div>
 <hr>
 <div class="container5">
-    <div class="image-block2">
+    <div class="image-block2" tabindex="0">
         <div class="text-blockC">
             <h3> S.P.E.C.I.A.L </h3>
         </div>
         <img src="{{ url_for('static', filename='images/special.png') }}" alt="S.P.E.C.I.A.L sats" class="yao">
     </div>
     <div class="break"></div>
-    <div class="image-block2">
+    <div class="image-block2" tabindex="0">
         <div class="text-blockC">
             <h3> Skills</h3>
         </div>

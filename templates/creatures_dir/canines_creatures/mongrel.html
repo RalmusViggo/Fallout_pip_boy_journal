@@ -5,7 +5,7 @@
 <a href="{{ url_for('creatures') }}" class="sel"> > Back to Creatures</a>
 <a href="{{ url_for('creatures_canines') }}" class="sel"> > Back to Canines</a>
 <hr>
-<h1> Mongrels </h1>
+<h1 tabindex="0"> Mongrels </h1>
 <div class="container">
     <div class="text-block">
         <div tabindex="0">
@@ -38,7 +38,7 @@
             <p> Stronger in every way than their counterparts, they are usually found with three or four other mongrels. </p>
         </div>
     </div>
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="{{ url_for('static', filename='images/mongrel.png') }}" alt="Mongrel" class="can2">
     </div>
 </div>
