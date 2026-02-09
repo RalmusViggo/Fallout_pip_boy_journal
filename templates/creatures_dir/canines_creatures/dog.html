@@ -5,96 +5,108 @@
 <a href="{{ url_for('creatures') }}" class="sel"> > Back to Creatures</a>
 <a href="{{ url_for('creatures_canines') }}" class="sel"> > Back to Canines</a>
 <hr>
-<h1> Dogs </h1>
+<h1 tabindex="0"> Dogs </h1>
 <div class="container">
     <div class="text-block">
-        <p> * Who let the mongrels out?... wait, thats not correct. * </p>
-        <p> Dogs are creatures found across the post-War United States. Many have remained domesticated pets, but many more have turned feral and hunt the wasteland in packs. The dogs that survived the War are a larger and tougher breed, now almost wolf-sized. Even so, just as they have in ages past, many dogs have remained faithful and beloved companions. </p>
-        <hr>
-        <h2> Research Findings </h2>
-        <p> The domestic dog (Latin: Canis lupus familiaris) is a canid that is known as man's best friend. The dog was the first domesticated animal and has been widely kept as a working, hunting, and pet companion. Though most breeds of dogs remain largely un-mutated by radiation exposure, some modified or mutant varieties do exist. The Master created centaurs by mixing dog, human and brahmin in the FEV vats. Dogs were also subject to cyberization, which resulted in cyberdogs. Toy breeds of dog such as poodles are virtually nonexistent in the post-War world. </p>
+        <div tabindex="0">
+            <p> * Who let the mongrels out?... wait, thats not correct. * </p>
+        </div>
+        <div  tabindex="0">
+            <p> Dogs are creatures found across the post-War United States. Many have remained domesticated pets, but many more have turned feral and hunt the wasteland in packs. The dogs that survived the War are a larger and tougher breed, now almost wolf-sized. Even so, just as they have in ages past, many dogs have remained faithful and beloved companions. </p>
+            <hr>
+        </div>
+        <div  tabindex="0">
+            <h2> Research Findings </h2>
+        </div>
+        <div  tabindex="0">
+            <p> The domestic dog (Latin: Canis lupus familiaris) is a canid that is known as man's best friend. The dog was the first domesticated animal and has been widely kept as a working, hunting, and pet companion. Though most breeds of dogs remain largely un-mutated by radiation exposure, some modified or mutant varieties do exist. The Master created centaurs by mixing dog, human and brahmin in the FEV vats. Dogs were also subject to cyberization, which resulted in cyberdogs. Toy breeds of dog such as poodles are virtually nonexistent in the post-War world. </p>
+        </div>
     </div>
     <div class="image-block">
         <img src="{{ url_for('static', filename='images/dog.png') }}" alt="Dog" class="can">
     </div>
 </div>
-<hr>
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <h2> Variants </h2>
         <hr> 
+    </div>
+</div>
+<hr>
+<div class="container">
+    <div class="text-block" tabindex="0">
         <h3> Dog </h3>
         <p> Regular dogs with no special characteristics and no special attributes. </p>
     </div>
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="{{ url_for('static', filename='images/dog2.png') }}" alt="Dog" class="can">
     </div>
 </div>
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <h3> Attack Dog </h3>
         <p> Attack dogs are domesticated dogs, with a degree of training. They are usually seen in raider camps or with Gunners, Minutemen or Brotherhood of Steel patrols. They are sometimes equipped with various pieces of dog apparel. </p>
     </div> 
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="{{ url_for('static', filename='images/attack_dog.png') }}" alt="Attack Dog" class="can3">
     </div>
 </div>
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <h3> Tame dogs </h3>
         <p> These dogs are domesticated and usually kept as pets. </p>
     </div>
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="{{ url_for('static', filename='images/tame_dog.png') }}" alt="Tame Dog" class="can3">
     </div>
 </div>
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <h3>  Cyberdogs </h3>
         <p> Cyberdogs, also called cyber-dogs or cyber-hounds, are mechanically enhanced canines found, albeit rarely, in the wasteland. </p>
         <li> <a href="{{ url_for('cyberdog') }}" class="sel"> > Cyberdog </a> </li>
     </div>
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="{{ url_for('static', filename='images/cyberdog.png') }}" alt="Cyberdog" class="can3">
     </div>
 </div>        
 <hr>
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <h3> Legion mongrel </h3>
         <p> Legion mongrels are dogs owned and bred by the houndmasters of Caesar's Legion. Mongrels are mainly used in combat and scouting missions by the Legion. Because of their thick, shaggy hair (as seen in the picture) and their red-colored eyes, they are of a distinctly different breed than most dogs found elsewhere. </p>
     </div>
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="{{ url_for('static', filename='images/legion_mongrel.png') }}" alt="Legion Mongrel" class="can">
     </div>
 </div>
 <hr>
 <div class="container">
-    <div class="text-block"> 
+    <div class="text-block" tabindex="0"> 
         <h3> Vicious dog </h3>
         <p> Vicious dogs are a nearly hairless and apparently, partially ghoulified species of wasteland canine. Ruthless survivors of the wastes, these starving, irradiated mutts will attack anything that moves. </p>
     </div>
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="{{ url_for('static', filename='images/vicious_dog.png') }}" alt="Vicious Dog" class="can">
     </div>
 </div>
 <hr>
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <h3> Mongrel </h3>
         <p> Mutant dogs are a mutant variant of the dog species. They are a thick, shaggy, red-haired breed. </p>
     </div>
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="{{ url_for('static', filename='images/mongrel.png') }}" alt="Mongrel" class="can">
     </div>
 </div>
 <hr>
 <div class="container">
-    <div class="text-block">
+    <div class="text-block" tabindex="0">
         <h3> Mutant Hound </h3>
         <p> Unlike other species of dogs mutated by radiation, these dogs are also mutated by FEV, giving them a distinct rough green exterior. They hunt with super mutant packs and they also come in a glowing variant. </p>
     </div>
-    <div class="image-block">
+    <div class="image-block" tabindex="0">
         <img src="{{ url_for('static', filename='images/mutant_hound.png') }}" alt="Mutant Hound" class="can">
     </div>
 </div>
