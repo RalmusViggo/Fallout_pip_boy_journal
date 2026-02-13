@@ -549,3 +549,15 @@ h3 {
 .indent {
     margin-left: 40px;
 }
+
+.break2 {
+  flex-basis: 15%;
+  height: 0; /* Ensures it takes no vertical space */
+}
+
+.container6 {
+    display: flex;   /* Aktiverer flexbox */
+    flex-direction: column; /* Vertikal rekkefølge */
+    flex-wrap: nowrap;
+    justify-content: left; /* Sentrerer innholdet horisontalt */
+}
