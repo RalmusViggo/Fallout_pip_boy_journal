@@ -248,5 +248,9 @@ def nightstalker():
 def nonferal():
     return render_template("/creatures_dir/non-feral.html")
 
+@app.route('/stats')
+def stats():
+    return render_template("stats.html")
+
 if __name__ == "__main__":
     app.run()
