@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %} Register {% endblock %}
+{% block content %}
+<h1> This is used to register a new user of the pip-boy. </h1>
+
+<form method="POST">
+    {{ form.hidden_tag() }} 
+    <br class="break">
+    <div class="sel_reg"> > {{ form.username.label }} {{ form.username }} </div><br>
+    <div class="sel_reg"> > {{ form.password.label }} {{ form.password }} </div><br>
+    <div class="sel_reg"> > {{ form.origin.label }} {{ form.origin }} </div><br>
+    <div class="sel_reg"> > {{ form.origin_trait.label }} {{ form.origin_trait }} </div><br>
+    <div class="sel_reg"> > {{ form.strength.label }} {{ form.strength }} </div><br>
+    <div class="sel_reg"> > {{ form.perception.label }} {{ form.perception }} </div><br>
+    <div class="sel_reg"> > {{ form.endurance.label }} {{ form.endurance }} </div><br>
+    <div class="sel_reg"> > {{ form.charisma.label }} {{ form.charisma }} </div><br>
+    <div class="sel_reg"> > {{ form.intelligence.label }} {{ form.intelligence }} </div><br>
+    <div class="sel_reg"> > {{ form.agility.label }} {{ form.agility }} </div><br>
+    <div class="sel_reg"> > {{ form.luck.label }} {{ form.luck }} </div><br>
+    <div class="sel_reg"> > {{ form.tagskill1.label }} {{ form.tagskill1 }} </div><br>
+    <div class="sel_reg"> > {{ form.tagskill2.label }} {{ form.tagskill2 }} </div><br>
+    <div class="sel_reg"> > {{ form.tagskill3.label }} {{ form.tagskill3 }} </div><br>
+    <div class="sel_reg"> > {{ form.athletics.label }} {{ form.athletics }} </div><br>
+    <div class="sel_reg"> > {{ form.barter.label }} {{ form.barter }} </div><br>
+    <div class="sel_reg"> > {{ form.big_guns.label }} {{ form.big_guns }} </div><br>
+    <div class="sel_reg"> > {{ form.energy_weapons.label }} {{ form.energy_weapons }} </div><br>
+    <div class="sel_reg"> > {{ form.explosives.label }} {{ form.explosives }} </div><br>
+    <div class="sel_reg"> > {{ form.lockpick.label }} {{ form.lockpick }} </div><br>
+    <div class="sel_reg"> > {{ form.medicine.label }} {{ form.medicine }} </div><br>
+    <div class="sel_reg"> > {{ form.melee_weapons.label }} {{ form.melee_weapons }} </div><br>
+    <div class="sel_reg"> > {{ form.pilot.label }} {{ form.pilot }} </div><br>
+    <div class="sel_reg"> > {{ form.repair.label }} {{ form.repair }} </div><br>
+    <div class="sel_reg"> > {{ form.science.label }} {{ form.science }} </div><br>
+    <div class="sel_reg"> > {{ form.small_guns.label }} {{ form.small_guns }} </div><br>
+    <div class="sel_reg"> > {{ form.sneak.label }} {{ form.sneak }} </div><br>
+    <div class="sel_reg"> > {{ form.speech.label }} {{ form.speech }} </div><br>
+    <div class="sel_reg"> > {{ form.survival.label }} {{ form.survival }} </div><br>
+    <div class="sel_reg"> > {{ form.throwing.label }} {{ form.throwing }} </div><br>
+    <div class="sel_reg"> > {{ form.unarmed.label }} {{ form.unarmed }} </div><br>
+    <div class="sel_reg"> > {{ form.level.label }} {{ form.level }} </div><br>
+        <div class="sel_sub"> {{ form.submit() }}</div>
+</form>
+{% endblock %}

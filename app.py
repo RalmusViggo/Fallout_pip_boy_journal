@@ -18,7 +18,7 @@ def get_conn():
 def index():
     return render_template("index.html")
 
-@app.route('/register', methods=['GET', 'POST'])
+""" @app.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegisterForm()
     if form.validate_on_submit():
@@ -44,6 +44,57 @@ def register():
         conn.close()
         return redirect("/")
     return render_template("register.html", form=form)
+"""
+@app.route('/register_actual', methods=['GET', 'POST'])
+def register_actual():
+    form = RegisterForm()
+    if form.validate_on_submit():
+        username = form.username.data
+        password = form.password.data
+        origin = form.origin.data
+        origin_trait = form.origin_trait.data
+        strength = form.strength.data
+        perception = form.perception.data
+        endurance = form.endurance.data
+        charisma = form.charisma.data
+        intelligence = form.intelligence.data
+        agility = form.agility.data
+        luck = form.luck.data
+        tagskill1 = form.tagskill1.data
+        tagskill2 = form.tagskill2.data
+        tagskill3 = form.tagskill3.data
+        athletics = form.athletics.data
+        barter = form.barter.data
+        big_guns = form.big_guns.data
+        energy_weapons = form.energy_weapons.data
+        explosives = form.explosives.data
+        lockpick = form.lockpick.data
+        medicine = form.medicine.data
+        melee_weapons = form.melee_weapons.data
+        pilot = form.pilot.data
+        repair = form.repair.data
+        science = form.science.data
+        small_guns = form.small_guns.data
+        sneak = form.sneak.data
+        speech = form.speech.data
+        survival = form.survival.data
+        throwing = form.throwing.data
+        unarmed = form.unarmed.data
+        level = form.level.data
+
+        conn = get_conn()
+        cur = conn.cursor()
+        cur.execute(
+            "INSERT INTO users (username, password, origin, origin_trait, strength, perception, endurance, charisma, intelligence, agility, luck, tagskill1, tagskill2, tagskill3, athletics, barter, big_guns, energy_weapons, explosives, lockpick, medicine, melee_weapons, pilot, repair, science, small_guns, sneak, speech, survival, throwing, unarmed, level) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+            (username,password,origin,origin_trait,strength,perception,endurance,charisma,intelligence,agility,luck,tagskill1,tagskill2,tagskill3,athletics,barter,big_guns,energy_weapons,explosives,lockpick,medicine,melee_weapons,pilot,repair,science,small_guns,sneak,speech,survival,throwing,unarmed,level)
+        )
+        conn.commit()
+        cur.close()
+        conn.close()
+        return redirect("/login.html")
+    return render_template("register_actual.html", form=form)
+
+
 
 @app.route('/factions')
 def factions():
