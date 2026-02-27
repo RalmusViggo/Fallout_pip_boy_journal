@@ -18,7 +18,7 @@ def get_conn():
 def index():
     return render_template("index.html")
 
-""" @app.route('/register', methods=['GET', 'POST'])
+@app.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegisterForm()
     if form.validate_on_submit():
@@ -44,7 +44,7 @@ def register():
         conn.close()
         return redirect("/")
     return render_template("register.html", form=form)
-"""
+
 @app.route('/register_actual', methods=['GET', 'POST'])
 def register_actual():
     form = RegisterForm()
@@ -91,7 +91,7 @@ def register_actual():
         conn.commit()
         cur.close()
         conn.close()
-        return redirect("/login.html")
+        return redirect("/")
     return render_template("register_actual.html", form=form)
 
 
