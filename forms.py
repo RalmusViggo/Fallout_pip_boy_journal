@@ -2,7 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, IntegerField
 from wtforms.validators import InputRequired
 
-"""class RegisterForm(FlaskForm):
+class RegisterForm(FlaskForm):
     name = StringField("Name", validators=[InputRequired()])
     gender = StringField("Gender", validators=[InputRequired()])
     age = StringField("Age", validators=[InputRequired()])
@@ -14,7 +14,7 @@ from wtforms.validators import InputRequired
     allergies = StringField("Allergies", validators=[InputRequired()])
     strengths = StringField("Strengths", validators=[InputRequired()])
     
-    submit = SubmitField("> Submit Data") """
+    submit = SubmitField("> Submit Data")
 
 class RegisterForm(FlaskForm):
     username = StringField("Name", validators=[InputRequired()])
