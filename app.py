@@ -303,5 +303,25 @@ def nonferal():
 def stats():
     return render_template("stats.html")
 
+@app.route('/journal_entries')
+def journal_entries():
+    return render_template("journal_entries.html")
+
+@app.route('/journal/journal_west_coast')
+def journal_west_coast():
+    return render_template("journal/journal_west_coast.html")
+
+@app.route('/journal/journal_commonwealth')
+def journal_commonwealth():
+    return render_template("journal/journal_commonwealth.html")
+
+@app.route('/journal/journal_capital')
+def journal_capital():
+    return render_template("journal/journal_capital.html")
+
+@app.route('/journal/journal_appalachia')
+def journal_appalachia():
+    return render_template("journal/journal_appalachia.html")
+
 if __name__ == "__main__":
     app.run()

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %} West Coast Journal Entries {% endblock %}
+
+{% block content %}
+<a href="{{ url_for('journal_entries') }}" class="sel"> > Back to Journal Entries</a>
+<hr>
+<h1 tabindex="0"> West Coast Journal Entries </h1>
+<hr>
+<div class="container">
+    <div class="text-block">
+        <h2> March 26 2163. </h2>
+        <p> This is my FIRST EVER journal entry! I just found this abandoned vault in right by the coast. It's a bit eerie, but I'm not sure if it's safe to stay here or not... BUT THATS BESIDES THE POINT, what i was trying to say was that i found this pip-boy in it. i think i'm going to keep it and modify it a little... maybe i could use a terminal for it... i'll write another entry when something happens. </p>
+        <hr class="short">
+        <h2> March 27 2163. </h2>
+        <p> Okay, so I've been exploring the vault more. I ddi find a terminal, and i found out a way to take photos and upload them to the pip-boy! I dismantled the termianl and used it to extend the pip-boy's storage space, i think i'll begin writing a guide to the wastes. Wish me Luck! </p>
+        <sub> I also added the photot of myself, it was kinda fickly... is that a word?... eh, probably, but as i was saying, it took multiple tries to get colour in the image insted of it being just green and black. </sub>
+    </div>
+    <div class="image-block" tabindex="0">
+        <img src="{{ url_for('static', filename='images/human.png') }}" alt="ME, or well an image of me... uuh, i have brown hair and blue eyes." class="gh">
+    </div>
+</div>
+<hr class="short">
+<div class="container">
+    <div class="text-block">
+        <h2> March 29 2163. </h2>
+        <p> So this pip-boy is really handy! It even somehow knows if and where i'm hurt, as well as my S.P.E.C.I.A.L. stats (something vault-tec used in their vaults to determine a dwellers strength, perception, endurance, charisma, intelligence, agility and luck). I'm not sure how it works but it's very useful. </p>
+        <p> anyway i think i'm done in this vault... maybe i'll return someday. </p>
+        <hr class="short">
+        <h2> April 1 2163. </h2>
+        <p> So i met a woman named Tandi today, she was from a place called "Shady Sands". I think it was a small village... she seemed ambitious... hope i'll get to speak with her again. </p>
+        <hr class="short">
+        <h2> May 29 2163. </h2>
+        <p> It's been a while since i've written... this is because i have really just been in a trading center called "The Hub", i've been there hunting and trading to get some supplies and such, and long story short i got side-tracked, and i was on a month-long quest to speak with  </p>
+    </div>
+{% endblock %}
