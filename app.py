@@ -1,6 +1,6 @@
-from flask import Flask, render_template_string, render_template, request, redirect, url_for
+from flask import Flask, render_template_string, render_template, request, redirect, url_for, session
 import mysql.connector
-from forms import RegisterForm
+from forms import RegisterForm, LoginForm
 
 
 app = Flask(__name__)
@@ -94,9 +94,30 @@ def register_actual():
         return redirect("/")
     return render_template("register_actual.html", form=form)
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    return render_template("login.html")
+    form = LoginForm()
+    if form.validate_on_submit():
+        username = form.username.data
+        password = form.password.data
+
+        conn = get_conn()
+        cur = conn.cursor()
+        cur.execute(
+            "SELECT username FROM users WHERE username=%s AND password=%s",
+            (username, password)
+        )
+        user = cur.fetchone()
+        cur.close()
+        conn.close()
+
+        if user:
+            session['username'] = user[0]  # lagrer navnet i session
+            return redirect("/")
+        else:
+            form.username.errors.append("Invalid username or password")
+
+    return render_template("login.html", form=form)
 
 @app.route('/factions')
 def factions():
@@ -303,7 +324,10 @@ def nonferal():
 
 @app.route('/stats')
 def stats():
-    return render_template("stats.html")
+    Name = session.get('username')  # Hent navn fra session
+    if not Name:
+        return redirect("/login")
+    return render_template("stats.html", name=Name)
 
 @app.route('/journal_entries')
 def journal_entries():

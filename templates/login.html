@@ -3,5 +3,14 @@
 {% block content %}
 <h1 tabindex="0"> Login </h1>
 
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="sel_reg"> > {{ form.username.label }} {{ form.username }}<br> </div>
+    <div class="sel_reg"> > {{ form.password.label }} {{ form.password }}<br> </div>
+    {% for error in form.username.errors %}
+        <p style="color:rgb(95, 249, 0)">{{ error }}</p>
+    {% endfor %}
+    <div class="sel_reg"> {{ form.submit() }}</div>
+</form>
 
 {% endblock %}

@@ -54,6 +54,7 @@ class RegisterForm(FlaskForm):
     
 
     
-""" class LoginForm(FlaskForm):
-    name = StringField("Brukernavn", validators=[InputRequired()])
-    submit = SubmitField("Logg inn") """
+class LoginForm(FlaskForm):
+    username = StringField("Name", validators=[InputRequired()])
+    password = PasswordField("Password", validators=[InputRequired()])
+    submit = SubmitField("> Submit Data")
