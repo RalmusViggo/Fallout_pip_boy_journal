@@ -7,12 +7,13 @@ app = Flask(__name__)
 app.secret_key = "123"
 
 def get_conn():
-    return mysql.connector.connect(
+    conn = mysql.connector.connect(
         host="localhost",
         user="rasmus",
         password="R-asmus150508",
         database="vault186"
     )
+    return conn
 
 @app.route('/')
 def index():
@@ -324,10 +325,12 @@ def nonferal():
 
 @app.route('/stats')
 def stats():
-    Name = session.get('username')  # Hent navn fra session
-    if not Name:
-        return redirect("/login")
-    return render_template("stats.html", name=Name)
+    # always use lowercase variable names and the Flask session helpers
+    navn = session.get('username')  # hent navn fra session
+    if not navn:
+        return redirect(url_for('login'))
+
+    return render_template("stats.html", name=navn)
 
 @app.route('/journal_entries')
 def journal_entries():

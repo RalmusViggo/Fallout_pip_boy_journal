@@ -563,6 +563,9 @@ h3 {
     justify-content: left; /* Sentrerer innholdet horisontalt */
 }
 
+/* project part 2 */
+
+
 .container7 {
     width: 300px;
     height: 30px;
@@ -579,8 +582,3 @@ h3 {
     background-color: rgb(43, 194, 83); /* Green for high health */
     transition: width 0.4s ease-in-out; /* Smooth transition when health changes */
 }
-
-
-
-/* project part 2 */
-
