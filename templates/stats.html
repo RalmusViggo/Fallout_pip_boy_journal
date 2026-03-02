@@ -7,4 +7,12 @@
 <nav>
   <li> a </li>
 </nav>
+<div class="container7"> <!-- container7 is used for now only for the health bar, but might be used for Javascript in the future -->
+  <div class="health-bar" id="health-bar"></div>
+</div>
+<p>Health: <span id="health-text">100/100</span></p>
+<button onclick="changeHealth(-10)">Decrease Health</button>
+<button onclick="changeHealth(10)">Increase Health</button>
+
+<script src="script.js"></script>
 {% endblock %}
