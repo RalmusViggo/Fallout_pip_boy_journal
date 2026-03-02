@@ -94,7 +94,9 @@ def register_actual():
         return redirect("/")
     return render_template("register_actual.html", form=form)
 
-
+@app.route('/login')
+def login():
+    return render_template("login.html")
 
 @app.route('/factions')
 def factions():
