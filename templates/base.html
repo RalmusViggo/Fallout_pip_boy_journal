@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="images" href="/static/images">
-    <link rel="fonts" href="/static/fonts">
-    <link rel="script" href="/static/js/main.js">
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="images" href="{{ url_for('static', filename='images') }}">
+    <link rel="fonts" href="{{ url_for('static', filename='fonts') }}">
+    <link rel="script" href="{{ url_for('static', filename='js/main.js') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>

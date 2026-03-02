@@ -89,10 +89,7 @@ nav {
       #004e14 6px
     );
 }
-.sel_reg:hover label {
-    color: #000000;
-    
-}
+
 .sel_sub:hover div {
     background-color: #5ff900;
     color: #000000;
@@ -569,16 +566,45 @@ h3 {
 .container7 {
     width: 300px;
     height: 30px;
-    background-color: #555; /* Represents max health */
+    background-color: #000000; /* Represents max health */
     border-radius: 5px;
     overflow: hidden;
     margin-bottom: 10px;
-    border: 1px solid #333;
+    border: 1px solid rgb(95, 249, 0);
 }
 
 .health-bar {
     height: 100%;
     width: 100%; /* Initial width */
-    background-color: rgb(43, 194, 83); /* Green for high health */
+    background-color: rgb(95, 249, 0); /* Green for high health */
     transition: width 0.4s ease-in-out; /* Smooth transition when health changes */
+}
+
+.sel_hp {
+    display: inline-block;
+    /*background-color: #000000;*/
+    padding: 6px;
+    margin: 0px;
+    font-size: xx-large;
+    color: rgb(95, 249, 0);
+    font-family: 'fixedsys', 'Courier New', Courier, monospace;
+    top: 0;
+    width: 96.5%;
+}
+
+.sel_hp:hover {
+    background-color: #5ff900;
+    color: #000000;
+}
+
+.sel_hp:hover label {
+    color: #000000;
+}
+
+.sel_hp:hover input {
+    background: repeating-linear-gradient(
+      180deg,
+      #021a00 -1px,
+      #004e14 6px
+    );
 }
