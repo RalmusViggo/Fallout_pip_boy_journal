@@ -566,7 +566,7 @@ h3 {
 .container7 {
     width: 300px;
     height: 30px;
-    background-color: #000000; /* Represents max health */
+    background-color: rgb(0, 0, 0, 0.3); /* Represents max health */
     border-radius: 5px;
     overflow: hidden;
     margin-bottom: 10px;
@@ -576,7 +576,7 @@ h3 {
 .health-bar {
     height: 100%;
     width: 100%; /* Initial width */
-    background-color: rgb(95, 249, 0); /* Green for high health */
+    background-color: rgb(95, 249, 0,); /* Green for high health */
     transition: width 0.4s ease-in-out; /* Smooth transition when health changes */
 }
 
@@ -589,10 +589,10 @@ h3 {
     color: rgb(95, 249, 0);
     font-family: 'fixedsys', 'Courier New', Courier, monospace;
     top: 0;
-    width: 96.5%;
+    width: 99.25%;
 }
 
-.sel_hp:hover {
+.sel_hp:hover, .sel_bu:hover {
     background-color: #5ff900;
     color: #000000;
 }
@@ -608,3 +608,31 @@ h3 {
       #004e14 6px
     );
 }
+
+.sel_bu:hover button {
+    background-color: #5ff900;
+    color: #000000;
+}
+
+.sel_bu {
+    padding: 10px;
+    margin: 10px;
+    /*background-color: #000000;*/
+    font-size: xx-large;
+    color: rgb(95, 249, 0);
+    font-family: 'fixedsys', 'Courier New', Courier, monospace;
+    top: 0;
+}
+
+button {
+    font-size: large;
+    color: rgb(95, 249, 0);
+    font-family: 'fixedsys', 'Courier New', Courier, monospace;
+    background-color: transparent;
+    border: 1px solid rgb(95, 249, 0);
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    position: center;
+}
+

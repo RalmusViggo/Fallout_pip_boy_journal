@@ -5,6 +5,23 @@ import App from './App.vue' // Importing the "Root" component
 createApp(App).mount('#app')
 */
 
+const mysql = require('mysql2'); // Or require('mysql2') for the newer package
+
+const connection = mysql.createConnection({
+  host: 'localhost',      // Your MySQL host
+  user: 'rasmus',   // Your MySQL username
+  password: 'R-asmus150508', // Your MySQL password
+  database: 'vault186'        // The database you want to use (optional at first)
+});
+
+connection.connect(err => {
+  if (err) {
+    console.error('Error connecting: ' + err.stack);
+    return;
+  }
+  console.log('Connected as id ' + connection.threadId);
+});
+
 // Attempt to remember health in localStorage so it survives reloads in the same browser
 let currentHealth = 100;
 const stored = localStorage.getItem('currentHealth');

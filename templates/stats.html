@@ -3,20 +3,27 @@
 
 {% block content %}
 <h1 tabindex="0"> Stats and S.P.E.C.I.A.L. </h1>
-<p> Hello {{ name }} </p>
+<p tabindex="0"> Hello {{ name }} </p>
 <nav>
-  <li> a </li>
+  <li tabindex="0"> a </li>
 </nav>
-<div class="container7"> <!-- container7 is used for now only for the health bar, but might be used for Javascript in the future -->
-  <div class="health-bar" id="health-bar"></div>
+<div class="container3">
+  <div class="container7"> <!-- container7 is used for now only for the health bar, but might be used for Javascript in the future -->
+    <div class="health-bar" id="health-bar" tabindex="0"></div>
+  </div>
 </div>
-<p>Health: <span id="health-text">100/100</span></p>
-<div class="sel_hp"> 
-  <label for="health-input">Amount:</label>
-  <input id="health-input" type="number" value="10" min="0" /> 
+<div class="container3">
+  <p tabindex="0">Health: <span id="health-text" tabindex="0">100/100</span></p>
 </div>
-<button onclick="applyChangeFromInput(-1)">Decrease Health</button>
-<button onclick="applyChangeFromInput(1)">Increase Health</button>
 
+<div class="sel_hp"> 
+  <label for="health-input" tabindex="0">Amount:</label>
+  <input id="health-input" type="number" value="10" min="0" tabindex="0"/> 
+</div>
+<div class="container3">
+  <button onclick="applyChangeFromInput(-1)" class="sel_bu" tabindex="0">Decrease Health</button> 
+  <button onclick="applyChangeFromInput(1)" class="sel_bu" tabindex="0">Increase Health</button>
+</div>
+  
 <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 {% endblock %}
