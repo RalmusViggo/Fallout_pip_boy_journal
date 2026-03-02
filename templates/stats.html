@@ -25,5 +25,13 @@
   <button onclick="applyChangeFromInput(1)" class="sel_bu" tabindex="0">Increase Health</button>
 </div>
   
+<!-- directly expose the username using Flask template context -->
+<script type="application/javascript">
+  // name was passed from Flask; tojson quotes it safely
+  window.username =  {{ name | tojson }};
+  console.log('username from Python:', window.username);
+</script>
+
 <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
 {% endblock %}

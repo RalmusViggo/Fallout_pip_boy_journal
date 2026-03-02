@@ -1,33 +1,27 @@
-const mysql = require('mysql2'); // Or require('mysql2') for the newer package
+const express = require('express');
+const mysql = require('mysql2/promise');
 
-const connection = mysql.createConnection({
-  host: 'localhost',      // Your MySQL host
-  user: 'rasmus',   // Your MySQL username
-  password: 'R-asmus150508', // Your MySQL password
-  database: 'vault186'        // The database you want to use (optional at first)
+const app = express();
+const pool = mysql.createPool({
+  host: 'localhost',
+  user: 'rasmus',
+  password: 'R-asmus150508',
+  database: 'vault186',
+  waitForConnections: true,
+  connectionLimit: 5
 });
 
-connection.connect(err => {
-  if (err) {
-    console.error('Error connecting: ' + err.stack);
-    return;
+app.get('/api/health-sum', async (req, res) => {
+  try {
+    const [rows] = await pool.query(
+      'SELECT COALESCE(SUM(endurance),0) + COALESCE(SUM(luck),0) AS total FROM users WHERE username = ?',
+      [req.query.username]
+    );
+    const total = rows && rows[0] ? Number(rows[0].total) : 0;
+    res.json({ total });
+  } catch (err) {
+    res.status(500).json({ error: 'db error' });
   }
-  console.log('Connected as id ' + connection.threadId);
 });
 
-// ... (after connection is established in server.js)
-
-connection.query('SELECT * FROM users', (error, results, fields) => {
-  if (error) throw error;
-  
-  // Log the results from the database
-  console.log(results); 
-  
-  // You can iterate over results if needed
-  // results.forEach(result => {
-  //     console.log(result.name);
-  // });
-});
-
-// Close the connection when you are done (optional if using a pool)
-connection.end();
+app.listen(3000);

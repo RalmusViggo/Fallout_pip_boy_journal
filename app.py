@@ -1,7 +1,7 @@
-from flask import Flask, render_template_string, render_template, request, redirect, url_for, session
+from flask import Flask, render_template_string, render_template, request, redirect, url_for, session, jsonify
 import mysql.connector
 from forms import RegisterForm, LoginForm
-
+import json
 
 app = Flask(__name__)
 app.secret_key = "123"
@@ -329,8 +329,40 @@ def stats():
     navn = session.get('username')  # hent navn fra session
     if not navn:
         return redirect(url_for('login'))
-
+    # render page, `name` passed directly into template
     return render_template("stats.html", name=navn)
+
+
+@app.route('/api/current-user')
+def api_current_user():
+    """Simple JSON endpoint exposing the logged‑in username.
+
+    JavaScript can fetch this route to learn who is signed in without
+    embedding values in the template.
+    """
+    user = session.get('username')
+    return jsonify(username=user)
+
+
+@app.route('/api/health-sum')
+def api_health_sum():
+    """Calculate health from user's endurance and luck stats."""
+    username = request.args.get('username')
+    if not username:
+        return jsonify(total=0), 400
+    
+    conn = get_conn()
+    cur = conn.cursor()
+    cur.execute(
+        "SELECT COALESCE(endurance, 0) + COALESCE(luck, 0) AS total FROM users WHERE username=%s",
+        (username,)
+    )
+    result = cur.fetchone()
+    cur.close()
+    conn.close()
+    
+    total = result[0] if result else 0
+    return jsonify(total=total)
 
 @app.route('/journal_entries')
 def journal_entries():

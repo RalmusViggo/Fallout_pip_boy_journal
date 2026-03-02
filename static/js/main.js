@@ -5,34 +5,45 @@ import App from './App.vue' // Importing the "Root" component
 createApp(App).mount('#app')
 */
 
-const mysql = require('mysql2'); // Or require('mysql2') for the newer package
+// global state
+let currentHealth = 0;
+const maxHealth = 100;
 
-const connection = mysql.createConnection({
-  host: 'localhost',      // Your MySQL host
-  user: 'rasmus',   // Your MySQL username
-  password: 'R-asmus150508', // Your MySQL password
-  database: 'vault186'        // The database you want to use (optional at first)
-});
+// template injected this before the file
+const username = window.username || '';
+console.log('JS sees username:', username);
 
-connection.connect(err => {
-  if (err) {
-    console.error('Error connecting: ' + err.stack);
-    return;
-  }
-  console.log('Connected as id ' + connection.threadId);
-});
-
-// Attempt to remember health in localStorage so it survives reloads in the same browser
-let currentHealth = 100;
-const stored = localStorage.getItem('currentHealth');
-if (stored !== null) {
-    // parse the saved value and ignore if it's not a number
+async function initHealth() {
+  const stored = localStorage.getItem('currentHealth');
+  if (stored !== null) {
     const num = Number(stored);
     if (Number.isFinite(num)) {
-        currentHealth = num;
+      currentHealth = num;
+      updateHealthBar();
+      return;
     }
+  }
+
+  try {
+    // use the real username when calling the API
+    const resp = await fetch(`/api/health-sum?username=${encodeURIComponent(username)}`);
+    if (resp.ok) {
+      const json = await resp.json();
+      const num = Number(json.total);
+      if (Number.isFinite(num)) currentHealth = num;
+    }
+  } catch (e) {
+    // fallback
+  }
+
+  if (!Number.isFinite(currentHealth) || currentHealth <= 0) {
+    currentHealth = maxHealth;
+  }
+  updateHealthBar();
 }
-const maxHealth = 100;
+
+// call on load
+initHealth();
 
 function changeHealth(amount) {
     currentHealth += amount;
