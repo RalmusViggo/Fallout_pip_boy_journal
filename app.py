@@ -1,7 +1,7 @@
 from flask import Flask, render_template_string, render_template, request, redirect, url_for, session, jsonify
 import mysql.connector
 from forms import RegisterForm, LoginForm
-import json
+
 
 app = Flask(__name__)
 app.secret_key = "123"
@@ -353,4 +353,4 @@ def journal_appalachia():
     return render_template("journal/journal_appalachia.html")
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=8080, debug=True)
