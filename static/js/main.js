@@ -5,45 +5,18 @@ import App from './App.vue' // Importing the "Root" component
 createApp(App).mount('#app')
 */
 
-// global state
-let currentHealth = 0;
-const maxHealth = 100;
 
-// template injected this before the file
-const username = window.username || '';
-console.log('JS sees username:', username);
-
-async function initHealth() {
-  const stored = localStorage.getItem('currentHealth');
-  if (stored !== null) {
+// Attempt to remember health in localStorage so it survives reloads in the same browser
+let currentHealth = 100;
+const stored = localStorage.getItem('currentHealth');
+if (stored !== null) {
+    // parse the saved value and ignore if it's not a number
     const num = Number(stored);
     if (Number.isFinite(num)) {
-      currentHealth = num;
-      updateHealthBar();
-      return;
+        currentHealth = num;
     }
-  }
-
-  try {
-    // use the real username when calling the API
-    const resp = await fetch(`/api/health-sum?username=${encodeURIComponent(username)}`);
-    if (resp.ok) {
-      const json = await resp.json();
-      const num = Number(json.total);
-      if (Number.isFinite(num)) currentHealth = num;
-    }
-  } catch (e) {
-    // fallback
-  }
-
-  if (!Number.isFinite(currentHealth) || currentHealth <= 0) {
-    currentHealth = maxHealth;
-  }
-  updateHealthBar();
 }
-
-// call on load
-initHealth();
+const maxHealth = 100;
 
 function changeHealth(amount) {
     currentHealth += amount;
@@ -105,4 +78,3 @@ function applyChangeFromInput(sign) {
 
     changeHealth(sign * value);
 }
-
