@@ -1,4 +1,4 @@
-from flask import Flask, render_template_string, render_template, request, redirect, url_for, session, jsonify
+from flask import Flask, render_template_string, render_template, request, redirect, url_for, session
 import mysql.connector
 from forms import RegisterForm, LoginForm
 
@@ -327,6 +327,7 @@ def nonferal():
 def stats():
     # always use lowercase variable names and the Flask session helpers
     navn = session.get('username')  # hent navn fra session
+    
     if not navn:
         return redirect(url_for('login'))
     # render page, `name` passed directly into template
