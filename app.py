@@ -1,6 +1,8 @@
 from flask import Flask, render_template_string, render_template, request, redirect, url_for, session
 import mysql.connector
 from forms import RegisterForm, LoginForm
+from werkzeug.security import generate_password_hash, check_password_hash
+
 
 
 app = Flask(__name__)
@@ -14,6 +16,7 @@ def get_conn():
         database="vault186"
     )
     return conn
+
 
 @app.route('/')
 def index():
@@ -83,11 +86,13 @@ def register_actual():
         unarmed = form.unarmed.data
         level = form.level.data
 
+        password_hash = generate_password_hash(password)
+        
         conn = get_conn()
         cur = conn.cursor()
         cur.execute(
             "INSERT INTO users (username, password, origin, origin_trait, strength, perception, endurance, charisma, intelligence, agility, luck, tagskill1, tagskill2, tagskill3, athletics, barter, big_guns, energy_weapons, explosives, lockpick, medicine, melee_weapons, pilot, repair, science, small_guns, sneak, speech, survival, throwing, unarmed, level) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
-            (username,password,origin,origin_trait,strength,perception,endurance,charisma,intelligence,agility,luck,tagskill1,tagskill2,tagskill3,athletics,barter,big_guns,energy_weapons,explosives,lockpick,medicine,melee_weapons,pilot,repair,science,small_guns,sneak,speech,survival,throwing,unarmed,level)
+            (username,password_hash,origin,origin_trait,strength,perception,endurance,charisma,intelligence,agility,luck,tagskill1,tagskill2,tagskill3,athletics,barter,big_guns,energy_weapons,explosives,lockpick,medicine,melee_weapons,pilot,repair,science,small_guns,sneak,speech,survival,throwing,unarmed,level)
         )
         conn.commit()
         cur.close()
@@ -105,14 +110,16 @@ def login():
         conn = get_conn()
         cur = conn.cursor()
         cur.execute(
-            "SELECT username FROM users WHERE username=%s AND password=%s",
-            (username, password)
+            "SELECT username, password FROM users WHERE username=%s",
+            (username,)
         )
         user = cur.fetchone()
         cur.close()
         conn.close()
 
         if user:
+            password_db = user[1]
+        if check_password_hash(password_db, password):
             session['username'] = user[0]  # lagrer navnet i session
             return redirect("/")
         else:
@@ -323,15 +330,86 @@ def nightstalker():
 def nonferal():
     return render_template("/creatures_dir/non-feral.html")
 
-@app.route('/stats')
+@app.route('/stats', methods=['GET', 'POST'])
 def stats():
     # always use lowercase variable names and the Flask session helpers
-    navn = session.get('username')  # hent navn fra session
+    username = session.get('username')  # hent navn fra session
+    origin = session.get('origin')
+    origin_trait = session.get('origin_trait')
+    strength = session.get('strength')
+    perception = session.get('perception')
+    endurance = session.get('endurance')
+    charisma = session.get('charisma')
+    intelligence = session.get('intelligence')
+    agility = session.get('agility')
+    luck = session.get('luck')
+    tagskill1 = session.get('tagskill1')
+    tagskill2 = session.get('tagskill2')
+    tagskill3 = session.get('tagskill3')
+    athletics = session.get('athletics')
+    barter = session.get('barter')
+    big_guns = session.get('big_guns')
+    energy_weapons = session.get('energy_weapons')
+    explosives = session.get('explosives')
+    lockpick = session.get('lockpick')
+    medicine = session.get('medicine')
+    melee_weapons = session.get('melee_weapons')
+    pilot = session.get('pilot')
+    repair = session.get('repair')
+    science = session.get('science')
+    small_guns = session.get('small_guns')
+    sneak = session.get('sneak')
+    speech = session.get('speech')
+    survival = session.get('survival')
+    throwing = session.get('throwing')
+    unarmed = session.get('unarmed')
+    level = session.get('level')
     
-    if not navn:
+    if not username:
         return redirect(url_for('login'))
     # render page, `name` passed directly into template
-    return render_template("stats.html", name=navn)
+    conn = get_conn()
+    cur = conn.cursor()
+    cur.execute(
+            "SELECT username, origin, origin_trait, strength, perception, endurance, charisma, intelligence, agility, luck, tagskill1, tagskill2, tagskill3, athletics, barter, big_guns, energy_weapons, explosives, lockpick, medicine, melee_weapons, pilot, repair, science, small_guns, sneak, speech, survival, throwing, unarmed, level FROM users WHERE username=%s",
+            (username,)
+        )
+    stat = cur.fetchall()
+    cur.close()
+    conn.close()
+    session['origin'] = stat[0][1] if stat else None
+    session['origin_trait'] = stat[0][2] if stat else None
+    session['strength'] = stat[0][3] if stat else None
+    session['perception'] = stat[0][4] if stat else None
+    session['endurance'] = stat[0][5] if stat else None
+    session['charisma'] = stat[0][6] if stat else None
+    session['intelligence'] = stat[0][7] if stat else None
+    session['agility'] = stat[0][8] if stat else None
+    session['luck'] = stat[0][9] if stat else None
+    session['tagskill1'] = stat[0][10] if stat else None
+    session['tagskill2'] = stat[0][11] if stat else None
+    session['tagskill3'] = stat[0][12] if stat else None
+    session['athletics'] = stat[0][13] if stat else None
+    session['barter'] = stat[0][14] if stat else None
+    session['big_guns'] = stat[0][15] if stat else None
+    session['energy_weapons'] = stat[0][16] if stat else None
+    session['explosives'] = stat[0][17] if stat else None
+    session['lockpick'] = stat[0][18] if stat else None
+    session['medicine'] = stat[0][19] if stat else None
+    session['melee_weapons'] = stat[0][20] if stat else None
+    session['pilot'] = stat[0][21] if stat else None
+    session['repair'] = stat[0][22] if stat else None
+    session['science'] = stat[0][23] if stat else None
+    session['small_guns'] = stat[0][24] if stat else None
+    session['sneak'] = stat[0][25] if stat else None
+    session['speech'] = stat[0][26] if stat else None
+    session['survival'] = stat[0][27] if stat else None
+    session['throwing'] = stat[0][28] if stat else None
+    session['unarmed'] = stat[0][29] if stat else None
+    session['level'] = stat[0][30] if stat else None
+    health = endurance + luck + (level -1 )
+    
+    return render_template("stats.html", name=username, health=health, stat=stat, origin=origin, origin_trait=origin_trait, strength=strength, perception=perception, endurance=endurance, charisma=charisma, intelligence=intelligence, agility=agility, luck=luck, tagskill1=tagskill1, tagskill2=tagskill2, tagskill3=tagskill3, athletics=athletics, barter=barter, big_guns=big_guns, energy_weapons=energy_weapons, explosives=explosives, lockpick=lockpick, medicine=medicine, melee_weapons=melee_weapons, pilot=pilot, repair=repair, science=science, small_guns=small_guns, sneak=sneak, speech=speech, survival=survival, throwing=throwing, unarmed=unarmed, level=level)
 
 @app.route('/journal_entries')
 def journal_entries():

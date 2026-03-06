@@ -5,8 +5,9 @@ import App from './App.vue' // Importing the "Root" component
 createApp(App).mount('#app')
 */
 
-let currentHealth = 100;
-const maxHealth = 100;
+
+let currentHealth = parseInt(document.getElementById('health').value) || 100;  // Fallback to 100 if invalid
+const maxHealth = currentHealth;  
 
 const stored = localStorage.getItem('currentHealth'); // dette gjør sånn at koden "spør" nettleseren om den har lagret noe med nøkkelen 'currentHealth', om nettleseren ikke finner noe kommer 'null' tilbake
 if (stored !== null) { // her gjør det sånn at hvis nettleseren sender tilbake 'null', så sier dette 'hvis du fant noe (det er ikke 'null')
@@ -42,6 +43,11 @@ function updateHealthBar() {
     healthBar.style.width = healthPercentage + '%'; // dette sier at bredden til 'healthBar' er det samme som 'healthPercentage' + '%', "+ '%'" delen av dette gjør sånn at verdien blir lagret med et '%' symbol på slutten av den. 
 
     healthText.innerHTML = `${currentHealth}/${maxHealth}`;
+
+    // Update the <output> element's value and text
+    const healthOutput = document.getElementById('health');
+    healthOutput.value = currentHealth;
+    healthOutput.textContent = currentHealth;  // For display
 
     if (healthPercentage <= 25) {
         healthBar.style.backgroundColor = 'rgb(249,0,0)';

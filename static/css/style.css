@@ -634,4 +634,6 @@ button {
     cursor: pointer;
     position: center;
 }
-
+output{
+    color: transparent;
+}
