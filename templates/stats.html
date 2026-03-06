@@ -7,4 +7,23 @@
 <nav>
 </nav>
 
+<div class="container3">
+    <div class="container7"> <!-- container7 is used for now only for the health bar, but might be used for Javascript in the future -->
+        <div class="health-bar" id="health-bar" tabindex="0"></div>
+    </div>
+</div>
+<div class="container3">
+    <p tabindex="0">Health: <span id="health-text" tabindex="0">100/100</span></p>
+</div>
+
+<div class="sel_hp">
+    <label for="health-input" tabindex="0">Amount:</label>
+    <input id="health-input" type="number" value="10" min="0" tabindex="0"/>
+</div>
+<div class="container3">
+    <button onclick="applyChangeFromInput(-1)" class="sel_bu" tabindex="0">> Decrease Health</button>
+    <button onclick="applyChangeFromInput(1)" class="sel_bu" tabindex="0">> Increase Health</button>
+</div>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 {% endblock %}
