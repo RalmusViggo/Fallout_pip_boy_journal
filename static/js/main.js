@@ -19,15 +19,15 @@ if (stored !== null) { // her gjør det sånn at hvis nettleseren sender tilbake
 
 function changeHealth(amount) { // denne funksjonen er for å endre 'Health' mengden
     currentHealth += amount; // her står det egentlig 'currentHealth = currentHealth + amount'
-    try { 
-        localStorage.setItem('currentHealth', currentHealth); // dette lagrer etter hver input av brukeren, så verdien alltid er korrekt, selv når fanen i nettleseren blir oppdatert.
-    } catch(e) {} // ignorerer error
     if (currentHealth > maxHealth) { // gjør det sånn at hvis 'currentHealth' er større enn 'maxHealth' så vil 'currentHealth' bli satt til å være like mye som 'maxHealth' 
         currentHealth = maxHealth;
     }
     else if (currentHealth < 0) { // gjør det sånn at 'currentHealth' ikke kan være mindre enn null
         currentHealth = 0;
     }
+    try { 
+        localStorage.setItem('currentHealth', currentHealth); // dette lagrer etter hver input av brukeren, så verdien alltid er korrekt, selv når fanen i nettleseren blir oppdatert.
+    } catch(e) {} // ignorerer error
 
     updateHealthBar();
 }

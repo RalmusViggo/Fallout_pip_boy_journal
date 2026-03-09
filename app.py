@@ -371,7 +371,41 @@ def stats():
     conn = get_conn()
     cur = conn.cursor()
     cur.execute(
-            "SELECT username, origin, origin_trait, strength, perception, endurance, charisma, intelligence, agility, luck, tagskill1, tagskill2, tagskill3, athletics, barter, big_guns, energy_weapons, explosives, lockpick, medicine, melee_weapons, pilot, repair, science, small_guns, sneak, speech, survival, throwing, unarmed, level FROM users WHERE username=%s",
+            """ SELECT username,
+            origin,
+            origin_trait,
+            strength,
+            perception,
+            endurance,
+            charisma,
+            intelligence,
+            agility,
+            luck,
+            tagskill1,
+            tagskill2,
+            tagskill3,
+            athletics,
+            barter,
+            big_guns,
+            energy_weapons,
+            explosives,
+            lockpick,
+            medicine,
+            melee_weapons,
+            pilot,
+            repair,
+            science,
+            small_guns,
+            sneak,
+            speech,
+            survival,
+            throwing,
+            unarmed,
+            level 
+            FROM
+            users
+            WHERE
+            username=%s""",
             (username,)
         )
     stat = cur.fetchall()
