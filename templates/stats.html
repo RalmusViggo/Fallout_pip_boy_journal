@@ -5,26 +5,63 @@
 <h1 tabindex="0"> Stats and S.P.E.C.I.A.L. </h1>
 <p tabindex="0"> Hello {{ name }} </p>
 <nav>
-  <li tabindex="0"> a </li>
 </nav>
+
 <div class="container3">
-  <div class="container7"> <!-- container7 is used for now only for the health bar, but might be used for Javascript in the future -->
-    <div class="health-bar" id="health-bar" tabindex="0"></div>
-  </div>
+    <div class="container7"> <!-- container7 is used for now only for the health bar, but might be used for Javascript in the future -->
+        <div class="health-bar" id="health-bar" tabindex="0"></div>
+    </div>
 </div>
 <div class="container3">
-  <p tabindex="0">Health: <span id="health-text" tabindex="0">100/100</span></p>
+    <p tabindex="0">Health: <span id="health-text" tabindex="0">{{ health }}/{{ health }}</span></p>
 </div>
 
-<div class="sel_hp"> 
-  <label for="health-input" tabindex="0">Amount:</label>
-  <input id="health-input" type="number" value="10" min="0" tabindex="0"/> 
+<div class="sel_hp">
+    <label for="health-input" tabindex="0">Amount To Change By:</label>
+    <input id="health-input" type="number" value="10" min="0" tabindex="0"/>
 </div>
 <div class="container3">
-  <button onclick="applyChangeFromInput(-1)" class="sel_bu" tabindex="0">Decrease Health</button> 
-  <button onclick="applyChangeFromInput(1)" class="sel_bu" tabindex="0">Increase Health</button>
+    <button onclick="applyChangeFromInput(-1)" class="sel_bu" tabindex="0">> Decrease Health</button>
+    <button onclick="applyChangeFromInput(1)" class="sel_bu" tabindex="0">> Increase Health</button>
 </div>
+<output class="health_1" id="health" name="health" value="{{ health }}" tabindex="0">{{ health }}</output>
+
 
 <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
+<div class="container">
+    <div class="text-block" tabindex="0">
+        <h2> Stats: </h2>
+        <p> Origin: {{ origin }} </p>
+        <p> Origin Trait: {{ origin_trait }} </p>
+        <p> Strength: {{ strength }} </p>
+        <p> Perception: {{ perception }} </p>
+        <p> Endurance: {{ endurance }} </p>
+        <p> Charisma: {{ charisma }} </p>
+        <p> Intelligence: {{ intelligence }} </p>
+        <p> Agility: {{ agility }} </p>
+        <p> Luck: {{ luck }} </p>
+        <p> Tag Skill 1: {{ tagskill1 }} </p>
+        <p> Tag Skill 2: {{ tagskill2 }} </p>
+        <p> Tag Skill 3: {{ tagskill3 }} </p>
+        <p> Athletics: {{ athletics }} </p>
+        <p> Barter: {{ barter }} </p>
+        <p> Big Guns: {{ big_guns }} </p>
+        <p> Energy Weapons: {{ energy_weapons }} </p>
+        <p> Explosives: {{ explosives }} </p>
+        <p> Lockpick: {{ lockpick }} </p>
+        <p> Medicine: {{ medicine }} </p>
+        <p> Melee Weapons: {{ melee_weapons }} </p>
+        <p> Pilot: {{ pilot }} </p>
+        <p> Repair: {{ repair }} </p>
+        <p> Science: {{ science }} </p>
+        <p> Small Guns: {{ small_guns }} </p>
+        <p> Sneak: {{ sneak }} </p>
+        <p> Speech: {{ speech }} </p>
+        <p> Survival: {{ survival }} </p>
+        <p> Throwing: {{ throwing }} </p>
+        <p> Unarmed: {{ unarmed }} </p>
+        <p> Level: {{ level }} </p>
+    </div>
+</div>
 {% endblock %}

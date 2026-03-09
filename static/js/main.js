@@ -6,75 +6,68 @@ createApp(App).mount('#app')
 */
 
 
-// Attempt to remember health in localStorage so it survives reloads in the same browser
-let currentHealth = 100;
-const stored = localStorage.getItem('currentHealth');
-if (stored !== null) {
-    // parse the saved value and ignore if it's not a number
-    const num = Number(stored);
-    if (Number.isFinite(num)) {
-        currentHealth = num;
+let currentHealth = parseInt(document.getElementById('health').value) || 100;  // Fallback to 100 if invalid
+const maxHealth = currentHealth;  
+
+const stored = localStorage.getItem('currentHealth'); // dette gjør sånn at koden "spør" nettleseren om den har lagret noe med nøkkelen 'currentHealth', om nettleseren ikke finner noe kommer 'null' tilbake
+if (stored !== null) { // her gjør det sånn at hvis nettleseren sender tilbake 'null', så sier dette 'hvis du fant noe (det er ikke 'null')
+    const num = Number(stored); // siden 'localStorage' lagrer all data som strings, så må vi omgjøre det tilbake til integers, dette er funksjonen til 'Number(stored)', den gjør om det inne i parantesende til tall så 'Number("100")' blir til 'Number(100)'
+    if (Number.isFinite(num)) { // her sjekker koden om 'Number' er et gyldig tall; om nettleseren har lagret søppeldata, så kan det hende at 'Number()' returnerer 'NaN', 'isFinite' avviser 'NaN', 'Infinity' og '-Infinity'
+        currentHealth = num; // her blir 'currentHealth' satt til verdien av 'num'
     }
 }
-const maxHealth = 100;
 
-function changeHealth(amount) {
-    currentHealth += amount;
-
-    // store after every change so reloads see the updated value
-    try {
-        localStorage.setItem('currentHealth', currentHealth);
-    } catch (e) {
-        // localStorage might be unavailable (e.g. privacy modes); ignore errors
-    }
-
-    // Constrain health within valid range (0 to maxHealth)
-    if (currentHealth > maxHealth) {
+function changeHealth(amount) { // denne funksjonen er for å endre 'Health' mengden
+    currentHealth += amount; // her står det egentlig 'currentHealth = currentHealth + amount'
+    if (currentHealth > maxHealth) { // gjør det sånn at hvis 'currentHealth' er større enn 'maxHealth' så vil 'currentHealth' bli satt til å være like mye som 'maxHealth' 
         currentHealth = maxHealth;
-    } else if (currentHealth < 0) {
+    }
+    else if (currentHealth < 0) { // gjør det sånn at 'currentHealth' ikke kan være mindre enn null
         currentHealth = 0;
     }
+    try { 
+        localStorage.setItem('currentHealth', currentHealth); // dette lagrer etter hver input av brukeren, så verdien alltid er korrekt, selv når fanen i nettleseren blir oppdatert.
+    } catch(e) {} // ignorerer error
 
     updateHealthBar();
 }
 
 function updateHealthBar() {
-    const healthBar = document.getElementById('health-bar');
-    const healthText = document.getElementById('health-text');
-
-    // If the expected DOM elements are missing, do nothing (prevents console errors)
-    if (!healthBar || !healthText) return;
-
-    // Calculate the percentage: (current / max) * 100
-    const healthPercentage = (currentHealth / maxHealth) * 100;
-
-    // Update the width of the inner bar
-    healthBar.style.width = healthPercentage + '%';
+    const healthBar = document.getElementById('health-bar'); // her er 'document' hele siden, og 'getElementById' søker gjennom siden (html-en) for å finne et element med 'health-bar' id-en
+    const healthText = document.getElementById('health-text'); 
     
-    // Update the displayed text
+    if (!healthBar || !healthText) return; // ! i kode betyr veldig ofte "NEI", "IKKE" eller "NOT", så f.eks. !== betyr "er ikke lik", i denne konteksten betyr det at hvis ingen av elementene finnes, stop funksjonen nå
+
+    const healthPercentage = (currentHealth / maxHealth) * 100; // dette regner ut prosenten av hp som er igjen ved å dele 'currentHealth' på 'maxHealth' også gange med 100
+
+    healthBar.style.width = healthPercentage + '%'; // dette sier at bredden til 'healthBar' er det samme som 'healthPercentage' + '%', "+ '%'" delen av dette gjør sånn at verdien blir lagret med et '%' symbol på slutten av den. 
+
     healthText.innerHTML = `${currentHealth}/${maxHealth}`;
 
-    // Optional: Change color based on percentage
+    // Update the <output> element's value and text
+    const healthOutput = document.getElementById('health');
+    healthOutput.value = currentHealth;
+    healthOutput.textContent = currentHealth;  // For display
+
     if (healthPercentage <= 25) {
-        healthBar.style.backgroundColor = 'rgb(249, 0, 0)';
+        healthBar.style.backgroundColor = 'rgb(249,0,0)';
     } else if (healthPercentage <= 50) {
-        healthBar.style.backgroundColor = 'rgb(166, 249, 0)';
+        healthBar.style.backgroundColor = 'rgb(166,249,0)';
     } else {
-        healthBar.style.backgroundColor = 'rgb(95, 249, 0)';
+        healthBar.style.backgroundColor = 'rgb(95,249,0)';
     }
 }
 
-// Initialize the health bar on page load
 updateHealthBar();
 
-// Helper used by the buttons: read the numeric input and apply sign (1 or -1)
 function applyChangeFromInput(sign) {
     const input = document.getElementById('health-input');
-    const raw = input ? input.value : '';
+    const raw = input ? input.value : ''; // dette betyr " hvis 'input' finnes, bruk dens verdi, ellers bruk en tom 'string'("") "
     const value = Number(raw);
 
-    // If user enters something invalid, treat as 0
     if (!Number.isFinite(value)) return;
 
     changeHealth(sign * value);
+
 }
+

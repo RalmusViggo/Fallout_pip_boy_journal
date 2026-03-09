@@ -566,7 +566,7 @@ h3 {
 .container7 {
     width: 300px;
     height: 30px;
-    background-color: rgb(0, 0, 0, 0.3); /* Represents max health */
+    background-color: rgb(0, 0, 0, 0.3); 
     border-radius: 5px;
     overflow: hidden;
     margin-bottom: 10px;
@@ -575,14 +575,13 @@ h3 {
 
 .health-bar {
     height: 100%;
-    width: 100%; /* Initial width */
-    background-color: rgb(95, 249, 0,); /* Green for high health */
-    transition: width 0.4s ease-in-out; /* Smooth transition when health changes */
+    width: 100%;
+    background-color: rgb(95, 249, 0,);
+    transition: width 0.4s ease-in-out; 
 }
 
 .sel_hp {
     display: inline-block;
-    /*background-color: #000000;*/
     padding: 6px;
     margin: 0px;
     font-size: xx-large;
@@ -635,4 +634,6 @@ button {
     cursor: pointer;
     position: center;
 }
-
+output{
+    color: transparent;
+}

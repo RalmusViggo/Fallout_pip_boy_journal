@@ -5,9 +5,13 @@ dette prosjektet går ut på at jeg lager en oversikt over en del informasjon fr
 * planlegge og dokumentere arbeidsprosesser og IT-løsninger
 * designe og implementere IT-tjenester med innebygget personvern
 * modellere og opprette databaser for informasjonsflyt i systemer
+* kartlegge behovet for og utvikle veiledninger for brukere og kunder
+* feilsøke og rette feil ved hjelp av feilsøkingsstrategier og relevante rammeverk
+* administrere brukere, tilganger og rettigheter i relevante systemer
 
 ### To-DO
-* lage ting som kan endres og som forblir endret for den brukeren 
+
+* lage ting som kan endres og som forblir endret for den brukeren
     * lage en enkel "log-in" side som krever navn og passord
     * lage "health bar"
 * gjøre om på registrerings-siden
