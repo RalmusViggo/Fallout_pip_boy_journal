@@ -532,6 +532,13 @@ h3 {
     margin-left: auto;
     margin-right: auto;
 }
+.fac_img3 {
+    max-width: 350px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .sp {
     font-size: 14px;
