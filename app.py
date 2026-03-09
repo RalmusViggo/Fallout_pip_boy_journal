@@ -443,6 +443,51 @@ def stats():
     session['level'] = stat[0][30] if stat else None
     health = endurance + luck + (level -1 )
     
+    # Create a dictionary of skills for easy modification
+    skill_dict = {
+        'athletics': athletics,
+        'barter': barter,
+        'big_guns': big_guns,
+        'energy_weapons': energy_weapons,
+        'explosives': explosives,
+        'lockpick': lockpick,
+        'medicine': medicine,
+        'melee_weapons': melee_weapons,
+        'pilot': pilot,
+        'repair': repair,
+        'science': science,
+        'small_guns': small_guns,
+        'sneak': sneak,
+        'speech': speech,
+        'survival': survival,
+        'throwing': throwing,
+        'unarmed': unarmed
+    }
+    
+    # Add +2 to each tag skill
+    for tag in [tagskill1, tagskill2, tagskill3]:
+        if tag and tag in skill_dict:
+            skill_dict[tag] += 2
+    
+    # Update the variables from the dictionary
+    athletics = skill_dict['athletics']
+    barter = skill_dict['barter']
+    big_guns = skill_dict['big_guns']
+    energy_weapons = skill_dict['energy_weapons']
+    explosives = skill_dict['explosives']
+    lockpick = skill_dict['lockpick']
+    medicine = skill_dict['medicine']
+    melee_weapons = skill_dict['melee_weapons']
+    pilot = skill_dict['pilot']
+    repair = skill_dict['repair']
+    science = skill_dict['science']
+    small_guns = skill_dict['small_guns']
+    sneak = skill_dict['sneak']
+    speech = skill_dict['speech']
+    survival = skill_dict['survival']
+    throwing = skill_dict['throwing']
+    unarmed = skill_dict['unarmed']
+    
     return render_template("stats.html", name=username, health=health, stat=stat, origin=origin, origin_trait=origin_trait, strength=strength, perception=perception, endurance=endurance, charisma=charisma, intelligence=intelligence, agility=agility, luck=luck, tagskill1=tagskill1, tagskill2=tagskill2, tagskill3=tagskill3, athletics=athletics, barter=barter, big_guns=big_guns, energy_weapons=energy_weapons, explosives=explosives, lockpick=lockpick, medicine=medicine, melee_weapons=melee_weapons, pilot=pilot, repair=repair, science=science, small_guns=small_guns, sneak=sneak, speech=speech, survival=survival, throwing=throwing, unarmed=unarmed, level=level)
 
 @app.route('/journal_entries')
