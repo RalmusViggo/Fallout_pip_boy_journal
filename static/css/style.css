@@ -466,13 +466,6 @@ h3 {
     margin-left: auto;
     margin-right: auto;
 }
-.gh4 {
-    max-width: 808.11px; /* Maks bredde på bildet */
-    height: auto; /* Bevarer proporsjonene */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 .redacted {
     color: rgb(95, 249, 0);
     background-color: rgb(95, 249, 0);
@@ -655,4 +648,18 @@ button {
 }
 output{
     color: transparent;
+}
+
+/* project part 3 */
+
+.indent2 {
+    margin-left: 80px;
+}
+
+.gh4 {
+    max-width: 808.11px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
