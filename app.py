@@ -510,5 +510,9 @@ def journal_capital():
 def journal_appalachia():
     return render_template("journal/journal_appalachia.html")
 
+@app.route('/char')
+def char():
+    return render_template("char.html")
+
 if __name__ == "__main__":
     app.run(port=8080, debug=True)

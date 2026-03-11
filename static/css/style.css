@@ -6,6 +6,11 @@ body {
   );
 }
 
+::selection {
+    background: rgb(95, 249, 0);
+    color: #000000;
+}
+
 @font-face {
   font-family: 'fixedsys';
   src: url(/static/font/fixedsys/FSEX300.ttf);
