@@ -514,5 +514,11 @@ def journal_appalachia():
 def char():
     return render_template("char.html")
 
+@app.route('/glow')
+def glow():
+    return render_template("glow.html")
+
+
+
 if __name__ == "__main__":
     app.run(port=8080, debug=True)

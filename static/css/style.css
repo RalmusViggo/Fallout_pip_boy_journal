@@ -20,6 +20,7 @@ body {
 }
 
 
+
 nav {
     overflow: auto;
     text-align: left;
@@ -662,4 +663,34 @@ output{
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+@font-face {
+  font-family: 'sd-dystopian-font';
+  src: url(/static/font/sd-dystopian-font/Sddystopiandemo-GO7xa.otf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.p_g {
+    font-family: 'fixedsys', 'Courier New', Courier, monospace;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #7be600, 0 0 40px #73e600, 0 0 50px #5ce600, 0 0 60px #7cc000, 0 0 70px #8ee600;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #8bff4d, 0 0 40px #a2e555, 0 0 50px #91ff4d, 0 0 60px #b8ff4d, 0 0 70px #caff4d, 0 0 80px #a9ff4d;
+    }
+}
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #7be600, 0 0 40px #73e600, 0 0 50px #5ce600, 0 0 60px #7cc000, 0 0 70px #7be600;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #8bff4d, 0 0 40px #a2e555, 0 0 50px #91ff4d, 0 0 60px #b8ff4d, 0 0 70px #caff4d, 0 0 80px #a9ff4d;
+    }
 }
