@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %} Railroad - Factions {% endblock %}
+
+{% block content %}
+<a href="{{ url_for('factions') }}" class="sel" tabindex="0"> >Back to Factions</a>
+<h1 tabindex="0"> The Railroad </h1>
+<div class="container">
+    <div class="text_block">
+        <p> The Railroad is a secretive organization based in the Commonwealth, where they carry out a shadow war against the Institute with the aim of liberating synthkind. Their core belief is that the artificial synth race deserves the right to freedom and free will. </p>
+
+    </div>
+    <div class="image-block" tabindex="0">
+        <img src="{{ url_for('static', filename='images/railroad.png') }}" alt="Railroad Emblem" class="fac_img">
+    </div>
+</div>
+{% endblock %}
