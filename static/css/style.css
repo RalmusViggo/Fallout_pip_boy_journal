@@ -694,3 +694,25 @@ output{
         text-shadow: 0 0 20px #fff, 0 0 30px #8bff4d, 0 0 40px #a2e555, 0 0 50px #91ff4d, 0 0 60px #b8ff4d, 0 0 70px #caff4d, 0 0 80px #a9ff4d;
     }
 }
+
+.fac_img4 {
+    max-width: 500px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.raid {
+    max-width: 600px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.raid2 {
+    max-width: 688.12px; /* Maks bredde på bildet */
+    height: auto; /* Bevarer proporsjonene */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
