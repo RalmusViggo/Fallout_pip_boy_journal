@@ -9,7 +9,7 @@
 
 <div class="container3">
     <div class="container7"> <!-- container7 is used for now only for the health bar, but might be used for Javascript in the future -->
-        <div class="health-bar" id="health-bar" tabindex="0"></div>
+        <div class="health-bar" id="health-bar"></div>
     </div>
 </div>
 <div class="container3">
@@ -24,7 +24,7 @@
     <button onclick="applyChangeFromInput(-1)" class="sel_bu" tabindex="0">> Decrease Health</button>
     <button onclick="applyChangeFromInput(1)" class="sel_bu" tabindex="0">> Increase Health</button>
 </div>
-<output class="health_1" id="health" name="health" value="{{ health }}" tabindex="0">{{ health }}</output>
+<output class="health_1" id="health" name="health" value="{{ health }}">{{ health }}</output>
 
 
 <script src="{{ url_for('static', filename='js/main.js') }}"></script>
