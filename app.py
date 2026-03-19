@@ -151,10 +151,6 @@ def caravans():
 def raiders():
     return render_template("factions/raiders.html") 
 
-@app.route('/factions/vault_dwellers')
-def vault_dwellers():
-    return render_template("factions/vault_dwellers.html")
-
 @app.route('/factions/enclave')
 def enclave():
     return render_template("factions/enclave.html")

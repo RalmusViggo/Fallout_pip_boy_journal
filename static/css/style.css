@@ -22,7 +22,7 @@ body {
 
 
 nav {
-    overflow: auto;
+    overflow: visible;
     text-align: left;
     line-height: 100px;
 }
@@ -673,25 +673,26 @@ output{
 }
 .p_g {
     font-family: 'fixedsys', 'Courier New', Courier, monospace;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
+    overflow: visible;
+    -webkit-animation: glow 400ms ease-in-out infinite alternate;
+    -moz-animation: glow 400ms ease-in-out infinite alternate;
+    animation: glow 400ms ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes glow {
     from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #7be600, 0 0 40px #73e600, 0 0 50px #5ce600, 0 0 60px #7cc000, 0 0 70px #8ee600;
+        text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 30px #7be600, 0 0 40px #73e600, 0 0 50px #5ce600, 0 0 60px #7cc000, 0 0 70px #8ee600;
     }
     to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #8bff4d, 0 0 40px #a2e555, 0 0 50px #91ff4d, 0 0 60px #b8ff4d, 0 0 70px #caff4d, 0 0 80px #a9ff4d;
+        text-shadow: 0 0 20px #fff, 0 0 30px #8bff4d, 0 0 40px #b3ff5d, 0 0 50px #87f940, 0 0 60px #b2ff3f, 0 0 70px #c2fc3b, 0 0 80px #9efd38;
     }
 }
 @keyframes glow {
     from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #7be600, 0 0 40px #73e600, 0 0 50px #5ce600, 0 0 60px #7cc000, 0 0 70px #7be600;
+        text-shadow: 0 0 10px #fff, 0 0 20px #e0f8ca, 0 0 30px #7be600, 0 0 40px #73e600, 0 0 50px #5ce600, 0 0 60px #7cc000, 0 0 70px #7be600;
     }
     to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #8bff4d, 0 0 40px #a2e555, 0 0 50px #91ff4d, 0 0 60px #b8ff4d, 0 0 70px #caff4d, 0 0 80px #a9ff4d;
+        text-shadow: 0 0 40px #ffffff, 0 0 50px #8bff4d, 0 0 60px #b3ff5d, 0 0 70px #87f940, 0 0 80px #b5ff3f, 0 0 90px #9bfc3b, 0 0 100px #83fd38;
     }
 }
 
