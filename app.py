@@ -502,6 +502,10 @@ def journal_capital():
 def journal_appalachia():
     return render_template("journal/journal_appalachia.html")
 
+@app.route('/journal/journal_mojave_nevada')
+def journal_mojave_nevada():
+    return render_template("journal/journal_mojave_nevada.html")
+
 @app.route('/char')
 def char():
     return render_template("char.html")

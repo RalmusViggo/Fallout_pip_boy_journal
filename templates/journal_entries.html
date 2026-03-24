@@ -3,8 +3,9 @@
 
 {% block content %}
 <h1 tabindex="0"> Journal Entries </h1>
-<li> <a href="{{ url_for('journal_appalachia') }}" class="sel" tabindex="0"> > Appalachia Journal Entries </a>
+    <li> <a href="{{ url_for('journal_appalachia') }}" class="sel" tabindex="0"> > Appalachia Journal Entries </a>
     <li> <a href="{{ url_for('journal_capital') }}" class="sel" tabindex="0"> > Capital Wasteland Journal Entries </a> </li>
     <li> <a href="{{ url_for('journal_commonwealth') }}" class="sel" tabindex="0"> > Commonwealth Journal Entries </a> </li>
+    <li> <a href="{{ url_for('journal_mojave_nevada') }}" class="sel" tabindex="0"> > Mojave/Nevada Journal Entries </a> </li>
     <li> <a href="{{ url_for('journal_west_coast') }}" class="sel" tabindex="0"> > West Coast Journal Entries </a> </li>
 {% endblock %}
