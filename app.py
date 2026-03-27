@@ -22,33 +22,6 @@ def get_conn():
 def index():
     return render_template("index.html")
 
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    form = RegisterForm()
-    if form.validate_on_submit():
-        name = form.name.data
-        gender = form.gender.data
-        age = form.age.data
-        blood_type = form.blood_type.data
-        known_diseases = form.known_diseases.data
-        family = form.family.data
-        current_medical_conditions = form.current_medical_conditions.data
-        previous_medical_conditions = form.previous_medical_conditions.data
-        allergies = form.allergies.data
-        strengths = form.strengths.data
-
-        conn = get_conn()
-        cur = conn.cursor()
-        cur.execute(
-            "INSERT INTO inhabitant_data (name, gender, age, blood_type, known_diseases, family, current_medical_conditions, previous_medical_conditions, allergies, strengths) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
-            (name, gender, age, blood_type, known_diseases, family, current_medical_conditions, previous_medical_conditions, allergies, strengths)
-        )
-        conn.commit()
-        cur.close()
-        conn.close()
-        return redirect("/")
-    return render_template("register.html", form=form)
-
 @app.route('/register_actual', methods=['GET', 'POST'])
 def register_actual():
     form = RegisterForm()
