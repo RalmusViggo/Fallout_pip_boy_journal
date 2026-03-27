@@ -2,6 +2,7 @@ from flask import Flask, render_template_string, render_template, request, redir
 import mysql.connector
 from forms import RegisterForm, LoginForm
 from werkzeug.security import generate_password_hash, check_password_hash
+import requests
 
 
 
@@ -20,7 +21,11 @@ def get_conn():
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    api_response = requests.get("https://api.chucknorris.io/jokes/random")
+    joke = api_response.json()["value"]
+    date = api_response.json()["updated_at"]
+    img = "https://cataas.com/cat"
+    return render_template("index.html", joke=joke, date=date, img=img)
 
 @app.route('/register_actual', methods=['GET', 'POST'])
 def register_actual():
