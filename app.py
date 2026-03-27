@@ -21,11 +21,11 @@ def get_conn():
 
 @app.route('/')
 def index():
-    api_response = requests.get("https://api.chucknorris.io/jokes/random")
+    """api_response = requests.get("https://api.chucknorris.io/jokes/random")
     joke = api_response.json()["value"]
     date = api_response.json()["updated_at"]
-    img = "https://cataas.com/cat"
-    return render_template("index.html", joke=joke, date=date, img=img)
+    img = "https://cataas.com/cat"""
+    return render_template("index.html", """joke=joke, date=date, img=img""")
 
 @app.route('/register_actual', methods=['GET', 'POST'])
 def register_actual():
