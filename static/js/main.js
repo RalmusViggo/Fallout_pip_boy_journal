@@ -1,24 +1,23 @@
-/* import isDarkColor from './isDarkColor.js';
-import { createApp } from 'vue'
-import App from './App.vue' // Importing the "Root" component
+// det meste av det som er under de komentarene har jeg fått hjelp av KI til å skrive eller feilsøke
+// Health bar code - only initialize if health element exists
+let currentHealth = 100;
+let maxHealth = 100;
 
-createApp(App).mount('#app')
-*/
+if (document.getElementById('health')) {
+    currentHealth = parseInt(document.getElementById('health').value) || 100;  // Fallback to 100 if invalid
+    maxHealth = currentHealth;  
 
-////
-
-let currentHealth = parseInt(document.getElementById('health').value) || 100;  // Fallback to 100 if invalid
-const maxHealth = currentHealth;  
-
-const stored = localStorage.getItem('currentHealth'); // dette gjør sånn at koden "spør" nettleseren om den har lagret noe med nøkkelen 'currentHealth', om nettleseren ikke finner noe kommer 'null' tilbake
-if (stored !== null) { // her gjør det sånn at hvis nettleseren sender tilbake 'null', så sier dette 'hvis du fant noe (det er ikke 'null')
-    const num = Number(stored); // siden 'localStorage' lagrer all data som strings, så må vi omgjøre det tilbake til integers, dette er funksjonen til 'Number(stored)', den gjør om det inne i parantesende til tall så 'Number("100")' blir til 'Number(100)'
-    if (Number.isFinite(num)) { // her sjekker koden om 'Number' er et gyldig tall; om nettleseren har lagret søppeldata, så kan det hende at 'Number()' returnerer 'NaN', 'isFinite' avviser 'NaN', 'Infinity' og '-Infinity'
-        currentHealth = num; // her blir 'currentHealth' satt til verdien av 'num'
+    const stored = localStorage.getItem('currentHealth'); // dette gjør sånn at koden "spør" nettleseren om den har lagret noe med nøkkelen 'currentHealth', om nettleseren ikke finner noe kommer 'null' tilbake
+    if (stored !== null) { // her gjør det sånn at hvis nettleseren sender tilbake 'null', så sier dette 'hvis du fant noe (det er ikke 'null')
+        const num = Number(stored); // siden 'localStorage' lagrer all data som strings, så må vi omgjøre det tilbake til integers, dette er funksjonen til 'Number(stored)', den gjør om det inne i parantesende til tall så 'Number("100")' blir til 'Number(100)'
+        if (Number.isFinite(num)) { // her sjekker koden om 'Number' er et gyldig tall; om nettleseren har lagret søppeldata, så kan det hende at 'Number()' returnerer 'NaN', 'isFinite' avviser 'NaN', 'Infinity' og '-Infinity'
+            currentHealth = num; // her blir 'currentHealth' satt til verdien av 'num'
+        }
     }
 }
 
 function changeHealth(amount) { // denne funksjonen er for å endre 'Health' mengden
+    if (!document.getElementById('health')) return; // Skip if health element doesn't exist
     currentHealth += amount; // her står det egentlig 'currentHealth = currentHealth + amount'
     if (currentHealth > maxHealth) { // gjør det sånn at hvis 'currentHealth' er større enn 'maxHealth' så vil 'currentHealth' bli satt til å være like mye som 'maxHealth' 
         currentHealth = maxHealth;
@@ -72,23 +71,61 @@ function applyChangeFromInput(sign) {
 
 }
 
-// Dette bruker mye av det som står i denne nettsiden: https://github.com/ivandotv/radio-browser-api?tab=readme-ov-file, men jeg brukte også noe KI
-// TODO: Implement radio station selection when ready
+// Only update health bar on pages where it exists
+if (document.getElementById('health-bar') && document.getElementById('health-text')) {
+    updateHealthBar();
+}
 
-// Example radio player setup (uncomment when radio-browser-api is available via CDN)
+// Radio Player
+let radioPlayer = new Audio();
+let isPlaying = false;
 
-const streamUrl = "https://das-edge63-live365-dal03.cdnstream.com/a43564";
-const radioPlayer = new Audio(streamUrl);
+// Get all station radio inputs
+const stationInputs = document.querySelectorAll('input[name="station"]');
 
-// Start playing
-radioPlayer.play();
+// Function to play the selected station
+function playStation() {
+    const selectedStation = document.querySelector('input[name="station"]:checked');
+    
+    if (!selectedStation) {
+        alert('Please select a station first');
+        return;
+    }
+    
+    const stationUrl = selectedStation.value;
+    
+    // If playing a different station, stop and load the new one
+    if (radioPlayer.src !== stationUrl) {
+        radioPlayer.src = stationUrl;
+    }
+    
+    radioPlayer.play();
+    isPlaying = true;
+    console.log('Playing: ' + stationUrl);
+}
 
-// Stop playing
-radioPlayer.pause();
+// Function to stop the radio
+function stopStation() {
+    radioPlayer.pause();
+    isPlaying = false;
+    console.log('Radio stopped');
+}
 
-document.getElementById('playButton').addEventListener('click', () => {
-  radioPlayer.play();
+// Function to toggle play/pause
+function togglePlayPause() {
+    if (isPlaying) {
+        stopStation();
+    } else {
+        playStation();
+    }
+}
+
+// Add event listeners to station inputs to update when user selects a different one
+stationInputs.forEach(input => {
+    input.addEventListener('change', () => {
+        if (isPlaying) {
+            playStation(); // Immediately switch to new station
+        }
+    });
 });
-
-const selectedUrl = document.querySelector('input[name="station"]:checked').value;
 

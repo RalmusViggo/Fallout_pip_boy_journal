@@ -2,7 +2,19 @@
 {% block title %}Radio{% endblock %}
 
 {% block content %}
-<input type="radio" name="station" id="playButton" value="https://das-edge63-live365-dal03.cdnstream.com/a43564"> Station 1
-<input type="radio" name="station" value="http://stream2.mp3"> Station 2
+<div class="container">
+    <h3 tabindex="0">Select a Station</h3>
+    <label>
+        <input tabindex="0" type="radio" name="station" value="https://das-edge63-live365-dal03.cdnstream.com/a43564"> 
+        Station 1
+    </label>
+</div>
+
+<div>
+    <button tabindex="0" onclick="playStation()">▶ Play</button>
+    <button tabindex="0" onclick="stopStation()">⏹ Stop</button>
+    <button tabindex="0" onclick="togglePlayPause()">⏯ Toggle</button>
+</div>
+
 <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 {% endblock %}
