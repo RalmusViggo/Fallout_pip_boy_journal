@@ -5,6 +5,7 @@ import App from './App.vue' // Importing the "Root" component
 createApp(App).mount('#app')
 */
 
+////
 
 let currentHealth = parseInt(document.getElementById('health').value) || 100;  // Fallback to 100 if invalid
 const maxHealth = currentHealth;  
@@ -70,4 +71,24 @@ function applyChangeFromInput(sign) {
     changeHealth(sign * value);
 
 }
+
+// Dette bruker mye av det som står i denne nettsiden: https://github.com/ivandotv/radio-browser-api?tab=readme-ov-file, men jeg brukte også noe KI
+// TODO: Implement radio station selection when ready
+
+// Example radio player setup (uncomment when radio-browser-api is available via CDN)
+
+const streamUrl = "https://das-edge63-live365-dal03.cdnstream.com/a43564";
+const radioPlayer = new Audio(streamUrl);
+
+// Start playing
+radioPlayer.play();
+
+// Stop playing
+radioPlayer.pause();
+
+document.getElementById('playButton').addEventListener('click', () => {
+  radioPlayer.play();
+});
+
+const selectedUrl = document.querySelector('input[name="station"]:checked').value;
 

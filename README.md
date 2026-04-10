@@ -11,7 +11,12 @@ dette prosjektet går ut på at jeg lager en oversikt over en del informasjon fr
 
 ### To-DO
 
-* lage ting som kan endres og som forblir endret for den brukeren
-    * lage en enkel "log-in" side som krever navn og passord
-    * lage "health bar"
-* gjøre om på registrerings-siden
+- Holotape Audio Player
+
+
+## installerte moduler og sånn
+
+- pip install flask
+- pip install mysql-connector-python
+- pip install flask-wtf
+* pass på at disse er installert i et virtuelt miljø

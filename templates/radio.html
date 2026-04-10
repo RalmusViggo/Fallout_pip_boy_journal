@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Radio{% endblock %}
+
+{% block content %}
+<input type="radio" name="station" id="playButton" value="https://das-edge63-live365-dal03.cdnstream.com/a43564"> Station 1
+<input type="radio" name="station" value="http://stream2.mp3"> Station 2
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}

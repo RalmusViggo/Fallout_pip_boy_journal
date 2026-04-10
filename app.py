@@ -492,7 +492,9 @@ def char():
 def glow():
     return render_template("glow.html")
 
-
+@app.route('/radio')
+def radio():
+    return render_template("radio.html")
 
 if __name__ == "__main__":
     app.run(port=8080, debug=True)
