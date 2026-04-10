@@ -25,7 +25,7 @@ def index():
     joke = api_response.json()["value"]
     date = api_response.json()["updated_at"]
     img = "https://cataas.com/cat"""
-    return render_template("index.html" """, joke=joke, date=date, img=img""")
+    return render_template("index.html")
 
 @app.route('/register_actual', methods=['GET', 'POST'])
 def register_actual():
