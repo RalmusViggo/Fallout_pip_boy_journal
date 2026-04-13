@@ -76,12 +76,39 @@ if (document.getElementById('health-bar') && document.getElementById('health-tex
     updateHealthBar();
 }
 
-// Radio Player
+// Radio Player with persistent state
 let radioPlayer = new Audio();
 let isPlaying = false;
 
 // Get all station radio inputs
 const stationInputs = document.querySelectorAll('input[name="station"]');
+
+// Function to save radio state to localStorage
+function saveRadioState(stationUrl, playing) {
+    localStorage.setItem('radioStation', stationUrl);
+    localStorage.setItem('radioPlaying', playing ? 'true' : 'false');
+}
+
+// Function to load and restore radio state
+function restoreRadioState() {
+    const savedStation = localStorage.getItem('radioStation');
+    const wasPlaying = localStorage.getItem('radioPlaying') === 'true';
+    
+    if (savedStation) {
+        // Find and select the station
+        const stationInput = document.querySelector(`input[name="station"][value="${savedStation}"]`);
+        if (stationInput) {
+            stationInput.checked = true;
+            
+            // If it was playing, resume it
+            if (wasPlaying) {
+                setTimeout(() => {
+                    playStation();
+                }, 100);
+            }
+        }
+    }
+}
 
 // Function to play the selected station
 function playStation() {
@@ -101,6 +128,7 @@ function playStation() {
     
     radioPlayer.play();
     isPlaying = true;
+    saveRadioState(stationUrl, true);
     console.log('Playing: ' + stationUrl);
 }
 
@@ -108,6 +136,10 @@ function playStation() {
 function stopStation() {
     radioPlayer.pause();
     isPlaying = false;
+    const selectedStation = document.querySelector('input[name="station"]:checked');
+    if (selectedStation) {
+        saveRadioState(selectedStation.value, false);
+    }
     console.log('Radio stopped');
 }
 
@@ -128,4 +160,7 @@ stationInputs.forEach(input => {
         }
     });
 });
+
+// Restore radio state when page loads
+window.addEventListener('load', restoreRadioState);
 

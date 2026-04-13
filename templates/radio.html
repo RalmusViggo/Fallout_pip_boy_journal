@@ -2,14 +2,21 @@
 {% block title %}Radio{% endblock %}
 
 {% block content %}
-<div class="container">
-    <h3 tabindex="0">Select a Station</h3>
-    <label>
-        <input tabindex="0" type="radio" name="station" value="https://das-edge63-live365-dal03.cdnstream.com/a43564"> 
-        Station 1
-    </label>
+<div>
+    <h3>Select a Station</h3>
+    <div class="sel">
+        <label>
+            <input type="radio" name="station" value="https://das-edge63-live365-dal03.cdnstream.com/a43564"> 
+            Station 1
+        </label>
+    </div>
 </div>
 
+<div class="container">
+    <div class="text-block" tabindex="0">
+        <p> (* I figured out a way to automatically connect to the local radio, so there should be little difference between the music. *) </p>
+    </div>
+</div>
 <div>
     <button tabindex="0" onclick="playStation()">▶ Play</button>
     <button tabindex="0" onclick="stopStation()">⏹ Stop</button>

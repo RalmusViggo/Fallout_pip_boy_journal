@@ -1275,7 +1275,6 @@ output{
     font-size: x-large;
 }
 
-
 :root {
     background-image: #5ff900;
     -webkit-background-clip: border-box;
@@ -1285,5 +1284,162 @@ output{
     background-clip: border-box;
     /* 3. make the text fill transparent so the background shows through */
     top: 0;
+    width: 96.5%;
+}
+
+.radio {
+    font-size: large;
+    color: rgb(95, 249, 0);
+    background-image: repeating-linear-gradient(
+      180deg,
+      rgb(95, 249, 0) 1.4px,
+      rgb(54, 141, 0) 3.5px
+    );
+    background-size: 100% auto; 
+    font-family: 'fixedsys', 'courier new', courier, monospace;
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* 2. clip the background to the text shape */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* 3. make the text fill transparent so the background shows through */
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* fallback for non-webkit browsers (though background-clip: text support is key) */
+    font-family: 'fixedsys', 'Courier New', Courier, monospace;
+}
+
+.sel_rad {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    /*background-color: #000000;*/
+    font-size: xx-large;
+    font-family: 'fixedsys', 'courier new', courier, monospace;
+}
+
+.sel_rad:hover {
+    color: #000000;
+    background-image: repeating-linear-gradient(
+        180deg,
+        rgb(95, 249, 0) 1.4px,
+        rgb(54, 141, 0) 3.5px
+    );
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    /* 2. clip the background to the text shape */
+    -webkit-text-fill-color: #004e14;
+    -webkit-text-stroke: rgb(95, 249, 0);
+    /* 3. make the text fill transparent so the background shows through */
+    top: 0;
+    width: 96.5%;
+}
+.sel_rad:focus {
+    background-image: repeating-linear-gradient(
+        180deg,
+        rgb(95, 249, 0) 1.4px,
+        rgb(54, 141, 0) 3.5px
+    );
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    /* 2. clip the background to the text shape */
+    -webkit-text-fill-color: #004e14;
+    -webkit-text-stroke: rgb(95, 249, 0);
+    /* 3. make the text fill transparent so the background shows through */
+    top: 0;
+    width: 96.5%;
+}
+.sel_rad:hover label {
+    background-image: repeating-linear-gradient(
+        180deg,
+        rgb(95, 249, 0) 1.4px,
+        rgb(54, 141, 0) 3.5px
+    );
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    /* 2. clip the background to the text shape */
+    -webkit-text-fill-color: #004e14;
+    -webkit-text-stroke: rgb(95, 249, 0);
+    /* 3. make the text fill transparent so the background shows through */
+    top: 0;
+    width: 96.5%;
+}
+.sel_rad:focus input {
+    background: repeating-linear-gradient(
+        180deg,
+        #021a00 -1px,
+        #004e14 4.9px
+    );
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    /* 2. clip the background to the text shape */
+    -webkit-text-fill-color: #004e14;
+    -webkit-text-stroke: rgb(95, 249, 0);
+    /* 3. make the text fill transparent so the background shows through */
+    top: 0;
+    width: 96.5%;
+}
+.sel_rad:focus input {
+    background: repeating-linear-gradient(
+        180deg,
+        #021a00 -1px,
+        #004e14 4.9px
+    );
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    /* 2. clip the background to the text shape */
+    -webkit-text-fill-color: #004e14;
+    -webkit-text-stroke: rgb(95, 249, 0);
+    /* 3. make the text fill transparent so the background shows through */
+    top: 0;
+    width: 96.5%;
+}
+
+/* lagd med hjelp av KI */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.sel label {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    font-size: xx-large;
+    font-family: 'fixedsys', 'courier new', courier, monospace;
+    cursor: pointer;
+}
+
+.sel label:hover {
+    color: #000000;
+    background-image: repeating-linear-gradient(
+        180deg,
+        #021a00 -1px,
+        #004e14 4.9px
+    );
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-text-fill-color: #004e14;
+    -webkit-text-stroke: rgb(95, 249, 0);
+    width: 96.5%;
+}
+
+.sel label:focus-within {
+    color: #000000;
+    background-image: repeating-linear-gradient(
+        180deg,
+        #021a00 -1px,
+        #004e14 4.9px
+    );
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-text-fill-color: #004e14;
+    -webkit-text-stroke: rgb(95, 249, 0);
     width: 96.5%;
 }
