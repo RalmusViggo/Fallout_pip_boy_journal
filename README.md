@@ -13,7 +13,6 @@ dette prosjektet går ut på at jeg lager en oversikt over en del informasjon fr
 
 - Holotape Audio Player
 
-
 ## installerte moduler og sånn
 
 - pip install flask
