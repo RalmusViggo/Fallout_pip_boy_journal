@@ -3,10 +3,10 @@
 
 {% block content %}
 <div>
-    <h3>Select a Station</h3>
-    <div class="sel">
+    <h3 tabindex="0">Select a Station</h3>
+    <div class="sel_r" tabindex="0" >
         <label>
-            <input type="radio" name="station" value="https://das-edge63-live365-dal03.cdnstream.com/a43564"> 
+            <input type="radio" name="station" value="https://das-edge63-live365-dal03.cdnstream.com/a43564" tabindex="-1"> 
             Station 1
         </label>
     </div>
@@ -17,10 +17,10 @@
         <p> (* I figured out a way to automatically connect to the local radio, so there should be little difference between the music. *) </p>
     </div>
 </div>
-<div>
-    <button tabindex="0" onclick="playStation()">▶ Play</button>
-    <button tabindex="0" onclick="stopStation()">⏹ Stop</button>
-    <button tabindex="0" onclick="togglePlayPause()">⏯ Toggle</button>
+<div class="container8">
+    <button class="sel_b" tabindex="0" onclick="playStation()">▶ Play</button>
+    <button class="sel_b" tabindex="0" onclick="stopStation()">⏹ Stop</button>
+    <button class="sel_b" tabindex="0" onclick="togglePlayPause()">⏯ Toggle</button>
 </div>
 
 <script src="{{ url_for('static', filename='js/main.js') }}"></script>

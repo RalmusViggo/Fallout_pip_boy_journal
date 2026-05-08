@@ -2,6 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, IntegerField
 from wtforms.validators import InputRequired
 
+# Lager en classe for forms med flaskForms
 class RegisterForm(FlaskForm):
     username = StringField("Name", validators=[InputRequired()])
     password = PasswordField("Password", validators=[InputRequired()])
