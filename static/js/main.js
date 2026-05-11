@@ -1,23 +1,23 @@
-// det meste av det som er under de komentarene har jeg fått hjelp av KI til å skrive eller feilsøke
-// Health bar code - only initialize if health element exists
-let currentHealth = 100;
-let maxHealth = 100;
+/* import isDarkColor from './isDarkColor.js';
+import { createApp } from 'vue'
+import App from './App.vue' // Importing the "Root" component
 
-if (document.getElementById('health')) {
-    currentHealth = parseInt(document.getElementById('health').value) || 100;  // Fallback to 100 if invalid
-    maxHealth = currentHealth;  
+createApp(App).mount('#app')
+*/
 
-    const stored = localStorage.getItem('currentHealth'); // dette gjør sånn at koden "spør" nettleseren om den har lagret noe med nøkkelen 'currentHealth', om nettleseren ikke finner noe kommer 'null' tilbake
-    if (stored !== null) { // her gjør det sånn at hvis nettleseren sender tilbake 'null', så sier dette 'hvis du fant noe (det er ikke 'null')
-        const num = Number(stored); // siden 'localStorage' lagrer all data som strings, så må vi omgjøre det tilbake til integers, dette er funksjonen til 'Number(stored)', den gjør om det inne i parantesende til tall så 'Number("100")' blir til 'Number(100)'
-        if (Number.isFinite(num)) { // her sjekker koden om 'Number' er et gyldig tall; om nettleseren har lagret søppeldata, så kan det hende at 'Number()' returnerer 'NaN', 'isFinite' avviser 'NaN', 'Infinity' og '-Infinity'
-            currentHealth = num; // her blir 'currentHealth' satt til verdien av 'num'
-        }
+
+let currentHealth = parseInt(document.getElementById('health').value) || 100;  // Fallback to 100 if invalid
+const maxHealth = currentHealth;  
+
+const stored = localStorage.getItem('currentHealth'); // dette gjør sånn at koden "spør" nettleseren om den har lagret noe med nøkkelen 'currentHealth', om nettleseren ikke finner noe kommer 'null' tilbake
+if (stored !== null) { // her gjør det sånn at hvis nettleseren sender tilbake 'null', så sier dette 'hvis du fant noe (det er ikke 'null')
+    const num = Number(stored); // siden 'localStorage' lagrer all data som strings, så må vi omgjøre det tilbake til integers, dette er funksjonen til 'Number(stored)', den gjør om det inne i parantesende til tall så 'Number("100")' blir til 'Number(100)'
+    if (Number.isFinite(num)) { // her sjekker koden om 'Number' er et gyldig tall; om nettleseren har lagret søppeldata, så kan det hende at 'Number()' returnerer 'NaN', 'isFinite' avviser 'NaN', 'Infinity' og '-Infinity'
+        currentHealth = num; // her blir 'currentHealth' satt til verdien av 'num'
     }
 }
 
 function changeHealth(amount) { // denne funksjonen er for å endre 'Health' mengden
-    if (!document.getElementById('health')) return; // Skip if health element doesn't exist
     currentHealth += amount; // her står det egentlig 'currentHealth = currentHealth + amount'
     if (currentHealth > maxHealth) { // gjør det sånn at hvis 'currentHealth' er større enn 'maxHealth' så vil 'currentHealth' bli satt til å være like mye som 'maxHealth' 
         currentHealth = maxHealth;
@@ -58,8 +58,6 @@ function updateHealthBar() {
     }
 }
 
-updateHealthBar();
-
 function applyChangeFromInput(sign) {
     const input = document.getElementById('health-input');
     const raw = input ? input.value : ''; // dette betyr " hvis 'input' finnes, bruk dens verdi, ellers bruk en tom 'string'("") "
@@ -71,10 +69,7 @@ function applyChangeFromInput(sign) {
 
 }
 
-// Only update health bar on pages where it exists
-if (document.getElementById('health-bar') && document.getElementById('health-text')) {
-    updateHealthBar();
-}
+
 
 // Radio Player with persistent state
 let radioPlayer = new Audio();
