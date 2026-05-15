@@ -72,8 +72,15 @@ function applyChangeFromInput(sign) {
 
 
 // Radio Player with persistent state
-let radioPlayer = new Audio();
-let isPlaying = false;
+var radioPlayer;
+var isPlaying = false;
+
+function getRadioPlayer() {
+    if (!radioPlayer) {
+        radioPlayer = new Audio();
+    }
+    return radioPlayer;
+}
 
 // Get all station radio inputs
 const stationInputs = document.querySelectorAll('input[name="station"]');
@@ -115,13 +122,14 @@ function playStation() {
     }
     
     const stationUrl = selectedStation.value;
+    const player = getRadioPlayer();
     
     // If playing a different station, stop and load the new one
-    if (radioPlayer.src !== stationUrl) {
-        radioPlayer.src = stationUrl;
+    if (player.src !== stationUrl) {
+        player.src = stationUrl;
     }
     
-    radioPlayer.play();
+    player.play();
     isPlaying = true;
     saveRadioState(stationUrl, true);
     console.log('Playing: ' + stationUrl);
@@ -129,7 +137,8 @@ function playStation() {
 
 // Function to stop the radio
 function stopStation() {
-    radioPlayer.pause();
+    const player = getRadioPlayer();
+    player.pause();
     isPlaying = false;
     const selectedStation = document.querySelector('input[name="station"]:checked');
     if (selectedStation) {

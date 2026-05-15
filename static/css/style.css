@@ -529,30 +529,7 @@ input {
     box-sizing: border-box;
     border: 0px;
 }
-#username {
-    font-size: large;
-    color: rgb(95, 249, 0);
-    background-image: repeating-linear-gradient(
-      180deg,
-      rgb(95, 249, 0) 1.4px,
-      rgb(54, 141, 0) 3.5px
-    );
-    background-size: 100% auto; 
-    font-family: 'fixedsys', 'courier new', courier, monospace;
-    -webkit-background-clip: text;
-    background-clip: text;
-    /* 2. clip the background to the text shape */
-    -webkit-background-clip: text;
-    background-clip: text;
-    /* 3. make the text fill transparent so the background shows through */
-    -webkit-text-fill-color: transparent;
-    color: transparent; /* fallback for non-webkit browsers (though background-clip: text support is key) */
-    font-family: 'fixedsys', 'Courier New', Courier, monospace;
-    background: inherit;
-    width: -webkit-fill-available;
-    box-sizing: border-box;
-    border: 0px;
-}
+
 .a1 {
     font-size: xx-large;
     color: rgb(95, 249, 0);

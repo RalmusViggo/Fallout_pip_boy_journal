@@ -21,10 +21,6 @@ def get_conn():
 
 @app.route('/')
 def index():
-    """api_response = requests.get("https://api.chucknorris.io/jokes/random")
-    joke = api_response.json()["value"]
-    date = api_response.json()["updated_at"]
-    img = "https://cataas.com/cat"""
     return render_template("index.html")
 
 @app.route('/register_actual', methods=['GET', 'POST'])
