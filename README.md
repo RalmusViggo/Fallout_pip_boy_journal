@@ -9,9 +9,6 @@ dette prosjektet går ut på at jeg lager en oversikt over en del informasjon fr
 * feilsøke og rette feil ved hjelp av feilsøkingsstrategier og relevante rammeverk
 * administrere brukere, tilganger og rettigheter i relevante systemer
 
-### To-DO
-
-- Holotape Audio Player
 
 ## installerte moduler og sånn
 
@@ -22,9 +19,9 @@ dette prosjektet går ut på at jeg lager en oversikt over en del informasjon fr
 
 ## install guide
 
-## **Create a new virtual environment**
+download the files from the github repositort you're currently in, and make sure they are somewhere they can actually run, i haven't tested this on any other type of system besides an ubuntu/apache server.
 
-This is done every time you create a **new** project where you will use Flask. 
+### **Create a new virtual environment**
 
 1. Create an empty folder for the project with its own name, **example_folder**
 2. Open the folder in VSCode 
@@ -77,7 +74,6 @@ pip list
 
 Not many packages installed yet. Only the package “pip”.
 
-![Screenshot 2025-06-06 at 18.11.30.png](attachment:cc1f2e42-b619-43cc-969b-fedc9b1c2c8d:Screenshot_2025-06-06_kl._18.11.30.png)
 
 Then install the packages for flask: 
 
@@ -88,3 +84,14 @@ pip3 install flask
 ```
 pip3 install flask_wtf
 ```
+
+```
+pip3 install mysql-connector-python
+```
+
+Setup to be able to use Flask on Apache:
+
+**IMPORTANT**
+in app.py, change the things in the function "def get_conn():" with the things of *your* mysql database.
+also use this query to add the collums that the website uses: "CREATE TABLE {{table name}}(user_id INT AUTO_INCREMENT PRIMARY KEY, username VARCHAR(255), password VARCHAR(255), origin VARCHAR(255), origin_trait VARCHAR(255), strength INT, perception INT, endurance INT, charisma INT, intelligence INT, agility INT, luck INT, tagskill1 VARCHAR(255), tagskill2 VARCHAR(255), tagskill3 VARCHAR(255), athletics INT, barter INT, big_guns INT, energy_weapons INT, explosives INT, lockpick INT, medicine INT, melee_weapons INT, pilot INT, repair INT, science INT, small_guns INT, sneak INT, speech INT, survival INT, throwing INT, unarmed INT, level INT);"
+[https://www.notion.so/Setup-for-using-Flask-on-Apache-ef15724844df836cac048197d8afb416?source=copy_link](https://www.notion.so/Setup-for-using-Flask-on-Apache-ef15724844df836cac048197d8afb416?source=copy_link)
