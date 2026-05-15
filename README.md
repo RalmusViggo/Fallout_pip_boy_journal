@@ -72,7 +72,7 @@ The point of a virtual environment is that you can work with it isolated from th
 pip list
 ```
 
-Not many packages installed yet. Only the package “pip”.
+Not many packages installed yet. Only the package “pip” should be there.
 
 
 Then install the packages for flask: 
